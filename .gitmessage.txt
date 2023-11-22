@@ -1,0 +1,4 @@
+Subject Line (try to keep under 50 characters)
+
+Multi-line description of the commit.
+Feel free to be detailed

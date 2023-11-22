@@ -1,0 +1,4 @@
+[init]
+	defaultBranch = master
+[commit]
+	template = ~/.gitmessage.txt
