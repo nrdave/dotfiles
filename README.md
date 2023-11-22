@@ -2,13 +2,24 @@
 
 If you don't know what a dotfile repo is, I can't help you.
 
-# Management
+## Management
 
 I use [yadm](https://yadm.io/) to manage my dotfiles. Why?
 
 1. It was available in the repos for both Linux Mint and Arch Linux (the two distros I use)
 2. Like 90% of yadm commands are just git commands, so you barely have to learn anything
 3. Despite the above point, yadm allows you to maintain alternative files, so I only have to maintain one repo for all my dotfiles and just create alternate files for configs where I need to change things system by system.
+
+### yadm config options
+
+I try to make all my alternate files (see [yadm docs](https://yadm.io/docs/alternates#) operate based on yadm's class values. That way, changing which file I use for the config on a system just involves changing what classes are set in yadm's config. 
+
+Below are all the values for classes that I have used, as well as what they change:
+
+- `Small\_Screen`: A class to enable when your screen is "small" and you want to enlarge text and/or icons
+	- `kitty`: Changes the `font_size` from 11 pt to 13 pt
+
+Ok it's just that right now but I expect it'll grow as I add config files. 
 
 ## Scope
 
