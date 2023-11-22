@@ -16,7 +16,7 @@ I try to make all my alternate files (see [yadm docs](https://yadm.io/docs/alter
 
 Below are all the values for classes that I have used, as well as what they change:
 
-- `Small\_Screen`: A class to enable when your screen is "small" and you want to enlarge text and/or icons
+- `Small_Screen`: A class to enable when your screen is "small" and you want to enlarge text and/or icons
 	- `kitty`: Changes the `font_size` from 11 pt to 13 pt
 
 Ok it's just that right now but I expect it'll grow as I add config files. 
