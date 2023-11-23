@@ -19,6 +19,13 @@ set $term kitty
 # on the original workspace that the command was run on.
 set $menu fuzzel | xargs swaymsg exec --
 
+### Border configuration
+default_border pixel 2
+client.focused #5e5f8c #5e5f8c #fffaf3
+gaps inner 5
+smart_borders on
+smart_gaps on
+
 ### Idle configuration
 #
 # Example configuration:
