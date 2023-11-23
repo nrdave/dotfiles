@@ -37,8 +37,11 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-kitty|xterm-color|*-256color) color_prompt=yes;;
+    xterm-kitty|xterm-color|foot|linux|*-256color) color_prompt=yes;;
 esac
+
+# Source the git prompt function if necessary
+source ~/.bash_source_git_prompt
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
