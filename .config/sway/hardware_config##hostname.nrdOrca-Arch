@@ -1,0 +1,17 @@
+# Sway Hardware configuration for my primary laptop
+# This file contains configuration for hardware-specific
+# configuration options e.g. the touchpad on the laptop
+
+### Output configuration
+# Background
+output * bg ~/Pictures/background/background.png fill
+
+### Input configuration
+input "1739:52632:MSFT0004:00_06CB:CD98_Touchpad" {
+	dwt enabled
+	tap enabled
+	natural_scroll enabled
+	middle_emulation enabled
+}
+
+
