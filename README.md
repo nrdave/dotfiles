@@ -70,3 +70,8 @@ My Neovim config does the following:
 - disables highlighting search matches
 - search ignores case by default unless an uppercase letter is entered
 
+### Sway
+
+My current window manager on Arch Linux.
+
+I'm not gonna bother describing an entire window manager config here, but it's mostly just the defaults with a custom background and changing the launcher to `fuzzel`.
