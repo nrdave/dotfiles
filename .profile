@@ -10,12 +10,6 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# Add my local bin folder to path
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
 
-# Set some universal env vars
-export EDITOR='/usr/bin/nano'
-export VISUAL='/usr/bin/nvim'
-export GTK_THEME='Arc-Dark'
+
+

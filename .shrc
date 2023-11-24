@@ -1,0 +1,24 @@
+# A common file for both bash and zsh to source - allows me to change only one
+# environment variable
+
+# Setting all XDG base directory values to their defaults
+# XDG user dirs are handled by the xdg-user-dirs package
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local.state"
+export XDG_RUNTIME_DIR="/run/user/$UID"
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# Set some universal env vars
+export EDITOR='/usr/bin/nano'
+export VISUAL='/usr/bin/nvim'
+export GTK_THEME='Arc-Dark'
+
+# Add my local bin folder to path
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+else
+	mkdir -p $HOME/.local/bin
+    PATH="$HOME/.local/bin:$PATH"
+fi
