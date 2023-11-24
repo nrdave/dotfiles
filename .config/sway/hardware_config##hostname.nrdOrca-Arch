@@ -14,4 +14,6 @@ input "1739:52632:MSFT0004:00_06CB:CD98_Touchpad" {
 	middle_emulation enabled
 }
 
-
+### Screen brightness configuration
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
