@@ -13,7 +13,13 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Set some universal env vars
 export EDITOR='/usr/bin/nano'
 export VISUAL='/usr/bin/nvim'
+
+# Graphical Variables
+# Force GTK theme because GTK4 can be stupid - Arc supports GTK 4, but doesn't
+# always get used by libadwaita apps for some reason
 export GTK_THEME='Arc-Dark'
+# Force Use of GTK2 theming for QT - uses 
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Add my local bin folder to path
 if [ -d "$HOME/.local/bin" ] ; then
