@@ -47,6 +47,21 @@ My bash config is divided into a few files. First, my `.profile` is just the min
 Dependencies:
 - git (specifically the __git_ps1 shell function)
 
+### fontconfig
+
+My font config file does two things:
+
+1. Sets my preferred default fonts: DejaVu Sans, DejaVu Serif, and Fira Code
+2. Provides automatic aliases for some Microsoft fonts - Calibri, Cambria, Times, Arial, and Courier New
+
+Dependencies - all fonts:
+
+- DejaVu Sans and Serif
+- Fira Code
+- Liberation Sans, Serif, and Mono
+- Carlito
+- Caladea
+
 ### git
 
 I don't include my actual .gitconfig file (for security reasons). I do have a `.gitconfig-common` which I use to set configs that don't have any important info. This amounts to setting the `defaultBranch` attribute to `master` and setting a custom commit message.
