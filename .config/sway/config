@@ -28,14 +28,23 @@ gaps inner 5
 smart_borders on
 smart_gaps on
 
+### Suspend/Lock shortcuts
+bindsym Control+Alt+S exec systemctl suspend
+bindsym Control+Alt+L exec loginctl lock-session
+
+
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+set $locker 'swaylock -f -c 000000'
+
+exec swayidle -w \
+         timeout 60 $locker  \
+         timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+		 lock $locker  \
+		 before-sleep $locker \
+
 
 ### Key bindings
 #
