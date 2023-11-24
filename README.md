@@ -23,15 +23,29 @@ Ok it's just that right now but I expect it'll grow as I add config files.
 
 ## Scope
 
-Right now, the repo only includes dotfiles for a few programs. I don't have an Arch install at the moment (long story, don't ask), so I only bothered tracking the configs I really care about on Mint.
+Below is the list of all programs/system configurations I have dotfiles for.
 
-Below is the list of all programs I have dotfiles for
+- bash
+- fontconfig
+- fuzzel
+- kitty
+- lf
+- Neovim
+- Sway
+- git
 
-### `.bashrc`
+### bash
 
-Mostly just the default Linux Mint bashrc. I just customized the shell prompt, set tab width to 4, and added an alias for `lf` (see below for information on that one). 
+My bash config is divided into a few files. First, my `.profile` is just the minimum required for sourcing `.bashrc`. My `.bashrc` is based on the default Linux Mint `.bashrc`, with the following changes:
 
-Also included my `.profile`, which adds `$HOME/.local/bin` to `PATH`, and sets `EDITOR` to `/usr/bin/nano` and `VISUAL` to `/usr/bin/nvim`. I set `EDITOR` to `nano` in case for whatever reason `nvim` wasn't installed. bash looks for `VISUAL` first when calling for an editor so it doesn't matter in day to day usage. 
+- Simplified the setting of the shell prompt to always use a color prompt (I'm willing to assume any terminal I use (even the TTY) supports at least some color)
+- Customize my shell prompt a bit, including the git-provided function to get the current git branch if the working directory contains a git repo
+- Source the file required to load the above git function if necessary - uses yadm's alternate files. If yadm's local classes include `Source_Git_Prompt`, the file `/usr/share/git/completion/git-prompt.sh1 will be sourced (this is the location of the prompt function on an Arch Linux system). If the class is not set, this file isn't sourced (the file doesn't exist on Linux Mint as far as I can tell)
+- Sources a file called `.shrc`, which contains environment variables that I want to maintain constant between bash and zsh (once I get around to switching to zsh). These environment variables include my EDITOR, VISUAL, GTK_THEME, and the XDG base directories.
+- Sets up an `lf` alias that allows me to exit `lf` into the last directory `lf` was in, rather than the directory `lf` was launched in.
+
+Dependencies:
+- git (specifically the __git_ps1 shell function)
 
 ### git
 
@@ -39,10 +53,10 @@ I don't include my actual .gitconfig file (for security reasons). I do have a `.
 
 ### kitty
 
-Currently my preferred terminal emulator, mainly just for the windows and tabs. It's fast, I don't really care if it's faster than Alacritty. That said, I also have an Alacritty config because kitty isn't available for Windows (when I do need to use Windows 10 for some godforsaken reason, I want a terminal better than the one Git Bash ships)
+Currently my preferred terminal emulator, mainly just for the windows and tabs. It's fast, I don't really care if it's faster than Alacritty. That said, I also have an Alacritty config (that I need to upload) because kitty isn't available for Windows (when I do need to use Windows 10 for some godforsaken reason, I want a terminal better than the one Git Bash ships)
 
 My config:
-- sets up my preferred color theme (some weird mix of the kitty Alabaster Dark and Alacritty Argonaut themes if memory serves)
+- sets up my preferred color theme (some weird mix of the kitty Alabaster Dark and Alacritty Argonaut themes if memory serves) including opacity
 - adds a keybind to open a new window in the same directory (Ctrl+Shift+Alt+Enter)
 - Sets the font (system monospace font) and font size (either 11 pt or 13 pt, depending on if yadm local.class includes Small\_Screen)
 
@@ -55,6 +69,11 @@ My `lf` config is mostly just the default config from the `lf` GitHub repo, but 
 - In my .bashrc, I have the following line: `alias lf='cd $(command lf -print-last-dir)'`. This sets up `lf` so that when I quit, it changes directory to the last directory I was in. However, I changed the quit key to `Q`. Pressing `q` will behave like `lf` normally does when quitting i.e. return to the directory it was launched in.
 - The `delete` key is mapped to trash files instead of delete them
 - The `trash` command uses `trash-put` from the `trash-cli` package (available for basically every distribution as far as I can tell). This way, trashing files in `lf` follows the FreeDesktop Trash Specification
+
+Dependencies:
+
+- mimeopen
+- trash-put
 
 ### Neovim
 
@@ -74,4 +93,10 @@ My Neovim config does the following:
 
 My current window manager on Arch Linux.
 
-I'm not gonna bother describing an entire window manager config here, but it's mostly just the defaults with a custom background and changing the launcher to `fuzzel`.
+I'm not gonna bother describing an entire window manager config here, but it's mostly just the defaults with a custom background and changing the launcher to `fuzzel`. I also added a screenshot mode based on a config I found online - enter it using Super+P
+
+Dependencies:
+
+- fuzzel
+- grim (in conjunction with slurp, screenshotting)
+- slurp
