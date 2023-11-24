@@ -32,6 +32,11 @@ smart_gaps on
 bindsym Control+Alt+S exec systemctl suspend
 bindsym Control+Alt+L exec loginctl lock-session
 
+### Wireplumber control using audio keys
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+ --limit 1.0
+bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
 
 ### Idle configuration
 #
