@@ -123,6 +123,8 @@ My Neovim config does the following:
 
 In my `.shrc`, I set `QT_QPA_PLATFORMTHEME` to `qt5ct`. This makes Qt apps use settings from the Qt5 settings menu. Then, in the Qt 5 settings app, I set the theme to `gtk2`. This makes Qt apps use GTK 2 colors using [QGTKStyle](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle).
 
+I include alternative `qt5ct.conf` files to control font size using the `Small_Screen` yadm class I have. This way, I can specify if fonts need to be enlarged for smaller screens or not.
+
 Dependencies:
 - Qt 5 Settings
 - A GTK theme that supports GTK 2 (for me, Arc-Dark)
