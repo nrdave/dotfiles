@@ -29,12 +29,14 @@ Below is the list of all programs/system configurations I have dotfiles for.
 - bash
 - fontconfig
 - fuzzel
+- git
+- GTK Theming
 - kitty
 - lf
 - Neovim
+- Qt Theming (kinda)
 - Sway
 - Waybar
-- git
 
 ### bash
 
@@ -43,7 +45,7 @@ My bash config is divided into a few files. First, my `.profile` is just the min
 - Simplified the setting of the shell prompt to always use a color prompt (I'm willing to assume any terminal I use (even the TTY) supports at least some color)
 - Customize my shell prompt a bit, including the git-provided function to get the current git branch if the working directory contains a git repo
 - Source the file required to load the above git function if necessary - uses yadm's alternate files. If yadm's local classes include `Source_Git_Prompt`, the file `/usr/share/git/completion/git-prompt.sh1 will be sourced (this is the location of the prompt function on an Arch Linux system). If the class is not set, this file isn't sourced (the file doesn't exist on Linux Mint as far as I can tell)
-- Sources a file called `.shrc`, which contains environment variables that I want to maintain constant between bash and zsh (once I get around to switching to zsh). These environment variables include my EDITOR, VISUAL, GTK_THEME, and the XDG base directories.
+- Sources a file called `.shrc`, which contains environment variables that I want to maintain constant between bash and zsh (once I get around to switching to zsh). These environment variables include my EDITOR, VISUAL, GTK and QT themeing, and the XDG base directories.
 - Sets up an `lf` alias that allows me to exit `lf` into the last directory `lf` was in, rather than the directory `lf` was launched in.
 
 Dependencies:
@@ -67,6 +69,17 @@ Dependencies - all fonts:
 ### git
 
 I don't include my actual .gitconfig file (for security reasons). I do have a `.gitconfig-common` which I use to set configs that don't have any important info. This amounts to setting the `defaultBranch` attribute to `master` and setting a custom commit message.
+
+### GTK Theming
+
+I use the Arc-Dark GTK theme, with the ePapirus-Dark icon theme. These themes are set up in `.config/gtk-3.0/settings.ini`, which also sets the GTK font to DejaVu Sans 12.
+
+In addition, in my `.shrc`, I source a script called import-gsettings.sh which reads the GTK 3 config file and uses the values in there in the respective calls to `gsettings` (i.e. the `gtk-theme-name` in the GTK 3 config file gets passed to a call to gsettings set org.gnome.desktop.interface gtk-theme). The script also sets the `GTK_THEME` environment variable to force libadwaita apps to use the Arc-Dark theme (Arc-Dark supports GTK 4 and should work by default, but it doesn't so I have to force it).
+
+Dependencies:
+- Arc-Dark GTK Theme
+- ePapirus-Dark Icon theme
+- DejaVu Sans
 
 ### kitty
 
@@ -105,6 +118,15 @@ My Neovim config does the following:
 - enables incremental search
 - disables highlighting search matches
 - search ignores case by default unless an uppercase letter is entered
+
+### Qt Theming
+
+In my `.shrc`, I set `QT_QPA_PLATFORMTHEME` to `qt5ct`. This makes Qt apps use settings from the Qt5 settings menu. Then, in the Qt 5 settings app, I set the theme to `gtk2`. This makes Qt apps use GTK 2 colors using [QGTKStyle](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle).
+
+Dependencies:
+- Qt 5 Settings
+- A GTK theme that supports GTK 2 (for me, Arc-Dark)
+- On Arch linux, you need the [qt5-styleplugins](https://aur.archlinux.org/packages/qt5-styleplugins) package from the AUR.
 
 ### Sway
 
