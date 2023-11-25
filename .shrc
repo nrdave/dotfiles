@@ -1,5 +1,5 @@
-# A common file for both bash and zsh to source - allows me to change only one
-# environment variable
+# A shell file that should be readable by most, if not all, shells in some form.
+# Should be sourced by any shell
 
 # Setting all XDG base directory values to their defaults
 # XDG user dirs are handled by the xdg-user-dirs package
