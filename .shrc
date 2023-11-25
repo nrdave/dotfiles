@@ -14,11 +14,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR='/usr/bin/nano'
 export VISUAL='/usr/bin/nvim'
 
-# Graphical Variables
-# Force GTK theme because GTK4 can be stupid - Arc supports GTK 4, but doesn't
-# always get used by libadwaita apps for some reason
-export GTK_THEME='Arc-Dark'
-# Force Use of GTK2 theming for QT - uses 
+# Use the Qt 5 settings app for theming Qt
+# In that app, I always set up Qt to use GTK 2 theming
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Add my local bin folder to path
@@ -28,3 +25,6 @@ else
 	mkdir -p $HOME/.local/bin
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# Set up GTK settings properly
+. import-gsettings.sh
