@@ -14,12 +14,13 @@ I use [yadm](https://yadm.io/) to manage my dotfiles. Why?
 
 I try to make all my alternate files (see [yadm docs](https://yadm.io/docs/alternates#) operate based on yadm's class values. That way, changing which file I use for the config on a system just involves changing what classes are set in yadm's config. 
 
+Right now, the only exception to this is my hardware configuration for Sway for my laptop. This file just contains specifics to my laptop, so it makes sense to set a hardware configuration by hostname.
+
 Below are all the values for classes that I have used, as well as what they change:
 
 - `Small_Screen`: A class to enable when your screen is "small" and you want to enlarge text and/or icons
 	- `kitty`: Changes the `font_size` from 11 pt to 13 pt
-
-Ok it's just that right now but I expect it'll grow as I add config files. 
+- `Source_Git_Prompt`: A class to indicate if the `__git_ps1` shell function needs to be sourced from `/usr/share/git/completion/git-prompt.sh`
 
 ## Scope
 
@@ -32,6 +33,7 @@ Below is the list of all programs/system configurations I have dotfiles for.
 - lf
 - Neovim
 - Sway
+- Waybar
 - git
 
 ### bash
@@ -110,8 +112,19 @@ My current window manager on Arch Linux.
 
 I'm not gonna bother describing an entire window manager config here, but it's mostly just the defaults with a custom background and changing the launcher to `fuzzel`. I also added a screenshot mode based on a config I found online - enter it using Super+P
 
+I also included handling of the XF86 keys for audio using wireplumber (because really, even Linux Mint defaults to Pipewire. Make the switch)
+
+I also have yadm alternate files for config options for individual systems (at this point, I only have a config for my laptop Arch install). For my laptop, I'm using brightnessctl to control brightness.
+
 Dependencies:
 
 - fuzzel
 - grim (in conjunction with slurp, screenshotting)
 - slurp
+- wireplumber (for audio control. I assume everyone uses Pipewire by now)
+- brightnessctl for my laptop config for brightness control
+- Waybar for the panel bar
+
+### Waybar
+
+The bar I use for Wayland compositors. Not gonna go in depth here yet.
