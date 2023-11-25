@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 8, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "pulseaudio", "network", "temperature", "backlight","battery", "clock", "tray"],
+    "modules-right": ["tray", "pulseaudio", "temperature","battery", "clock"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -35,53 +35,14 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "tray": {
-        // "icon-size": 21,
+   "tray": {
+        "icon-size": 21,
         "spacing": 10
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
+		"format": "{:%A, %B %e, %I:%M:%S %p %Z}",
+        "format-alt": "{:%Y-%m-%dT%H:%M:%S%z}"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -90,11 +51,6 @@
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "states": {

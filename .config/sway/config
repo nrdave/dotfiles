@@ -4,6 +4,8 @@
 include hardware_config
 
 exec_always xwayland
+exec blueman-applet
+exec nm-applet
 
 ### Variables
 #
