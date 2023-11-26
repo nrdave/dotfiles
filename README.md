@@ -150,4 +150,9 @@ Dependencies:
 
 ### Waybar
 
-The bar I use for Wayland compositors. Not gonna go in depth here yet.
+The bar I use for Wayland compositors. Not gonna go in depth here yet. That said, I use Font Awesome for icons. 
+
+Dependencies:
+- pavucontrol
+- Fira Code font
+- Font Awesome
