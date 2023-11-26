@@ -24,3 +24,6 @@ fi
 
 # Set up GTK settings properly
 . import-gsettings.sh
+
+# Set up Qt apps to use config from Qt 5 and Qt 6 settings apps
+export QT_QPA_PLATFORMTHEME=qt6ct
