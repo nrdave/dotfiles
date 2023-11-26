@@ -14,10 +14,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR='/usr/bin/nano'
 export VISUAL='/usr/bin/nvim'
 
-# Use the Qt 5 settings app for theming Qt
-# In that app, I always set up Qt to use GTK 2 theming
-export QT_QPA_PLATFORMTHEME=qt5ct
-
 # Add my local bin folder to path
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
