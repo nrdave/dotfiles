@@ -3,7 +3,7 @@
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 8, // Gaps between modules (4px)
+    "spacing": 12, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["sway/window"],
@@ -36,7 +36,7 @@
         "tooltip-format": "{app}: {title}"
     },
    "tray": {
-        "icon-size": 21,
+        "icon-size": 24,
         "spacing": 10
     },
     "clock": {
