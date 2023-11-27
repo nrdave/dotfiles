@@ -3,3 +3,29 @@
 	font-size: 14pt;
 }
 
+window#waybar {
+	background-color: #404552;
+	color: #D3DAE3;
+}
+
+
+#battery.charging, #battery.plugged {
+	color: #46f34c;
+}
+
+#battery.warning {
+	color: #f0ba4c;
+}
+
+#battery.critical {
+	color: #f0494c;
+}
+
+#pulseaudio.muted {
+    color: #f0494c;
+}
+
+#temperature.critical {
+    color: #f0494c;
+	background-color: #7a2831;
+}
