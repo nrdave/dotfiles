@@ -10,8 +10,8 @@ Colors I try to use for GUI apps
 
 Colors taken from the GTK them I use, the [Arc-Dark GTK Theme](https://github.com/jnsh/arc-theme).
 
-Base: `#404552`
 Text: `#D3DAE3`
+Base: `#404552`
 Background: `#383C4A`
 
 Base and background can both be used for background colors.
@@ -29,97 +29,96 @@ I chose colors first just using pure FF or 00 for red, green, or blue in the hex
 Core color: `#ff0000`
 
 Text: `#f0494c`
-Background: `#802e37`
-Base: `#7a2831`
+Base: `#802e37`
+Background:`#7a2831`
 
 #### Orange
 
 Core color: `#ffaa00`
 
 Text: `#f0ba4c`
-Background: `#806737`
-Base: `#7a6131`
+Base: `#806737`
+Background: `#7a6131`
 
 #### Yellow
 
 Core color: `#ffff00`
 
 Text: `#f0f34c`
-Background: `#808337`
-Base: `#7a7d31`
+Base: `#808337`
+Background: `#7a7d31`
 
 #### Lime
 
 Core color: `#aaff00`
 
 Text: `#b8f34c`
-Background: `#638337`
-Base: `#5e7d31`
+Base: `#638337`
+Background: `#5e7d31`
 
 #### Green
 
 Core color: `#00ff00`
 
 Text: `#46f34c`
-Background: `#2b8337`
-Base: `#257d31`
+Base: `#2b8337`
+Background: `#257d31`
 
 #### Turqoise (kinda)
 
 Core color: `#00ffaa`
 
 Text: `#46f3bd`
-Background: `#2b836f`
-Base: `#257d6a`
+Base: `#2b836f`
+Background: `#257d6a`
 
 #### Cyan
 
 Core color: `#00ffff`
 
 Text: `#46f3f6`
-Background: `#2b838c`
-Base: `#257d86`
+Base: `#2b838c`
+Background: `#257d86`
 
 #### Light Blue
 
 Core color: `#00aaff`
 
 Text: `#46baf6`
-Background: `#2b678c`
-Base: `#256186`
+Base: `#2b678c`
+Background: `#256186`
 
 #### Blue
 
 Core color: `#0000ff`
 
 Text: `#4649f6`
-Background: `#2b2e8c`
-Base: `#252886`
-
+Base: `#2b2e8c`
+Background: `#252886`
 
 #### Violet/Purple
 
 Core color: `#aa00ff`
 
 Text: `#b849f6`
-Background: `#632e8c`
-Base: `#5e2886`
+Base: `#632e8c`
+Background: `#5e2886`
 
 #### Magenta
 
 Core color: `#ff00ff`
 
 Text: `#f049f6`
-Background: `#802e8c`
-Base: `#7a2886`
+Base: `#802e8c`
+Background: `#7a2886`
 
 #### Pink (kinda a hot pink)
 
 Core color: `#ff00aa`
 
 Text: `#f049bd`
-Background: `#802e6f`
-Base: `#7a286a`
+Base: `#802e6f`
+Background: `#7a286a`
 
 ## Terminal Colors
 
