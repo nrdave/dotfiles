@@ -27,38 +27,13 @@ Highlights/Borders/other things: `#b0aeff`, `#5e5f8c`
 
 The 16 colors I use for my terminals, taken directly from my `kitty` config
 
-```
-# Black/Dark Grey
-color0                #222222
-color8                #444444
-
-# Red/Light Red
-color1                #ff000f
-color9                #ff4157
-
-# Green/Light Green
-color2                #85d209
-color10               #a8f034
-
-# Yellow/Light Yellow
-color3                #f7b100
-color11               #ffcf55
-
-# Blue/Light Blue
-color4                #0086e6
-color12               #19a9ff
-
-# Magenta/Light Magenta
-color5                #c864c8
-color13               #ff7fff
-
-# Cyan/Light Cyan
-color6                #00d7eb
-color14               #67ffef
-
-# Light Grey/White
-color7                #dddddd
-color15               #ffffff
-```
-
-
+| Color    | Normal  | Bright  |
+|----------|---------|---------|
+|Black     |`#222222`|`#444444`|
+|Red       |`#ff000f`|`#ff4157`|
+|Green     |`#85d209`|`#a8f034`|
+|Yellow    |`#f7b100`|`#ffcf55`|
+|Blue      |`#0086e6`|`#19a9ff`|
+|Magenta   |`#c864c8`|`#ff7fff`|
+|Cyan      |`#00d7eb`|`#67ffef`|
+|White     |`#dddddd`|`#ffffff`|
