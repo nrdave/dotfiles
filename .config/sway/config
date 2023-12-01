@@ -48,7 +48,7 @@ bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
 set $locker 'swaylock -f -c 000000'
 
 exec swayidle -w \
-         timeout 60 $locker  \
+         timeout 180 $locker  \
          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 		 lock $locker  \
 		 before-sleep $locker \
