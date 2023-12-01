@@ -66,6 +66,10 @@ Dependencies - all fonts:
 - Carlito
 - Caladea
 
+### fuzzel
+
+The launcher I'm using for Wayland right now. My config changes the colors to use some of my terminal colors, enables XDG Desktop file Actions (e.g. the private window option in the Firefox .desktop file), and uses kitty to open terminal apps.
+
 ### git
 
 I don't include my actual .gitconfig file (for security reasons). I do have a `.gitconfig-common` which I use to set configs that don't have any important info. This amounts to setting the `defaultBranch` attribute to `master` and setting a custom commit message.
@@ -147,6 +151,8 @@ Dependencies:
 - wireplumber (for audio control. I assume everyone uses Pipewire by now)
 - brightnessctl for my laptop config for brightness control
 - Waybar for the panel bar
+- blueman for the bluetooth applet
+- nm-applet for a network applet
 
 ### Waybar
 
