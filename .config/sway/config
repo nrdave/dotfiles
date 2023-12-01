@@ -192,6 +192,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
 # Screen capture
@@ -210,10 +211,10 @@ mode "$screenshot" {
 # back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
-    bindsym $mod+P mode "default"
+    bindsym $screenshot-key mode "default"
 }
-
-bindsym $mod+P mode "$screenshot"
+# The keybind to enable screenshot mode is decided in the hardware_config
+bindsym $screenshot-key mode "$screenshot"
 
 #
 # Status Bar:

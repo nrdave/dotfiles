@@ -21,3 +21,12 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 ### Bind swipe gestures to switching workspaces
 bindgesture swipe:right workspace prev
 bindgesture swipe:left workspace next
+
+# Use keys that have meaning in Windows (switch active window and settings)
+# to do media control
+bindsym Mod4+P exec playerctl play-pause
+bindsym Mod4+I exec playerctl next
+
+# Set the screenshot key variable to the output of my laptop's screenshot key
+# (that's also the windows screenshot shortcut)
+set $screenshot-key Mod4+Shift+S
