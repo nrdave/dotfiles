@@ -109,6 +109,10 @@ Dependencies:
 - mimeopen
 - trash-put
 
+### mako
+
+A Wayland notification daemon I'm using at the moment (no particular reason why, I just chose it and found it to do what I need). The config just sets up colors to match the Arc GTK theme, as well as include ePapirus icons and set the font to sans-serif (i.e. use the user/system sans-serif font). It also sets a 3 second default timeout on notifications.
+
 ### Neovim
 
 My preferred CLI editor. I like `vim` in general, I mainly chose Neovim because configuration in Lua is easier than in vimscript IMO.
