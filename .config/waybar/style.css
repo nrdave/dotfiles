@@ -1,6 +1,6 @@
 * {
-	font-family: FontAwesome, monospace; 
-	font-size: 13pt;
+	font-family: monospace, FontAwesome;
+	font-size: 17px;
 
 }
 
@@ -12,17 +12,21 @@ window#waybar {
 #clock,
 #battery,
 #temperature,
-#pulseaudio,
 #wireplumber,
 #tray,
 #mode,
 #scratchpad {
-	border-radius: 10px;
-    padding: 4px 10px;
-	margin: 4px 0;
-	border: 1px solid #2c2f3a;
+	border-radius: 0.6em;
+    padding: 0.2em 0.6em;
+	margin: 0.3em 0;
+	border: 0.1em solid #2c2f3a;
 	background-color: #404552;
 }
+
+#tray {
+	padding: 0.1em 0.4em;
+}
+
 #battery.charging, #battery.plugged {
 	color: #46f34c;
 }
@@ -35,7 +39,7 @@ window#waybar {
 	color: #f0494c;
 }
 
-#pulseaudio.muted {
+#wireplumber.muted {
     color: #f0494c;
 }
 

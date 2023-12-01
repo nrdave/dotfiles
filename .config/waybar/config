@@ -1,7 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 40, // Waybar height (to be removed for auto height)
+    // "height": 40, // Waybar height (to be removed for auto height)
     "spacing": 8, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
@@ -10,7 +10,7 @@
 	// I'm using the pulseaudio module instead of wireplumber because I
 	// basically just use pipewire audio like pulseaudio - I don't need any
 	// features from wireplumber specifically. Maybe that's dumb, but oh well
-    "modules-right": ["tray", "pulseaudio", "temperature","battery", "clock"],
+    "modules-right": ["tray", "wireplumber", "temperature","battery", "clock"],
     // Modules configuration
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -23,7 +23,7 @@
         "tooltip-format": "{app}: {title}"
     },
    "tray": {
-        "icon-size": 24,
+		"icon-size": 24,
         "spacing": 8
     },
     "clock": {
@@ -44,26 +44,15 @@
             "critical": 15
         },
 		"interval": 1,
-        "format": "{capacity}% {icon} ",
+        "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-icons": ["", "", "", "", ""]
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+    "wireplumber": {
         "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": " ",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
+		"format-muted": "{volume}% <U+F026>",
+        "format-icons": ["", "", ""],
         "on-click": "pavucontrol"
     },
 }
