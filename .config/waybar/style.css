@@ -1,14 +1,28 @@
 * {
-	font-family: "Fira Code", "Font Awesome 6 Free";
-	font-size: 14pt;
+	font-family: FontAwesome, monospace; 
+	font-size: 13pt;
+
 }
 
 window#waybar {
-	background-color: #404552;
-	color: #D3DAE3;
+	background-color: #2b2e38;
+	color: #bac3cf;
 }
 
-
+#clock,
+#battery,
+#temperature,
+#pulseaudio,
+#wireplumber,
+#tray,
+#mode,
+#scratchpad {
+	border-radius: 10px;
+    padding: 4px 10px;
+	margin: 4px 0;
+	border: 1px solid #2c2f3a;
+	background-color: #404552;
+}
 #battery.charging, #battery.plugged {
 	color: #46f34c;
 }
@@ -27,5 +41,4 @@ window#waybar {
 
 #temperature.critical {
     color: #f0494c;
-	background-color: #7a2831;
 }

@@ -2,7 +2,7 @@
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
-    "spacing": 16, // Gaps between modules (4px)
+    "spacing": 8, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["sway/window"],
@@ -24,12 +24,13 @@
     },
    "tray": {
         "icon-size": 24,
-        "spacing": 10
+        "spacing": 8
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format": "{:%A, %B %e, %I:%M:%S %p %Z}",
-        "format-alt": "{:%Y-%m-%dT%H:%M:%S%z}"
+		"format": "{:%A, %B %d, %I:%M:%S %p %Z}",
+        "format-alt": "{:%Y-%m-%dT%H:%M:%S%z}",
+		"interval": 1,
     },
     "temperature": {
         "critical-threshold": 80,
@@ -42,7 +43,8 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
+		"interval": 1,
+        "format": "{capacity}% {icon} ",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-icons": ["", "", "", "", ""]
