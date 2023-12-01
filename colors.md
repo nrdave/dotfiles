@@ -6,11 +6,16 @@ A file containing colors that I commonly reuse in various configs. Allows me to 
 
 Colors taken from the GTK them I use, the [Arc-Dark GTK Theme](https://github.com/jnsh/arc-theme).
 
-Text: `#D3DAE3`
-Base: `#404552`
-Background: `#383C4A`
+| Category          | Text    | Background| Base    | Border  |
+|-------------------|---------|-----------|---------|---------|
+| Normal            |`#d3dae3`| `#383c4a` |`#404552`|`#2c2f3a`|
+| Header            |`#d3dae3`| `#2f343f` | N/A     |`#282c35`|
+| Sidebar           |`#bac3cf`| `#353945` | N/A     |`#2b2e38`|
+| Panel             |`#bac3cf`| `#2b2e38` | N/A     |`#2b2e38`|
 
-Base and background can both be used for background colors.
+Colors taken from [here](https://github.com/jnsh/arc-theme/blob/master/common/gtk-3.0/sass/_colors.scss).
+
+As far as I can tell, background is used as the background for the "main" UI elements, while base is used for surrouding elements (e.g. background is for the main file listing in thunar, while base is for the sidebar/top bar).
 
 ## Terminal Colors
 
