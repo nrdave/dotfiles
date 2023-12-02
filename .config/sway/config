@@ -3,9 +3,17 @@
 # Include hardware-specific config file
 include hardware_config
 
+# Start xwayland
 exec_always xwayland
+
+# Run the geoclue agent to provide gammastep with an agent to talk to
+exec /usr/lib/geoclue-2.0/demos/agent &
+
+# Firing up the tray applets
 exec blueman-applet
 exec nm-applet
+exec gammastep-indicator
+
 
 ### Variables
 #
