@@ -3,5 +3,4 @@ background-color=#383c4aff
 text-color=#d3dae3ff
 border-color=#2c2f3aff
 icons=1
-icon-path=/usr/share/icons/ePapirus-Dark
 default-timeout=3000

@@ -12,7 +12,7 @@ I use [yadm](https://yadm.io/) to manage my dotfiles. Why?
 
 ### yadm config options
 
-I try to make all my alternate files (see [yadm docs](https://yadm.io/docs/alternates#) operate based on yadm's class values. That way, changing which file I use for the config on a system just involves changing what classes are set in yadm's config. 
+I try to make all my alternate files (see [yadm docs](https://yadm.io/docs/alternates#)) operate based on yadm's class values. That way, changing which file I use for the config on a system just involves changing what classes are set in yadm's config. 
 
 Right now, the only exception to this is my hardware configuration for Sway for my laptop. This file just contains specifics to my laptop, so it makes sense to set a hardware configuration by hostname.
 
@@ -20,6 +20,8 @@ Below are all the values for classes that I have used, as well as what they chan
 
 - `Small_Screen`: A class to enable when your screen is "small" and you want to enlarge text and/or icons
 	- `kitty`: Changes the `font_size` from 11 pt to 13 pt
+	- GTK Theming: Changes `gtk-font-name` from DejaVu Sans 10 to DejaVu Sans 12
+	- QT Theming: Changes the font sizes for both `fixed` and `general` to 12 instead of 10
 - `Source_Git_Prompt`: A class to indicate if the `__git_ps1` shell function needs to be sourced from `/usr/share/git/completion/git-prompt.sh`
 
 ## Scope
@@ -50,6 +52,7 @@ My bash config is divided into a few files. First, my `.profile` is just the min
 
 Dependencies:
 - git (specifically the __git_ps1 shell function)
+- lf (kinda? There's an lf alias in .bashrc, so idk)
 
 ### fontconfig
 
@@ -78,7 +81,7 @@ I don't include my actual .gitconfig file (for security reasons). I do have a `.
 
 I use the Arc-Dark GTK theme, with the ePapirus-Dark icon theme. These themes are set up in `.config/gtk-3.0/settings.ini`, which also sets the GTK font to DejaVu Sans 12.
 
-In addition, in my `.shrc`, I source a script called import-gsettings.sh which reads the GTK 3 config file and uses the values in there in the respective calls to `gsettings` (i.e. the `gtk-theme-name` in the GTK 3 config file gets passed to a call to gsettings set org.gnome.desktop.interface gtk-theme). The script also sets the `GTK_THEME` environment variable to force libadwaita apps to use the Arc-Dark theme (Arc-Dark supports GTK 4 and should work by default, but it doesn't so I have to force it).
+In addition, in my `.shrc`, I source a script called import-gsettings.sh which reads the GTK 3 config file and uses the values in there in the respective calls to `gsettings` (i.e. the `gtk-theme-name` in the GTK 3 config file gets passed to a call to gsettings set org.gnome.desktop.interface gtk-theme). The script also sets the `GTK_THEME` environment variable to force libadwaita apps to use the Arc-Dark theme. While the point of libadwaita is to force the Adwaita theme for some GNOME apps, I think Adwaita looks bad, so if I have the choice to use something different, I will. (I really should just use GUI apps that aren't from GNOME, but I'm just grabbing stuff I use on Mint and using it on Arch lol).
 
 Dependencies:
 - Arc-Dark GTK Theme
@@ -96,7 +99,7 @@ My config:
 
 ### lf
 
-My preferred terminal file manager. I originally tried `ranger`, but I prefer `lf` mainly for the easier configuration (just 1 pretty short file). Also, `lf` generally just uses existing system commands, which I feel makes more sense (e.g. just using mimeopen to open a file - in contrast, `ranger` has its own file opener, `rifle`).
+My preferred terminal file manager. I originally tried `ranger`, but I prefer `lf` mainly for the easier configuration (just 1 pretty short file). Also, `lf` generally just uses existing system commands, which I feel makes more sense (e.g. just using `mimeopen` to open a file - in contrast, `ranger` has its own file opener, `rifle`).
 
 My `lf` config is mostly just the default config from the `lf` GitHub repo, but with a few small changes.
 
@@ -107,11 +110,11 @@ My `lf` config is mostly just the default config from the `lf` GitHub repo, but 
 Dependencies:
 
 - mimeopen
-- trash-put
+- trash-cli
 
 ### mako
 
-A Wayland notification daemon I'm using at the moment (no particular reason why, I just chose it and found it to do what I need). The config just sets up colors to match the Arc GTK theme, as well as include ePapirus icons and set the font to sans-serif (i.e. use the user/system sans-serif font). It also sets a 3 second default timeout on notifications.
+A Wayland notification daemon I'm using at the moment (no particular reason why, I just chose it and found it to do what I need). The config just sets up colors to match the Arc GTK theme and set the font to sans-serif (i.e. use the user/system sans-serif font). It also sets a 3 second default timeout on notifications.
 
 ### Neovim
 
@@ -143,7 +146,7 @@ My current window manager on Arch Linux.
 
 I'm not gonna bother describing an entire window manager config here, but it's mostly just the defaults with a custom background and changing the launcher to `fuzzel`. I also added a screenshot mode based on a config I found online - enter it using Super+P
 
-I also included handling of the XF86 keys for audio using wireplumber (because really, even Linux Mint defaults to Pipewire. Make the switch)
+I also included handling of the XF86 keys for audio using wireplumber (because really, even Linux Mint defaults to Pipewire. Make the switch. And `pipewire-media-session` is deprecated, so for anyone using that, stop).
 
 I also have yadm alternate files for config options for individual systems (at this point, I only have a config for my laptop Arch install). For my laptop, I'm using brightnessctl to control brightness.
 
@@ -161,9 +164,10 @@ Dependencies:
 - geoclue for determining location (this is a dependency of gammastep (for Arch at least))
 ### Waybar
 
-The bar I use for Wayland compositors. Not gonna go in depth here yet. That said, I use Font Awesome for icons. 
+The bar I use for Wayland compositors. Not gonna go in depth here yet, since my config is very much in flux. That said, I use Font Awesome for icons, and Fira Code for text. I also generally color my bar to match Arc GTK colors. 
 
 Dependencies:
-- pavucontrol
-- Fira Code font
+- wireplumber (again, because I'm using Pipewire)
+- pavucontrol (because if I do need graphical audio configuration, pavucontrol does everything I could ever need)
+- Fira Code font (for the text)
 - Font Awesome
