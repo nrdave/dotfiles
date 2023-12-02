@@ -157,7 +157,8 @@ Dependencies:
 - Waybar for the panel bar
 - blueman for the bluetooth applet
 - nm-applet for a network applet
-
+- gammastep for gamma control
+- geoclue for determining location (this is a dependency of gammastep (for Arch at least))
 ### Waybar
 
 The bar I use for Wayland compositors. Not gonna go in depth here yet. That said, I use Font Awesome for icons. 
