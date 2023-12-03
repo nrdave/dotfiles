@@ -1,10 +1,21 @@
 * {
 	font-family: monospace, FontAwesome;
+	font-weight: 500;
 }
 
 window#waybar {
 	background-color: #2b2e38;
 	color: #bac3cf;
+}
+
+#workspaces button {
+	border-radius: 0;
+	padding: 0.5em 0.2em;
+}
+
+#workspaces button.focused {
+	color: #5294e2;
+	background-color: #404552;
 }
 
 #clock,

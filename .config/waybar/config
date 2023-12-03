@@ -1,7 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 44, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
 
     // Choose the order of the modules
@@ -23,7 +22,7 @@
     },
    "tray": {
 		"icon-size": 24,
-        "spacing": 8
+        "spacing": 4
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
