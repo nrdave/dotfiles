@@ -3,6 +3,9 @@
 # Include hardware-specific config file
 include hardware_config
 
+
+### Start various needed programs
+
 # Start xwayland
 exec_always xwayland
 
@@ -13,6 +16,8 @@ exec /usr/lib/geoclue-2.0/demos/agent &
 exec blueman-applet
 exec nm-applet
 exec gammastep-indicator
+exec udiskie --no-automount --tray
+exec /usr/lib/polkit-kde-authentication-agent-1
 
 
 ### Variables
@@ -49,10 +54,31 @@ bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+ --limit 1.0
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
 
+
+### Configuring behavior for various windows
+
+for_window {
+	# Make all file/folder open popups open as floating
+	# credit to https://www.reddit.com/r/swaywm/comments/q90v6l/comment/hgurmbj/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+    [title="(?:Open|Save) (?:File|Folder|As)"] floating enable, resize set width 1030 height 710
+
+	# inhibit idle locking for firefox and mpv
+	[app_id="firefox"] inhibit_idle fullscreen
+	[app_id="mpv"] inhibit_idle fullscreen
+
+	# Make some apps default to floating
+	[app_id="org.gnome.Calculator"] floating enable
+	[app_id="piper"] floating enable
+	[app_id="org.kde.polkit-kde-authentication-agent-1"] floating enable
+		
+
+	[window_role="pop-up"] floating enable
+	[window_role="bubble"] floating enable
+	[window_role="dialog"] floating enable
+	[window_type="dialog"] floating enable
+}
+
 ### Idle configuration
-#
-# Example configuration:
-#
 set $locker 'swaylock -f -c 000000'
 
 exec swayidle -w \
