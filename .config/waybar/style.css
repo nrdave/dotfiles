@@ -1,7 +1,5 @@
 * {
 	font-family: monospace, FontAwesome;
-	font-size: 17px;
-
 }
 
 window#waybar {
@@ -27,22 +25,36 @@ window#waybar {
 	padding: 0.1em 0.4em;
 }
 
+/** 
+ * FontAwesome battery icons generally take up more than 1 character width
+ * This additional padding ensures the icons are still in the "box" for the
+ * battery module (by box, I mean the lighter colored area each module gets)
+ */
+#battery {
+	padding-right: 1em;
+}
+
+/* Battery text is green if plugged in */
 #battery.charging, #battery.plugged {
 	color: #46f34c;
 }
 
+/* Battery text is orange if low */
 #battery.warning {
 	color: #f0ba4c;
 }
 
+/* Battery text is red if really low*/
 #battery.critical {
 	color: #f0494c;
 }
 
+/* Wireplumber text becomes red if muted */
 #wireplumber.muted {
     color: #f0494c;
 }
 
+/* Temperature is red if cricitcal */
 #temperature.critical {
     color: #f0494c;
 }

@@ -1,18 +1,17 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "height": 40, // Waybar height (to be removed for auto height)
-    "spacing": 8, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
-    "modules-center": ["sway/window"],
+    "height": 44, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
 
-	// I'm using the pulseaudio module instead of wireplumber because I
-	// basically just use pipewire audio like pulseaudio - I don't need any
-	// features from wireplumber specifically. Maybe that's dumb, but oh well
+    // Choose the order of the modules
+    "modules-left": ["sway/mode", "sway/scratchpad"],
+    "modules-center": ["sway/workspaces"],
     "modules-right": ["tray", "wireplumber", "temperature","battery", "clock"],
+
     // Modules configuration
-    "sway/mode": {
+    
+	"sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/scratchpad": {
