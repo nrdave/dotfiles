@@ -2,9 +2,15 @@
 
 A file containing colors that I commonly reuse in various configs. Allows me to reference just one file when creating a new config.
 
+## GUI colors
+
+Colors I normally use for GUI programs.
+
 ### Arc GTK Theme Colors
 
 Colors taken from the GTK them I use, the [Arc-Dark GTK Theme](https://github.com/jnsh/arc-theme).
+
+Colors for categories of UI elements:
 
 | Category          | Text    | Background| Base    | Border  |
 |-------------------|---------|-----------|---------|---------|
@@ -13,9 +19,14 @@ Colors taken from the GTK them I use, the [Arc-Dark GTK Theme](https://github.co
 | Sidebar           |`#bac3cf`| `#353945` | N/A     |`#2b2e38`|
 | Panel             |`#bac3cf`| `#2b2e38` | N/A     |`#2b2e38`|
 
+
 Colors taken from [here](https://github.com/jnsh/arc-theme/blob/master/common/gtk-3.0/sass/_colors.scss).
 
 As far as I can tell, background is used as the background for the "main" UI elements, while base is used for surrouding elements (e.g. background is for the main file listing in thunar, while base is for the sidebar/top bar).
+
+### Text Colors
+
+Colors I use for text that I want to have a color
 
 ## Terminal Colors
 
