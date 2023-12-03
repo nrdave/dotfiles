@@ -29,11 +29,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
 set $term kitty
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
 set $menu fuzzel | xargs swaymsg exec --
 
 ### Border configuration
@@ -49,10 +45,10 @@ bindsym Control+Alt+S exec systemctl suspend
 bindsym Control+Alt+L exec loginctl lock-session
 
 ### Wireplumber control using audio keys
-bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
-bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+ --limit 1.0
-bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
+bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
+bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+ --limit 1.0
+bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
 
 
 ### Configuring behavior for various windows

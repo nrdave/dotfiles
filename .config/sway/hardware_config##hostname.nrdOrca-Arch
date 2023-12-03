@@ -15,8 +15,8 @@ input "1739:52632:MSFT0004:00_06CB:CD98_Touchpad" {
 }
 
 ### Screen brightness configuration
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 ### Bind swipe gestures to switching workspaces
 bindgesture swipe:right workspace prev
@@ -24,8 +24,8 @@ bindgesture swipe:left workspace next
 
 # Use keys that have meaning in Windows (switch active window and settings)
 # to do media control
-bindsym Mod4+P exec playerctl play-pause
-bindsym Mod4+I exec playerctl next
+bindsym --locked Mod4+P exec playerctl play-pause
+bindsym --locked Mod4+I exec playerctl next
 
 # Set the screenshot key variable to the output of my laptop's screenshot key
 # (that's also the windows screenshot shortcut)
