@@ -17,10 +17,13 @@ Colors for categories of UI elements:
 | Normal            |`#d3dae3`| `#383c4a` |`#404552`|`#2c2f3a`|
 | Header            |`#d3dae3`| `#2f343f` | N/A     |`#282c35`|
 | Sidebar           |`#bac3cf`| `#353945` | N/A     |`#2b2e38`|
-| Panel             |`#bac3cf`| `#2b2e38` | N/A     |`#2b2e38`|
-
+| Panel             |`#bac3cf`| `#2b2e38` | N/A     | N/A     |
+| Selected          |`#ffffff`| `#5294e2` | N/A     | N/A     |
+| Button            |`#d3dae3`| `#434956` | N/A     |`#2c2f3a`|
 
 Colors taken from [here](https://github.com/jnsh/arc-theme/blob/master/common/gtk-3.0/sass/_colors.scss).
+
+I don't always use the colors here in the same way as the Arc theme itself does e.g. I use the selected background color as the text color for a focused Sway workspace in waybar, and the base color as the background.
 
 As far as I can tell, background is used as the background for the "main" UI elements, while base is used for surrouding elements (e.g. background is for the main file listing in thunar, while base is for the sidebar/top bar).
 
