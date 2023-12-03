@@ -22,6 +22,7 @@ Below are all the values for classes that I have used, as well as what they chan
 	- `kitty`: Changes the `font_size` from 11 pt to 13 pt
 	- GTK Theming: Changes `gtk-font-name` from DejaVu Sans 10 to DejaVu Sans 12
 	- QT Theming: Changes the font sizes for both `fixed` and `general` to 12 instead of 10
+    - zathura: Changes the font from `monospace normal 10` to `monospace normal 12`
 - `Source_Git_Prompt`: A class to indicate if the `__git_ps1` shell function needs to be sourced from `/usr/share/git/completion/git-prompt.sh`
 
 ## Scope
@@ -39,6 +40,7 @@ Below is the list of all programs/system configurations I have dotfiles for.
 - Qt Theming (kinda)
 - Sway
 - Waybar
+- zathura
 
 ### bash
 
@@ -116,6 +118,9 @@ Dependencies:
 
 A Wayland notification daemon I'm using at the moment (no particular reason why, I just chose it and found it to do what I need). The config just sets up colors to match the Arc GTK theme and set the font to sans-serif (i.e. use the user/system sans-serif font). It also sets a 3 second default timeout on notifications.
 
+Dependencies:
+- ePapirus-Dark icons
+
 ### Neovim
 
 My preferred CLI editor. I like `vim` in general, I mainly chose Neovim because configuration in Lua is easier than in vimscript IMO.
@@ -162,6 +167,7 @@ Dependencies:
 - nm-applet for a network applet
 - gammastep for gamma control
 - geoclue for determining location (this is a dependency of gammastep (for Arch at least))
+
 ### Waybar
 
 The bar I use for Wayland compositors. Not gonna go in depth here yet, since my config is very much in flux. That said, I use Font Awesome for icons, and Fira Code for text. I also generally color my bar to match Arc GTK colors. 
@@ -171,3 +177,7 @@ Dependencies:
 - pavucontrol (because if I do need graphical audio configuration, pavucontrol does everything I could ever need)
 - Fira Code font (for the text)
 - Font Awesome
+
+### Zathura
+
+The reader (mainly for PDFs) I use on Arch (also Mint sometimes). The config just changes the text size depending on the yadm Small_Screen class.
