@@ -20,6 +20,9 @@ Colors for categories of UI elements:
 | Panel             |`#bac3cf`| `#2b2e38` | N/A     | N/A     |
 | Selected          |`#ffffff`| `#5294e2` | N/A     | N/A     |
 | Button            |`#d3dae3`| `#434956` | N/A     |`#2c2f3a`|
+| Error             |`#ffffff`| `#fc4138` | N/A     | N/A     |
+| Warning           |`#ffffff`| `#f27835` | N/A     | N/A     |
+| Destructive       |`#ffffff`| `#f04a50` | N/A     | N/A     |
 
 Colors taken from [here](https://github.com/jnsh/arc-theme/blob/master/common/gtk-3.0/sass/_colors.scss).
 

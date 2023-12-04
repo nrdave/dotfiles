@@ -50,14 +50,16 @@ window#waybar {
 	color: #46f34c;
 }
 
-/* Battery text is orange if low */
+/* Battery module goes orange if low */
 #battery.warning {
-	color: #f0ba4c;
+	background-color: #f27835;
+	color: #ffffff;
 }
 
-/* Battery text is red if really low*/
+/* Battery module goes red if really low*/
 #battery.critical {
-	color: #f0494c;
+	background-color: #fc4138;
+	color: #ffffff;
 }
 
 /* Wireplumber text becomes red if muted */
