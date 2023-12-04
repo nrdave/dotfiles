@@ -17,6 +17,8 @@ exec blueman-applet
 exec nm-applet
 exec gammastep-indicator
 exec udiskie --no-automount --tray
+
+# Start up an authentication agent (KDE because it was smaller than GNOME lol)
 exec /usr/lib/polkit-kde-authentication-agent-1
 
 
@@ -66,6 +68,9 @@ for_window {
 	[app_id="org.gnome.Calculator"] floating enable
 	[app_id="piper"] floating enable
 	[app_id="org.kde.polkit-kde-authentication-agent-1"] floating enable
+	[app_id="blueman-manager"] floating enable
+	[app_id="nm-connection-editor"] floating enable
+	[app_id="pavucontrol"] floating enable
 		
 
 	[window_role="pop-up"] floating enable
@@ -231,7 +236,6 @@ bindsym $mod+r mode "resize"
 # 
 set $screenshot 1 selected, 2 whole, 3 selected clipboard, 4 whole clipboard, 5 swappy
 mode "$screenshot" {
-	
     bindsym 1 exec 'grim -g "$(slurp)" ~/Pictures/Screenshots/Screenshot_$(date +"%Y%m%d%H%M%S").png', mode "default"
     bindsym 2 exec 'grim ~/Pictures/Screenshots/Screenshot_$(date +"%Y%m%d%H%M%S").png', mode "default"
     bindsym 3 exec 'grim -g "$(slurp)" - | wl-copy', mode "default"
