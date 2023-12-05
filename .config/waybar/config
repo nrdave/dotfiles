@@ -1,12 +1,13 @@
 {
+	"include": "$XDG_CONFIG_HOME/waybar/hardware_config",
+
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 2, // Gaps between modules (4px)
 
     // Choose the order of the modules
-    "modules-left": ["sway/mode", "sway/scratchpad"],
-    "modules-center": ["sway/workspaces"],
-    "modules-right": ["tray", "wireplumber", "temperature","battery", "clock"],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
+    "modules-right": ["tray", "group/host-specific", "wireplumber", "temperature", "cpu", "memory" , "clock"],
 
     // Modules configuration
     
@@ -22,7 +23,6 @@
     },
    "tray": {
 		"icon-size": 24,
-        "spacing": 4
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -33,25 +33,32 @@
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+		"interval": 5,
     },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-		"interval": 1,
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-icons": ["", "", "", "", ""]
+	"cpu": {
+        "format": "{usage}% ",
+        "tooltip": false,
+		"interval": 5,
+		"states": {
+			"high": 80,
+			"maxed": 95,
+		},
     },
+    "memory": {
+        "format": "{}% ",
+		"interval": 5,
+    	"states": {
+			"high": 80,
+			"maxed": 95,
+		},
+	},
     "wireplumber": {
         "format": "{volume}% {icon}",
 		"format-muted": "{volume}% <U+F026>",
         "format-icons": ["", "", ""],
         "on-click": "pavucontrol"
     },
+
 }
 

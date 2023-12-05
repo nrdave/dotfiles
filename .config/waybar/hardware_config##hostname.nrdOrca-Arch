@@ -1,0 +1,25 @@
+{
+	"group/host-specific": {
+		"orientation": "horizontal",
+        "modules": [
+			"battery",
+			"backlight",
+		],
+    },
+	"battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+		"interval": 1,
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+}
