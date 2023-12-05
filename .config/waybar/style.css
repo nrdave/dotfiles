@@ -50,6 +50,11 @@ window#waybar {
 	color: #46f34c;
 }
 
+/* The charging icon, unlike some others, is fine */
+#battery.charging {
+	padding-right: 0.6em;
+}
+
 /* Battery module goes orange if low */
 #battery.warning {
 	background-color: #f27835;
