@@ -81,13 +81,13 @@ I don't include my actual .gitconfig file (for security reasons). I do have a `.
 
 ### GTK Theming
 
-I use the Arc-Dark GTK theme, with the ePapirus-Dark icon theme. These themes are set up in `.config/gtk-3.0/settings.ini`, which also sets the GTK font to DejaVu Sans 12.
+I use the Arc-Dark GTK theme, with the Papirus-Dark icon theme. These themes are set up in `.config/gtk-3.0/settings.ini`, which also sets the GTK font to DejaVu Sans 12.
 
 In addition, in my `.shrc`, I source a script called import-gsettings.sh which reads the GTK 3 config file and uses the values in there in the respective calls to `gsettings` (i.e. the `gtk-theme-name` in the GTK 3 config file gets passed to a call to gsettings set org.gnome.desktop.interface gtk-theme). The script also sets the `GTK_THEME` environment variable to force libadwaita apps to use the Arc-Dark theme. While the point of libadwaita is to force the Adwaita theme for some GNOME apps, I think Adwaita looks bad, so if I have the choice to use something different, I will. (I really should just use GUI apps that aren't from GNOME, but I'm just grabbing stuff I use on Mint and using it on Arch lol).
 
 Dependencies:
 - Arc-Dark GTK Theme
-- ePapirus-Dark Icon theme
+- Papirus-Dark Icon theme
 - DejaVu Sans
 
 ### kitty
@@ -119,7 +119,7 @@ Dependencies:
 A Wayland notification daemon I'm using at the moment (no particular reason why, I just chose it and found it to do what I need). The config just sets up colors to match the Arc GTK theme and set the font to sans-serif (i.e. use the user/system sans-serif font). It also sets a 3 second default timeout on notifications.
 
 Dependencies:
-- ePapirus-Dark icons
+- Papirus-Dark icons
 
 ### Neovim
 
