@@ -6,7 +6,7 @@
     "spacing": 2,
 
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
-    "modules-right": ["cpu", "memory", "group/host-specific", "wireplumber", "temperature", "tray", "clock"],
+    "modules-right": ["group/hardware", "group/host-specific", "wireplumber", "tray", "clock"],
 
     
 	"sway/mode": {
@@ -28,6 +28,16 @@
         "format-alt": "{:%Y-%m-%dT%H:%M:%S%z}",
 		"interval": 1,
     },
+
+	"group/hardware": {
+		"orientation": "horizontal",
+		"modules": [
+			"cpu",
+			"memory",
+			"temperature",
+		]
+
+	},
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
