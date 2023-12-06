@@ -10,7 +10,7 @@ window#waybar {
 }
 
 #workspaces button {
-	border-radius: 0;
+	border-radius: 1em;
 	padding: 0.5em 0.2em;
 }
 
