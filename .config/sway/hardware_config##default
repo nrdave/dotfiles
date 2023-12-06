@@ -1,0 +1,6 @@
+# Default hardware configuration
+# Sets up minimal config options so that the main config file works
+
+# Set the screenshot key variable to a reasonable default
+# Should be changed to the relevant screenshot key on a keyboard (if available)
+set $screenshot-key Mod4+P
