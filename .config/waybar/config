@@ -1,15 +1,13 @@
 {
 	"include": "$XDG_CONFIG_HOME/waybar/hardware_config",
 
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "spacing": 2, // Gaps between modules (4px)
+    "layer": "top",
+    "position": "bottom",
+    "spacing": 2,
 
-    // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
-    "modules-right": ["tray", "group/host-specific", "wireplumber", "temperature", "cpu", "memory" , "clock"],
+    "modules-right": ["cpu", "memory", "group/host-specific", "wireplumber", "temperature", "tray", "clock"],
 
-    // Modules configuration
     
 	"sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -37,7 +35,7 @@
 		"interval": 5,
     },
 	"cpu": {
-        "format": "{usage}% ",
+        "format": "CPU {usage}%",
         "tooltip": false,
 		"interval": 5,
 		"states": {
@@ -46,7 +44,7 @@
 		},
     },
     "memory": {
-        "format": "{}% ",
+        "format": "Mem {}%",
 		"interval": 5,
     	"states": {
 			"high": 80,
@@ -54,8 +52,7 @@
 		},
 	},
     "wireplumber": {
-        "format": "{volume}% {icon}",
-		"format-muted": "{volume}% <U+F026>",
+        "format": "{volume}% <span font='15'>{icon}</span>",
         "format-icons": ["", "", ""],
         "on-click": "pavucontrol"
     },
