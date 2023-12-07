@@ -15,8 +15,8 @@ input "1739:52632:MSFT0004:00_06CB:CD98_Touchpad" {
 }
 
 ### Screen brightness configuration
-bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym --locked XF86MonBrightnessDown exec brightness-notifications.sh down
+bindsym --locked XF86MonBrightnessUp exec brightness-notifications.sh up
 
 ### Bind swipe gestures to switching workspaces
 bindgesture swipe:right workspace prev
