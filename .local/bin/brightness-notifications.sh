@@ -55,4 +55,12 @@ case $1 in
 		brightnessctl set $brightness_step%-
 		notification
 		;;
+	nano-up)
+		brightnessctl set 1%+
+		notification
+		;;
+	nano-down)
+		brightnessctl set 1%-
+		notification
+		;;
 esac
