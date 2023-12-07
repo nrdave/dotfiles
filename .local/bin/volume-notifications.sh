@@ -59,19 +59,19 @@ function volume_notification () {
 
 	# Set the icon based on the volume status
 	if $(get_muted); then 
-		icon="audio-volume-muted"
+		icon="notification-audio-volume-muted"
 		# If volume is muted, add text to indicate that as well
 		# (icon may be hard to discern)
 		text="Volume: $volume (MUTED)"
 
 	elif [ $((volume)) -le 30 ]; then
-		icon="audio-volume-low"
+		icon="notification-audio-volume-low"
 
 	elif [ $((volume)) -le 60 ]; then
-		icon="audio-volume-medium"
+		icon="notification-audio-volume-medium"
 
 	else
-		icon="audio-volume-high"
+		icon="notification-audio-volume-high"
 	fi
 
 	notify-send -i "$icon" -t $notification_life --hint=INT:value:$volume "$text"
