@@ -2,6 +2,8 @@
 
 If you don't know what a dotfile repo is, I can't help you.
 
+I also include some scripts and other files I've written that are nice to have.
+
 ## Management
 
 I use [yadm](https://yadm.io/) to manage my dotfiles. Why?
@@ -36,6 +38,7 @@ Below is the list of all programs/system configurations I have dotfiles for.
 - GTK Theming
 - kitty
 - lf
+- mako
 - Neovim
 - Qt Theming (kinda)
 - Sway
@@ -181,3 +184,31 @@ Dependencies:
 ### Zathura
 
 The reader (mainly for PDFs) I use on Arch (also Mint sometimes). The config just changes the text size depending on the yadm Small_Screen class.
+
+## Miscellaneous Scripts
+
+Aside from the dedicated dotfiles I have, I also use a few scripts I wrote. Those are:
+
+- brightness-notifications.sh
+- import-gsettings.sh
+- volume-notifications.sh
+
+### brightness-notifications.sh
+
+A script that wraps `brightnessctl` with notifications. Uses `brightnessctl` to get and set the brightness, and uses `notify-send` to send notifications.
+
+When calling `notify-send`, the script specifies icon names without a path - thus the icons used should be the icons used by your notification daemon. In addition, calls to `notify-send` include an integer hint with the value of the current brightness - mako uses this hint to render a progress bar behind the text of the notification. I don't know how other notification daemons will handle the hint - you might have to remove the hint.
+
+### import-gsettings.sh
+
+A tool to import settings from a GTK 3 config file and call the relevant `gsettings` calls to make GTK 4 match GTK 3 theming. Mostly taken from a Sway wiki page.
+
+In addition, the script sets the GTK_THEME environment variable, forcing even libadwaita apps (which normally just use an Adwaita theme) to use the theme in the environment variable - Note: I do this because the Arc Theme includes libadwaita styling, so libadwaita apps still mostly look fine. This may not be true for your preferred theme (see https://github.com/jnsh/arc-theme/issues/61#issuecomment-1671376666 for more information).
+
+### volume-notifications.sh
+
+This script wraps `wpctl` to add notifications with `notify-send`. Right now, the script can increase/decrease volume of the default sink and mute/unmute the default sink and source (input and output).
+
+When calling `notify-send`, the script specifies icon names without a path - thus the icons used should be the icons used by your notification daemon. In addition, calls to `notify-send` for the output (i.e. any commands but muting the input) include an integer hint with the value of the current volume - mako uses this hint to render a progress bar behind the text of the notification. I don't know how other notification daemons will handle the hint - you might have to remove it.
+
+(yes I copied what I wrote for brightness-notifications, sue me).
