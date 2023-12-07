@@ -45,8 +45,6 @@ function notification() {
 	notify-send -i "$icon" -t $notification_life --hint=INT:value:$brightness "$text"
 }
 
-notification
-
 # Figure out what to do based on the argument
 case $1 in
 	up)
