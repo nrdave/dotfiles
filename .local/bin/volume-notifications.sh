@@ -81,10 +81,10 @@ function input_notification () {
 	# Determine the icon and text based on the muted state of the 
 	# default input 
 	if $(get_input_muted); then
-		icon="audio-input-microphone-muted"
+		icon="notification-microphone-sensitivity-muted"
 		text="Input Muted"
 	else
-		icon="audio-input-microphone-high"
+		icon="notification-microphone-sensitivity-high"
 		text="Input Unmuted"
 	fi
 	notify-send -i "$icon" -t $notification_life "$text"
