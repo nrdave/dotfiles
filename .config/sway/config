@@ -18,6 +18,9 @@ exec nm-applet
 exec gammastep-indicator
 exec udiskie --no-automount --tray
 
+# Launch mako, my notification daemon
+exec mako
+
 # Start up an authentication agent (KDE because it was smaller than GNOME lol)
 exec /usr/lib/polkit-kde-authentication-agent-1
 
@@ -46,12 +49,11 @@ smart_gaps on
 bindsym Control+Alt+S exec systemctl suspend
 bindsym Control+Alt+L exec loginctl lock-session
 
-### Wireplumber control using audio keys
-bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
-bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
-bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+ --limit 1.0
-bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
-
+### Use custom volume notification script for volume control
+bindsym --locked XF86AudioMute exec volume-notifications.sh output-mute
+bindsym --locked XF86AudioLowerVolume exec volume-notifications.sh output-down
+bindsym --locked XF86AudioRaiseVolume exec volume-notifications.sh output-up
+bindsym --locked XF86AudioMicMute exec volume-notifications.sh input-mute
 
 ### Configuring behavior for various windows
 
