@@ -35,8 +35,9 @@
 		"interval": 5,
     },
     "wireplumber": {
-        "format": "{volume}% <span font='15'>{icon}</span>",
+        "format": "<span font='14'>{icon}</span>",
         "format-icons": ["", "", ""],
+		"format-muted": "",
         "on-click": "pavucontrol"
     },
 
