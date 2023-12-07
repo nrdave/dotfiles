@@ -6,7 +6,7 @@
     "spacing": 2,
 
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
-    "modules-right": ["group/hardware", "group/host-specific", "wireplumber", "tray", "clock"],
+    "modules-right": ["temperature", "group/host-specific", "wireplumber", "tray", "clock"],
 
     
 	"sway/mode": {
@@ -28,39 +28,12 @@
         "format-alt": "{:%Y-%m-%dT%H:%M:%S%z}",
 		"interval": 1,
     },
-
-	"group/hardware": {
-		"orientation": "horizontal",
-		"modules": [
-			"cpu",
-			"memory",
-			"temperature",
-		]
-
-	},
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""],
 		"interval": 5,
     },
-	"cpu": {
-        "format": "CPU {usage}%",
-        "tooltip": false,
-		"interval": 5,
-		"states": {
-			"high": 80,
-			"maxed": 95,
-		},
-    },
-    "memory": {
-        "format": "Mem {}%",
-		"interval": 5,
-    	"states": {
-			"high": 80,
-			"maxed": 95,
-		},
-	},
     "wireplumber": {
         "format": "{volume}% <span font='15'>{icon}</span>",
         "format-icons": ["", "", ""],

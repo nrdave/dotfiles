@@ -5,7 +5,7 @@
 
 window#waybar {
 	/* the hex color #2b2e38 with decreased opacity */
-	background-color: rgba(43, 46, 56, 0.5);
+	background-color: rgba(43, 46, 56, 0.7);
 	color: #bac3cf;
 }
 
@@ -23,8 +23,6 @@ window#waybar {
 /* Common Styling for most modules */
 #clock,
 #battery,
-#cpu,
-#memory,
 #temperature,
 #wireplumber,
 #backlight,
@@ -74,27 +72,6 @@ window#waybar {
 	background-color: #fc4138;
 	color: #ffffff;
 }
-
-/* CPU module goes orange for high usage */
-#cpu.high {
-	color: #f27835;
-}
-
-/* At practically maxed usage, CPU module goes red*/
-#cpu.maxed {
-	color: #fc4138;
-}
-
-/* Memory module goes orange for high usage */
-#memory.high {
-	color: #f27835;
-}
-
-/* When RAM is basically full, RAM module goes red */
-#memory.maxed {
-	color: #fc4138;
-}
-
 /* Wireplumber text becomes red if muted */
 #wireplumber.muted {
     color: #f0494c;
