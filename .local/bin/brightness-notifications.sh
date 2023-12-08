@@ -10,6 +10,13 @@ brightness_step=5
 # Time in ms for notifications to last
 notification_life=1500
 
+# Name to use for app-name in notify-send
+app_name="brightness-notification-script"
+
+# notify-send options that should always be used. 
+# These flags allow consolidation of arguments to notify-send in one place
+notify_send_flags="-a $app_name -t $notification_life"
+
 function get_brightness() {
 	# Get the current brightness raw value
 	raw_brightness=$(brightnessctl get)
@@ -42,7 +49,7 @@ function notification() {
 	else
 		icon="notification-display-brightness-full"
 	fi
-	notify-send -i "$icon" -t $notification_life --hint=INT:value:$brightness "$text"
+	notify-send -i "$icon" $notify_send_flags --hint=INT:value:$brightness "$text"
 }
 
 # Figure out what to do based on the argument

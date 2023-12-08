@@ -14,6 +14,13 @@ max_volume=1.00
 # Time in ms for notifications to last
 notification_life=1500
 
+# Name to use for app-name in notify-send
+app_name="volume-notification-script"
+
+# notify-send options that should always be used.
+# These flags allow consolidation of arguments to notify-send in one place
+notify_send_flags="-a $app_name -t $notification_life"
+
 function get_volume() {
 	volume=$( 
 	# Get the volume using wpctl - returns it in the form: Volume: X.XX
@@ -74,7 +81,7 @@ function volume_notification () {
 		icon="notification-audio-volume-high"
 	fi
 
-	notify-send -i "$icon" -t $notification_life --hint=INT:value:$volume "$text"
+	notify-send -i "$icon" $notify_send_flags --hint=INT:value:$volume "$text"
 }
 
 function input_notification () {
@@ -87,7 +94,7 @@ function input_notification () {
 		icon="notification-microphone-sensitivity-high"
 		text="Input Unmuted"
 	fi
-	notify-send -i "$icon" -t $notification_life "$text"
+	notify-send -i "$icon" $notify_send_flags "$text"
 }
 
 # Figure out what to do based on the argument
