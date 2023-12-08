@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=Lock Options
+Comment=Desktop entry to allow calling of loginctl lock-session and terminate-user from a .desktop launcher
+TryExec=/usr/bin/loginctl
+Exec=/usr/bin/loginctl
+Icon=system-lock-screen
+Actions=lock;logout
+
+[Desktop Action lock]
+Name=Lock Screen
+Exec=/usr/bin/loginctl lock-session
+Icon=system-lock-screen
+
+[Desktop Action logout]
+Name=Logout
+Exec=/usr/bin/loginctl terminate-user $USER
+Icon=system-log-out
