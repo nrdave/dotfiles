@@ -1,8 +1,28 @@
+# Setting up some normal stuff - fonts, icons, colors
 font=sans-serif
 icons=1
 icon-path=/usr/share/icons/Papirus-Dark
 background-color=#0d0f18ff
 text-color=#fffaf3ff
-border-color=#5e5f8cff
 progress-color=#1e1f46ff
 default-timeout=3000
+border-color=#5e5f8cff
+border-radius=5
+
+# Customize behavior of notifications from my volume and brightness
+# scripts
+[app-name="volume-notification-script"]
+anchor=bottom-center
+group-by=app-name
+icon-location=top
+padding=10
+height=150
+format=<b>%s</b>
+
+[app-name="brightness-notification-script"]
+anchor=bottom-center
+group-by=app-name
+icon-location=top
+padding=10
+height=150
+format=<b>%s</b>
