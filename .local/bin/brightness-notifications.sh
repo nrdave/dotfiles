@@ -63,11 +63,11 @@ case $1 in
 		notification
 		;;
 	nano-up)
-		brightnessctl set 1%+
+		brightnessctl set 1+
 		notification
 		;;
 	nano-down)
-		brightnessctl set 1%-
+		brightnessctl set 1-
 		notification
 		;;
 esac
