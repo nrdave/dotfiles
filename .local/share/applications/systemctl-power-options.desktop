@@ -1,0 +1,21 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=Power Options
+Comment=Desktop Entry to allow calling of systemctl suspend, reboot, and poweroff from a .desktop launcher
+TryExec=/usr/bin/systemctl
+Exec=/usr/bin/systemctl
+Icon=gnome-power-manager-symbolic
+Actions=suspend;poweroff;reboot;lock
+
+[Desktop Action suspend]
+Name=Suspend
+Exec=/usr/bin/systemctl suspend
+
+[Desktop Action poweroff]
+Name=Shutdown
+Exec=/usr/bin/systemctl poweroff
+
+[Desktop Action reboot]
+Name=Reboot
+Exec=/usr/bin/systemctl reboot
