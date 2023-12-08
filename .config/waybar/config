@@ -5,7 +5,8 @@
     "position": "bottom",
     "spacing": 2,
 
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
+    "modules-left": ["custom/launcher", "sway/mode", "sway/scratchpad"],
+	"modules-center": ["sway/workspaces"],
     "modules-right": ["temperature", "group/host-specific", "wireplumber", "tray", "clock"],
 
     
@@ -35,11 +36,16 @@
 		"interval": 5,
     },
     "wireplumber": {
-        "format": "<span font='14'>{icon}</span>",
-        "format-icons": ["", "", ""],
+        "format": "{icon}",
+        "format-icons": ["", "", "", ""],
 		"format-muted": "",
         "on-click": "pavucontrol"
     },
-
+	"custom/launcher": {
+        "format": "<span font='18'>{icon}</span>",
+        "format-icons": [""],
+		"on-click": "swaymsg exec fuzzel",
+		"tooltip": false,
+	}
 }
 

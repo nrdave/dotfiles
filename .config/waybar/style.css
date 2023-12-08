@@ -10,8 +10,8 @@ window#waybar {
 }
 
 #workspaces button {
-	border-radius: 1em;
-	padding: 0.5em 0.2em;
+	border-radius: 0.5em;
+	padding: 0;
 }
 
 #workspaces button.focused {
@@ -28,7 +28,8 @@ window#waybar {
 #backlight,
 #tray,
 #mode,
-#scratchpad {
+#scratchpad,
+#custom-launcher {
 	border-radius: 0.6em;
     padding: 0.2em 0.6em;
 	margin: 0.3em 0;
@@ -38,8 +39,19 @@ window#waybar {
 	background-color: rgba(64, 69, 82, 0.9);
 }
 
+/**
+ * Reducing padding for the tray because it doesn't need as much padding
+ */
 #tray {
 	padding: 0.1em 0.4em;
+}
+/**
+ * Styling the fuzzel launcher to only have horizontal padding - made
+ * padding-right bigger because the FontAwesome icon isn't centered
+ */
+#custom-launcher {
+	padding: 0 0.9em 0 0.5em;
+	margin: 0;
 }
 
 /** 
