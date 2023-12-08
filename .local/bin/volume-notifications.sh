@@ -21,7 +21,7 @@ app_name="volume-notification-script"
 # These flags allow consolidation of arguments to notify-send in one place
 notify_send_flags="-a $app_name -t $notification_life"
 
-function get_volume() {
+get_volume () {
 	volume=$( 
 	# Get the volume using wpctl - returns it in the form: Volume: X.XX
 			wpctl get-volume @DEFAULT_AUDIO_SINK@ | 
@@ -35,7 +35,7 @@ function get_volume() {
 	echo $volume
 }
 
-function get_muted () {
+get_muted () {
 	# Look for the string [MUTED] in the output of getting the volume
 	# wpctl adds this if the sink/source is muted
 	# true is 0 for shells, 1 is false
@@ -46,7 +46,7 @@ function get_muted () {
 	fi
 }
 
-function get_input_muted () {
+get_input_muted () {
 	# Look for the string [MUTED] in the output of getting the volume
 	# wpctl adds this if the sink/source is muted
 	# true is 0 for shells, 1 is false
@@ -57,7 +57,7 @@ function get_input_muted () {
 	fi
 }
 
-function volume_notification () {
+volume_notification () {
 	# Uses system icons - allows for easier user configuration
 	volume=$(get_volume)
 
@@ -84,7 +84,7 @@ function volume_notification () {
 	notify-send -i "$icon" $notify_send_flags --hint=INT:value:$volume "$text"
 }
 
-function input_notification () {
+input_notification () {
 	# Determine the icon and text based on the muted state of the 
 	# default input 
 	if $(get_input_muted); then
