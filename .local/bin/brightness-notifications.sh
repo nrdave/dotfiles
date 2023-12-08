@@ -17,7 +17,7 @@ app_name="brightness-notification-script"
 # These flags allow consolidation of arguments to notify-send in one place
 notify_send_flags="-a $app_name -t $notification_life"
 
-function get_brightness() {
+get_brightness() {
 	# Get the current brightness raw value
 	raw_brightness=$(brightnessctl get)
 	# Get the max brightness - used to calculate the
@@ -36,7 +36,7 @@ function get_brightness() {
 	echo $brightness
 }
 
-function notification() {
+notification() {
 	brightness=$(get_brightness)
 	text="Brightness: $brightness%"
 
