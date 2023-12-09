@@ -1,0 +1,13 @@
+{
+	"include": "~/.config/waybar/config",
+
+	"modules-left": ["custom/launcher", "wlr/taskbar"],
+	"modules-center": ["hyprland/workspaces"],
+	
+	"custom/launcher": {
+        "format": "<span font='18'>{icon}</span>",
+        "format-icons": [""],
+		"on-click": "hyprctl dispatch exec fuzzel",
+		"tooltip": false,
+	},
+}
