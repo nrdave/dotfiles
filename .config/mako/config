@@ -21,6 +21,7 @@ group-by=app-name
 
 [anchor=bottom-center]
 icon-location=top
+layer=overlay
 padding=10
 height=150
 format=<b>%s</b>
