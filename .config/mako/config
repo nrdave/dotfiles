@@ -14,14 +14,12 @@ border-radius=5
 [app-name="volume-notification-script"]
 anchor=bottom-center
 group-by=app-name
-icon-location=top
-padding=10
-height=150
-format=<b>%s</b>
 
 [app-name="brightness-notification-script"]
 anchor=bottom-center
 group-by=app-name
+
+[anchor=bottom-center]
 icon-location=top
 padding=10
 height=150
