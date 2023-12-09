@@ -62,14 +62,14 @@ volume_notification () {
 	volume=$(get_volume)
 
 	# Determine the notification text
-	text="Volume: $volume"
+	text="Volume: $volume%"
 
 	# Set the icon based on the volume status
 	if $(get_muted); then 
 		icon="notification-audio-volume-muted"
 		# If volume is muted, add text to indicate that as well
 		# (icon may be hard to discern)
-		text="Volume: $volume (MUTED)"
+		text="$text (MUTED)"
 
 	elif [ $((volume)) -le 30 ]; then
 		icon="notification-audio-volume-low"
