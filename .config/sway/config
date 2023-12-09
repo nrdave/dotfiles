@@ -252,18 +252,10 @@ mode "$screenshot" {
 # The keybind to enable screenshot mode is decided in the hardware_config
 bindsym $screenshot-key mode "$screenshot"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-	swaybar_command "waybar -c ~/.config/sway/waybar/config"
-}
+# Status bar
+# 
+# This command executes on every sway config load. It kills any instances of
+# waybar that are running, then launches waybar with the sway-specific config
+exec_always 'pkill waybar; waybar -c ~/.config/sway/waybar/config'
 
 include /etc/sway/config.d/*
