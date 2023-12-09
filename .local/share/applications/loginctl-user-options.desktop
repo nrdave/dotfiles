@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Version=1.5
-Name=Lock Options
+Name=User Options
 Comment=Desktop entry to allow calling of loginctl lock-session and terminate-user from a .desktop launcher
 TryExec=/usr/bin/loginctl
 Exec=/usr/bin/loginctl
