@@ -1,0 +1,19 @@
+{
+	"include": "~/.config/waybar/config",
+
+	"modules-left": ["custom/launcher", "sway/mode"],
+	"modules-center": ["sway/workspaces"],
+
+	"sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+
+}

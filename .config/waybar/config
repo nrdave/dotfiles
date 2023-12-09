@@ -1,26 +1,25 @@
 {
-	"include": "$XDG_CONFIG_HOME/waybar/hardware_config",
+	/**
+	 * My default waybar config
+	 *
+	 * Includes everything that isn't specific to a window manager
+	 * For WM_specific configuration, I create a waybar config file in the
+	 * WM config folder (e.g. ~/.config/sway/waybar/config), include this file
+	 * in that one, and call waybar specifying the config file as the
+	 * WM-specific one
+	 */
+
+	// Include the hardware_config file
+	"include": "~/.config/waybar/hardware_config",
 
     "layer": "top",
     "position": "bottom",
     "spacing": 2,
 
-    "modules-left": ["custom/launcher", "sway/mode", "sway/scratchpad"],
-	"modules-center": ["sway/workspaces"],
     "modules-right": ["temperature", "group/host-specific", "wireplumber", "tray", "clock"],
 
     
-	"sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-   "tray": {
+	"tray": {
 		"icon-size": 24,
     },
     "clock": {
