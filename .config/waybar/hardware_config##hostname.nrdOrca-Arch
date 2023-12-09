@@ -16,4 +16,8 @@
         "format-plugged": "{capacity}% ",
         "format-icons": ["", "", "", "", ""]
     },
+
+	"wlr/taskbar": {
+		"icon-size": 24,
+	},
 }
