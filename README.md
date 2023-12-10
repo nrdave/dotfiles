@@ -335,6 +335,9 @@ just changes the text size depending on the yadm Small_Screen class.
 
 Aside from the dedicated dotfiles I have, I also use a few scripts I wrote. Those are:
 
+These are files in `~/.local/bin`, which is where I put any programs I want on
+PATH (pretty sure that follow the FreeDesktop Home Directory Specification).
+
 - brightness-notifications.sh
 - import-gsettings.sh
 - volume-notifications.sh
@@ -380,3 +383,37 @@ don't know how other notification daemons will handle the hint - you might have
 to remove it.
 
 (yes I copied what I wrote for brightness-notifications, sue me).
+
+## Other Files
+
+### Backgrounds
+
+Where I put whatever background I use. Right now, it just has a picture I got
+off of WikiChip of a AMD Zen 2 Core Complex Die that I edited to be darker 
+(original image here: 
+https://en.wikichip.org/wiki/amd/microarchitectures/zen_2#Core_Complex_Die).
+
+Will probably add more soon.
+
+### Desktop Entries
+
+These are `.desktop` files in `.local/share/applications`, which means that any
+program that can launch desktop entries should find them.
+
+#### systemctl-power-options.desktop
+
+This file wraps calls to various `systemctl` commands, namely `poweroff`,
+`reboot`, and `suspend`. With this file, I can shut down/reboot/suspend 
+through fuzzel.
+
+Each command is listed as a Desktop Action, with the main Desktop Entry doing
+nothing.
+
+#### loginctl-user-options.desktop
+
+This file wraps calls to two `loginctl` commands, namely `lock-session`, and
+`terminate-user $USER`. With this file, I can lock the screen or logout from
+fuzzel, or any desktop entry launcher for that matter.
+
+Each command is listed as a Desktop Action, with the main Desktop Entry doing
+nothing.
