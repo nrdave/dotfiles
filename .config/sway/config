@@ -82,7 +82,7 @@ for_window {
 }
 
 ### Idle configuration
-set $locker 'swaylock -f -c 000000'
+set $locker 'swaylock'
 
 exec swayidle -w \
          timeout 600 $locker  \
