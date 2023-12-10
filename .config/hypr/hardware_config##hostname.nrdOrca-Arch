@@ -13,3 +13,7 @@ bindl = SHIFT, XF86MonBrightnessUp, exec, brightness-notifications.sh nano-up
 # to do media control
 bindl = SUPER, P, exec, playerctl play-pause
 bindl = SUPER, I, exec, playerctl next
+
+# Bind windows lock hotkey (SUPER+L) which is emitted by the lock key on my
+# laptop to lock
+bind = SUPER, L, exec, loginctl lock-session
