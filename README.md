@@ -83,7 +83,7 @@ the current git branch if the working directory contains a git repo
 
 - Source the file required to load the above git function if necessary - uses
 yadm's alternate files. If yadm's local classes include `Source_Git_Prompt`,
-the file `/usr/share/git/completion/git-prompt.sh1 will be sourced (this is the
+the file `/usr/share/git/completion/git-prompt.sh1` will be sourced (this is the
 location of the prompt function on an Arch Linux system). If the class is not
 set, this file isn't sourced (the file doesn't exist on Linux Mint as far as
 I can tell)
@@ -96,7 +96,7 @@ themeing, and the XDG base directories.
 `lf` was in, rather than the directory `lf` was launched in.
 
 Dependencies:
-- git (specifically the __git_ps1 shell function)
+- git (specifically the `__git_ps1` shell function)
 - lf (kinda? There's an lf alias in .bashrc, so idk)
 
 ### fontconfig
@@ -329,7 +329,7 @@ does everything I could ever need)
 ### Zathura
 
 The reader (mainly for PDFs) I use on Arch (also Mint sometimes). The config
-just changes the text size depending on the yadm Small_Screen class.
+just changes the text size depending on the yadm `Small_Screen` class.
 
 ## Miscellaneous Scripts
 
@@ -360,7 +360,7 @@ A tool to import settings from a GTK 3 config file and call the relevant
 `gsettings` calls to make GTK 4 match GTK 3 theming. Mostly taken from a Sway 
 wiki page.
 
-In addition, the script sets the GTK_THEME environment variable, forcing even
+In addition, the script sets the `GTK_THEME` environment variable, forcing even
 libadwaita apps (which normally just use an Adwaita theme) to use the theme in
 the environment variable - Note: I do this because the Arc Theme includes 
 libadwaita styling, so libadwaita apps still mostly look fine. This may not be 
