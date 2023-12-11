@@ -1,7 +1,7 @@
 {
 	"include": "~/.config/waybar/config",
 
-	"modules-left": ["custom/launcher", "sway/mode", "sway/scratchpad", "wlr/taskbar"],
+	"modules-left": ["custom/launcher", "wlr/taskbar", "sway/mode", "sway/scratchpad"],
 	"modules-center": ["sway/workspaces"],
 
 	"sway/mode": {
