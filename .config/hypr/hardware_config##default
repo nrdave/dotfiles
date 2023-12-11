@@ -1,1 +1,5 @@
-
+# Set screenshot keybind
+$screenshotKey1 = SUPER, P
+$screenshotKey2 = SUPER_ALT, P
+$screenshotKey3 = SUPER_CTRL, P
+$screenshotKey4 = SUPER_CTRL_ALT, P

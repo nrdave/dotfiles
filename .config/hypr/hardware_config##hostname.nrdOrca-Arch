@@ -17,3 +17,9 @@ bindl = SUPER, I, exec, playerctl next
 # Bind windows lock hotkey (SUPER+L) which is emitted by the lock key on my
 # laptop to lock
 bind = SUPER, L, exec, loginctl lock-session
+
+# Set screenshot keybind
+$screenshotKey1 = SUPER_SHIFT, S
+$screenshotKey2 = SUPER_SHIFT_ALT, S
+$screenshotKey3 = SUPER_SHIFT_CTRL, S
+$screenshotKey4 = SUPER_SHIFT_CTRL_ALT, S
