@@ -79,8 +79,8 @@ hi String          ctermfg=14
 hi Keyword         ctermfg=4
 hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
 hi Function        ctermfg=11
-hi Identifier      ctermfg=7   cterm=NONE
-hi Statement       ctermfg=4   cterm=bold
+hi Identifier      ctermfg=4   cterm=bold
+hi Statement       ctermfg=5   cterm=bold
 hi Constant        ctermfg=14
 hi Number          ctermfg=14
 hi Boolean         ctermfg=4
