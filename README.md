@@ -63,6 +63,7 @@ Below is the list of all programs/system configurations I have dotfiles for.
 - Neovim
 - Qt Theming (kinda)
 - Sway
+- vim
 - Waybar
 - zathura
 
@@ -244,7 +245,10 @@ configuration in Lua is easier than in vimscript IMO.
 
 My Neovim config does the following:
 - enables the mouse
-- sets up syntax highlighting to just use the terminal colors
+- sets up syntax highlighting to just use the terminal colors - MASSIVE
+  shoutout to [vim-noctu](https://github.com/noahfrederick/vim-noctu), the
+  colorscheme I based mine off of (I copied that one and made changes where
+  I wanted to change it).
 - uses the system clipboard (so you can copy and paste between Neovim and 
 anything else using Neovim commands)
 - sets tab width of 4, and to use tabs for indentation
@@ -304,6 +308,19 @@ Dependencies:
 - slurp
 - udiskie for managing USB drives (I launch it as a tray applet)
 - Waybar for the panel bar
+
+### vim
+
+I maintain a vim config primarily for situations where I can't use Neovim.
+Having vim is much more likely on a system I don't own, so if I'm on a
+different system I can just clone this repo and be all set with vim.
+
+In general, this config just sets up the necessary stuff - using tabs and tab
+width of 4, absolute line numbers, mouse support, filetype detection,
+cursor underline, and using my personal color scheme - see the Neovim section
+for more.
+
+Unlike my Neovim config, which I plan to eventually make pretty fancy, my vim config is gonna stay simple.
 
 ### Waybar
 
