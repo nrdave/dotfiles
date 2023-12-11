@@ -14,7 +14,6 @@
 
     "layer": "top",
     "position": "bottom",
-    "spacing": 2,
 
     "modules-right": ["temperature", "group/host-specific", "wireplumber", "tray", "clock"],
 
