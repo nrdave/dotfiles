@@ -44,7 +44,7 @@ hi TabLineSel          ctermfg=15    ctermbg=4
 hi Folded              ctermfg=14    ctermbg=0     cterm=bold
 hi Conceal             ctermfg=6     ctermbg=NONE
 hi Directory           ctermfg=12
-hi Title               ctermfg=3     cterm=bold
+hi Title               ctermfg=13    cterm=bold
 hi ErrorMsg            ctermfg=15    ctermbg=1
 hi DiffAdd             ctermfg=0     ctermbg=2
 hi DiffChange          ctermfg=0     ctermbg=3
@@ -93,9 +93,9 @@ hi! link Error     ErrorMsg
 
 "}}}
 " HTML {{{
-hi htmlTagName              ctermfg=2
-hi htmlTag                  ctermfg=2
-hi htmlArg                  ctermfg=10
+hi htmlTagName              ctermfg=12
+hi htmlTag                  ctermfg=4
+hi htmlArg                  ctermfg=9
 hi htmlH1                   cterm=bold
 hi htmlBold                 cterm=bold
 hi htmlItalic               cterm=underline
@@ -109,8 +109,8 @@ hi! link htmlEndTag         htmlTag
 
 "}}}
 " XML {{{
-hi xmlTagName       ctermfg=4
-hi xmlTag           ctermfg=12
+hi xmlTagName       ctermfg=12
+hi xmlTag           ctermfg=4
 hi! link xmlString  xmlTagName
 hi! link xmlAttrib  xmlTag
 hi! link xmlEndTag  xmlTag
@@ -132,7 +132,7 @@ hi! link phpDefine       Statement
 
 "}}}
 " Markdown {{{
-hi  markdownHeadingRule             ctermfg=5
+hi  markdownHeadingRule             ctermfg=5   cterm=bold
 hi  markdownHeadingText             ctermfg=13
 hi! link markdownHeadingDelimiter   markdownHeadingRule
 hi! link markdownLinkDelimiter      Delimiter
@@ -157,9 +157,12 @@ hi! link rubyStringDelimiter        rubyString
 
 "}}}
 " Git {{{
-hi gitCommitBranch               ctermfg=3
+
+hi gitCommitBranch               ctermfg=7          cterm=bold
 hi gitCommitSelectedType         ctermfg=10
-hi gitCommitSelectedFile         ctermfg=2
+hi gitCommitSelectedFile         ctermfg=13
+hi gitCommitHeader               ctermfg=14
+hi gitCommitSummary              ctermfg=11         cterm=bold
 hi gitCommitUnmergedType         ctermfg=9
 hi gitCommitUnmergedFile         ctermfg=1
 hi! link gitCommitFile           Directory
