@@ -19,7 +19,6 @@ let g:colors_name = "thermo"
 " Vim UI {{{
 hi Normal              ctermfg=7
 hi Cursor              ctermfg=7     ctermbg=NONE  
-hi CursorLine          ctermbg=0     cterm=NONE
 hi MatchParen          ctermfg=7     ctermbg=NONE  cterm=underline
 hi Pmenu               ctermfg=15    ctermbg=0
 hi PmenuThumb          ctermbg=7
@@ -31,7 +30,7 @@ hi SpellCap            ctermfg=10    ctermbg=NONE  cterm=underline
 hi SpellRare           ctermfg=11    ctermbg=NONE  cterm=underline
 hi SpellLocal          ctermfg=13    ctermbg=NONE  cterm=underline
 hi NonText             ctermfg=8
-hi LineNr              ctermfg=7     ctermbg=NONE
+hi LineNr              ctermfg=8     ctermbg=NONE
 hi CursorLineNr        ctermfg=11    ctermbg=0
 hi Visual              ctermfg=15    ctermbg=8
 hi IncSearch           ctermfg=0     ctermbg=13    cterm=NONE
@@ -44,7 +43,7 @@ hi TabLineSel          ctermfg=15    ctermbg=4
 hi Folded              ctermfg=14    ctermbg=0     cterm=bold
 hi Conceal             ctermfg=6     ctermbg=NONE
 hi Directory           ctermfg=12
-hi Title               ctermfg=13    cterm=bold
+hi Title               ctermfg=15    cterm=bold
 hi ErrorMsg            ctermfg=15    ctermbg=1
 hi DiffAdd             ctermfg=0     ctermbg=2
 hi DiffChange          ctermfg=0     ctermbg=3
