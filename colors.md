@@ -52,10 +52,10 @@ The 16 colors I use for my terminals, taken directly from my `kitty` config
 | Color    | Normal  | Bright  |
 |----------|---------|---------|
 |Black     |`#222222`|`#444444`|
-|Red       |`#ff000f`|`#ff4157`|
+|Red       |`#ff000f`|`#ff6677`|
 |Green     |`#85d209`|`#a8f034`|
 |Yellow    |`#f7b100`|`#ffcf55`|
-|Blue      |`#0086e6`|`#19a9ff`|
+|Blue      |`#0086e6`|`#4cb4ff`|
 |Magenta   |`#c864c8`|`#ff7fff`|
 |Cyan      |`#00d7eb`|`#67ffef`|
 |White     |`#dddddd`|`#ffffff`|
