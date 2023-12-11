@@ -132,12 +132,11 @@ hi! link phpDefine       Statement
 
 "}}}
 " Markdown {{{
-hi  markdownHeadingRule             ctermfg=5   cterm=bold
-hi  markdownHeadingText             ctermfg=13
+hi  markdownHeadingRule             ctermfg=4   cterm=bold
 hi! link markdownHeadingDelimiter   markdownHeadingRule
 hi! link markdownLinkDelimiter      Delimiter
 hi! link markdownURLDelimiter       Delimiter
-hi  markdownCodeDelimiter           ctermfg=13
+hi  markdownCodeDelimiter           ctermfg=9
 hi! link markdownLinkTextDelimiter  markdownLinkDelimiter
 hi! link markdownUrl                markdownLinkText
 hi! link markdownAutomaticLink      markdownLinkText
@@ -145,7 +144,7 @@ hi! link markdownCodeBlock          String
 hi markdownCode                     ctermfg=11
 hi markdownBold                     cterm=bold
 hi markdownItalic                   cterm=underline
-hi markdownListMarker               ctermfg=12
+hi markdownListMarker               ctermfg=13
 
 "}}}
 " Ruby {{{
