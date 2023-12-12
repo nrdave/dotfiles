@@ -58,6 +58,7 @@ hi User6               ctermfg=6     ctermbg=0
 hi User7               ctermfg=7     ctermbg=0
 hi User8               ctermfg=8     ctermbg=0
 hi User9               ctermfg=15    ctermbg=5
+hi SpecialKey          ctermfg=14
 hi! link CursorColumn  CursorLine
 hi! link SignColumn    LineNr
 hi! link WildMenu      Visual
@@ -67,7 +68,6 @@ hi! link MoreMsg       Title
 hi! link Question      MoreMsg
 hi! link ModeMsg       MoreMsg
 hi! link TabLineFill   StatusLineNC
-hi! link SpecialKey    NonText
 
 "}}}
 " Generic syntax {{{
