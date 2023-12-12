@@ -69,6 +69,7 @@ for_window {
 	[app_id="blueman-manager"] floating enable
 	[app_id="nm-connection-editor"] floating enable
 	[app_id="pavucontrol"] floating enable
+	[app_id="org.octave.Octave" title="Figure [0-9]+"] floating enable
 		
 
 	[window_role="pop-up"] floating enable
