@@ -51,7 +51,7 @@ window#waybar {
  * padding-right bigger because the FontAwesome icon isn't centered
  */
 #custom-launcher {
-	padding: 0 0.9em 0 0.5em;
+	padding: 0 0.6em 0 0.5em;
 	margin: 0;
 }
 
@@ -61,7 +61,7 @@ window#waybar {
  * battery module (by box, I mean the lighter colored area each module gets)
  */
 #battery {
-	padding-right: 1em;
+	padding-right: 0.7em;
 }
 
 /* Battery text is green if plugged in */

@@ -23,4 +23,7 @@
 	"wlr/taskbar": {
 		"icon-size": 32,
 	},
+	"tray": {
+		"icon-size": 24,
+    },
 }
