@@ -32,7 +32,7 @@
     },
     "wireplumber": {
         "format": "{icon}",
-        "format-icons": ["", "", "", ""],
+        "format-icons": ["", "", ""],
 		"format-muted": "",
         "on-click": "pavucontrol"
     },
