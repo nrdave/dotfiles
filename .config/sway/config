@@ -4,6 +4,9 @@
 include hardware_config
 
 
+# Disable middle-click paste / primary selection because I'm a sane human being
+exec wl-paste --primary --watch wl-copy --primary --clear
+
 ### Start various needed programs
 
 # Start xwayland
