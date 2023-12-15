@@ -3,7 +3,11 @@
 
 	"modules-left": ["custom/launcher", "wlr/taskbar"],
 	"modules-center": ["hyprland/workspaces"],
-	
+
+	"wlr/taskbar": {
+		"on-click": "activate",
+	},
+
 	"custom/launcher": {
         "format": "<span font-size='150%'>{icon}</span>",
         "format-icons": [""],

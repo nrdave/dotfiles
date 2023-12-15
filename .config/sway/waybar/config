@@ -8,6 +8,10 @@
         "format": "<span style=\"italic\">{}</span>"
     },
 
+	"wlr/taskbar": {
+		"on-click": "activate",
+	},
+
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
