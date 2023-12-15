@@ -98,7 +98,7 @@ exec swayidle -w \
     bindsym $mod+w exec $term
 
     # Kill focused window
-    bindsym $mod+k kill
+    bindsym $mod+Shift+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
