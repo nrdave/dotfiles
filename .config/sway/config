@@ -19,7 +19,7 @@ exec /usr/lib/geoclue-2.0/demos/agent &
 exec blueman-applet
 exec nm-applet
 exec gammastep-indicator
-exec udiskie --no-automount --tray
+exec udiskie --no-automount --tray &
 
 # Launch mako, my notification daemon
 exec mako
