@@ -9,6 +9,9 @@ bindl = , XF86MonBrightnessUp, exec, brightness-notifications.sh up
 bindl = SHIFT, XF86MonBrightnessDown, exec, brightness-notifications.sh nano-down
 bindl = SHIFT, XF86MonBrightnessUp, exec, brightness-notifications.sh nano-up
 
+# Set cursor
+exec-once = hyprctl setcursor Adwaita 32
+
 # Use keys that have meaning in Windows (switch active window and settings)
 # to do media control
 bindl = SUPER, P, exec, playerctl play-pause
