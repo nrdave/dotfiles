@@ -134,19 +134,12 @@ setting a custom commit message.
 
 I use the Arc-Dark GTK theme, with the Papirus-Dark icon theme. These themes
 are set up in `.config/gtk-3.0/settings.ini`, which also sets the GTK font to
-DejaVu Sans 12.
+DejaVu Sans.
 
 In addition, in my `.shrc`, I source a script called import-gsettings.sh which
 reads the GTK 3 config file and uses the values in there in the respective
 calls to `gsettings` (i.e. the `gtk-theme-name` in the GTK 3 config file gets
 passed to a call to gsettings set org.gnome.desktop.interface gtk-theme). 
-
-The script also sets the `GTK_THEME` environment variable to force libadwaita 
-apps to use the Arc-Dark theme. While the point of libadwaita is to force the
-Adwaita theme for some GNOME apps, I think Adwaita looks bad, so if I have the
-choice to use something different, I will. (I really should just use GUI apps
-that aren't from GNOME, but I'm just grabbing stuff I use on Mint and using it
-on Arch lol).
 
 Dependencies:
 - Arc-Dark GTK Theme
@@ -250,7 +243,7 @@ My Neovim config does the following:
   colorscheme I based mine off of (I copied that one and made changes where
   I wanted to change it).
 - uses the system clipboard (so you can copy and paste between Neovim and 
-anything else using Neovim commands)
+  anything else using Neovim commands)
 - sets tab width of 4, and to use tabs for indentation
 - enables absolute line numbers and active line underlining
 - enables incremental search
@@ -272,6 +265,10 @@ Dependencies:
 - On Arch linux, you need the 
   [qt5-styleplugins](https://aur.archlinux.org/packages/qt5-styleplugins) and
   [qt6gtk2](https://aur.archlinux.org/packages/qt6gtk2) packages from the AUR.
+
+Something I noticed with Kdenlive specifically was that some parts of the UI
+didn't look right until I installed the Breeze theme, so also consider
+installing that as well.
 
 ### Sway
 
@@ -303,7 +300,6 @@ Dependencies:
 - gammastep for gamma control
 - geoclue for determining location (this is a dependency of gammastep (for Arch
   at least))
-
 - nm-applet for a network applet
 - slurp
 - udiskie for managing USB drives (I launch it as a tray applet)
@@ -376,14 +372,6 @@ handle the hint - you might have to remove the hint.
 A tool to import settings from a GTK 3 config file and call the relevant
 `gsettings` calls to make GTK 4 match GTK 3 theming. Mostly taken from a Sway 
 wiki page.
-
-In addition, the script sets the `GTK_THEME` environment variable, forcing even
-libadwaita apps (which normally just use an Adwaita theme) to use the theme in
-the environment variable - Note: I do this because the Arc Theme includes 
-libadwaita styling, so libadwaita apps still mostly look fine. This may not be 
-true for your preferred theme (see 
-https://github.com/jnsh/arc-theme/issues/61#issuecomment-1671376666 for more
-information).
 
 ### volume-notifications.sh
 
