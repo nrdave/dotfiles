@@ -141,6 +141,13 @@ reads the GTK 3 config file and uses the values in there in the respective
 calls to `gsettings` (i.e. the `gtk-theme-name` in the GTK 3 config file gets
 passed to a call to gsettings set org.gnome.desktop.interface gtk-theme). 
 
+Finally, I also have a stylesheet called `gtk.css` in `~/.config/gtk-4.0/`, 
+which gets applied to libadwaita apps. This makes such apps (e.g. GNOME 
+Calculator) have the Arc GTK colorscheme, even if other UI elements are still
+from Adwaita. It's not necessarily perfect matching, but it makes the apps
+fit my theme well enough for me (and doesn't depend on using the `GTK_THEME`
+environment variable, so it feels less hacky).
+
 Dependencies:
 - Arc-Dark GTK Theme
 - Papirus-Dark Icon theme
