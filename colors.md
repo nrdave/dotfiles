@@ -38,10 +38,11 @@ Colors I use for text that I want to have a color
 
 The color set I use for my terminals and any apps that I want to look like the terminal.
 
-Backgrounds: `#0d0f18`
+Backgrounds: `#181a21`
 Text Color: `#fffaf3`
 Cursor: `#605dff`
 Selected Text Background: `#1e1f46`
+Selected Text Foreground: `#f3faff`
 Highlights/Borders/other things: `#b0aeff`, `#5e5f8c`
 
 
@@ -51,11 +52,11 @@ The 16 colors I use for my terminals, taken directly from my `kitty` config
 
 | Color    | Normal  | Bright  |
 |----------|---------|---------|
-|Black     |`#222222`|`#444444`|
-|Red       |`#ff000f`|`#ff6677`|
-|Green     |`#85d209`|`#a8f034`|
-|Yellow    |`#f7b100`|`#ffcf55`|
+|Black     |`#1c1e26`|`#323644`|
+|Red       |`#ff000f`|`#ff7f8e`|
+|Green     |`#3ed16a`|`#5bef87`|
+|Yellow    |`#f2d500`|`#ffea4c`|
 |Blue      |`#0086e6`|`#4cb4ff`|
 |Magenta   |`#c864c8`|`#ff7fff`|
 |Cyan      |`#00d7eb`|`#67ffef`|
-|White     |`#dddddd`|`#ffffff`|
+|White     |`#d2d9dd`|`#f3faff`|
