@@ -5,7 +5,7 @@
 
 window#waybar {
 	/* the hex color #2b2e38 with decreased opacity */
-	background-color: rgba(43, 46, 56, 0.7);
+	background-color: rgba(43, 46, 56, 0.9);
 	color: #bac3cf;
 }
 
