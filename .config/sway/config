@@ -3,9 +3,7 @@
 # Include hardware-specific config file
 include hardware_config
 
-
-# Disable middle-click paste / primary selection because I'm a sane human being
-exec wl-paste --primary --watch wl-copy --primary --clear
+include /etc/sway/config.d/*
 
 ### Start various needed programs
 
@@ -240,4 +238,3 @@ bindsym $screenshot-key mode "$screenshot"
 # waybar that are running, then launches waybar with the sway-specific config
 exec_always 'pkill waybar; waybar -c ~/.config/sway/waybar/config'
 
-include /etc/sway/config.d/*
