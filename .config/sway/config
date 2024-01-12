@@ -43,7 +43,7 @@ smart_borders on
 smart_gaps on
 
 ### Suspend/Lock shortcuts
-bindsym Control+Alt+S exec systemctl suspend
+bindsym --locked Control+Alt+S exec systemctl suspend
 bindsym Control+Alt+L exec loginctl lock-session
 
 ### Use custom volume notification script for volume control
