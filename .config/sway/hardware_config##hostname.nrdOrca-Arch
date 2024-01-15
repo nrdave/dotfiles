@@ -20,6 +20,8 @@ bindsym --locked XF86MonBrightnessUp exec brightness-notifications.sh up
 bindsym --locked XF86MonBrightnessDown+Shift exec brightness-notifications.sh nano-down
 bindsym --locked XF86MonBrightnessUp+Shift exec brightness-notifications.sh nano-up
 
+bindsym XF86Calculator exec gnome-calculator
+
 # Make cursor bigger
 seat * xcursor_theme Adwaita 32
 
