@@ -1,0 +1,4 @@
+# Programs that I want to start automatically
+exec-once = [workspace 2 silent] firefox
+exec-once = [workspace 3 silent] steam
+exec-once = [workspace 4 silent] spotify-launcher

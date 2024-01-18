@@ -3,6 +3,9 @@
 # Include hardware-specific config file
 include hardware_config
 
+# Include file for autostarting apps in specific workspaces
+include autostart
+
 include /etc/sway/config.d/*
 
 ### Start various needed programs
