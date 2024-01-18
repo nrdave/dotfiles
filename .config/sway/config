@@ -42,6 +42,7 @@ default_border pixel 2
 client.focused #605dff #605dff #fffaf3
 client.unfocused #5e5f8c #5e5f8c #fffaf3
 gaps inner 5
+font sans-serif 10
 smart_borders on
 smart_gaps on
 
