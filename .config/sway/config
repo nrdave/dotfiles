@@ -56,6 +56,12 @@ bindsym --locked XF86AudioLowerVolume exec volume-notifications.sh output-down
 bindsym --locked XF86AudioRaiseVolume exec volume-notifications.sh output-up
 bindsym --locked XF86AudioMicMute exec volume-notifications.sh input-mute
 
+### Bind media keys to their functions
+bindsym --locked XF86AudioPlay exec playerctl play
+bindsym --locked XF86AudioPause exec playerctl pause
+bindsym --locked XF86AudioNext exec playerctl next
+bindsym --locked XF86AudioPrev exec playerctl previous
+
 ### Configuring behavior for various windows
 
 for_window {
