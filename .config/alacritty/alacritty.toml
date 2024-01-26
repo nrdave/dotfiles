@@ -1,0 +1,12 @@
+# The main config file - contains settings that don't have a category or 
+# settings that are the only changed value in their category
+
+# import the other config files
+import = [
+	"~/.config/alacritty/font_size.toml",
+	"~/.config/alacritty/appearance.toml",
+]
+
+live_config_reload = true
+
+selection.save_to_clipboard = true

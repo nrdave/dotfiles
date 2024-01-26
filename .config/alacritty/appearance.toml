@@ -1,0 +1,44 @@
+# This file contains config options for alacritty's appearance
+
+window.opacity	= 0.9
+
+# Configuring generic colors
+[colors.primary]
+background = "#181a21"
+foreground = "#fffaf3"
+
+[colors.selection]
+text		= "#f3faff"
+background	= "#1e1f46"
+
+
+[colors.normal]
+black	= "#1c1e26"
+red 	= "#ff000f"
+green 	= "#3ed16a"
+yellow 	= "#f2d500"
+blue 	= "#0086e6"
+magenta = "#c864c8"
+cyan	= "#00d7eb"
+white 	= "#d2d9dd"
+
+[colors.bright]
+black	= "#323644"
+red		= "#ff7f8e"
+green	= "#5bef87"
+yellow	= "#ffea4c"
+blue	= "#4cb4ff"
+magenta	= "#ff7fff"
+cyan	= "#67ffef"
+white	= "#f3faff"
+
+
+# Cursor config
+[cursor]
+style.shape = "Beam"
+style.blinking = "On"
+
+[colors.cursor]
+text= "CellBackground"
+background = "#605dff"
+
