@@ -34,13 +34,10 @@ change:
 
 - `Small_Screen`: A class to enable when your screen is "small" and you want to
    enlarge text and/or icons
-	- `kitty`: Changes the `font_size` from 11 pt to 13 pt
-
+	- `kitty` and `alacritty`: Changes the `font_size` from 11 pt to 13 pt
 	- GTK Theming: Changes `gtk-font-name` from DejaVu Sans 10 to DejaVu Sans 12
-
-	- QT Theming: Changes the font sizes for both `fixed` and `general` to 12 
+	- Qt Theming: Changes the font sizes for both `fixed` and `general` to 12 
 	  instead of 10
-
     - zathura: Changes the font from `monospace normal 10` to 
 	  `monospace normal 12`
 
@@ -51,6 +48,7 @@ change:
 
 Below is the list of all programs/system configurations I have dotfiles for.
 
+- alacritty
 - bash
 - fontconfig
 - fuzzel
@@ -67,7 +65,14 @@ Below is the list of all programs/system configurations I have dotfiles for.
 - Waybar
 - zathura
 
-(Yes I have a Sway and Hyprland config. Can't hurt to have both I guess)
+
+### Alacritty
+
+Not necessarily my preferred terminal emulator at the moment, but it's
+good. I primarily keep this config around for Windows, where kitty is
+unavailable - I get to use a terminal emulator that doesn't suck (that said, I
+need to create a custom config or something for windows that'll include this
+config). The config is broken up into a few files for organizational sake.
 
 ### bash
 
@@ -91,8 +96,8 @@ I can tell)
 
 - Sources a file called `.shrc`, which contains environment variables that I
 want to maintain constant between bash and zsh (once I get around to switching
-to zsh). These environment variables include my EDITOR, VISUAL, GTK and QT
-themeing, and the XDG base directories.
+to zsh). These environment variables include my EDITOR, VISUAL, GTK and Qt
+theming, and the XDG base directories.
 - Sets up an `lf` alias that allows me to exit `lf` into the last directory
 `lf` was in, rather than the directory `lf` was launched in.
 
@@ -155,7 +160,8 @@ Dependencies:
 
 ### Hyprland
 
-Just started trying out Hyprland.
+I keep this around in case there's ever a feature on Hyprland I want to try out,
+but I don't actually have it installed on my Arch install right now.
 
 My config basically does all the same stuff as my Sway config: handle audio 
 with my volume script, sets a custom background, uses fuzzel for launching, 
@@ -183,9 +189,9 @@ at least))
 
 Currently my preferred terminal emulator, mainly just for the windows and tabs.
 It's fast, I don't really care if it's faster than Alacritty. That said, I also
-have an Alacritty config (that I need to upload) because kitty isn't available
-for Windows (when I do need to use Windows 10 for some godforsaken reason, I
-want a terminal better than the one Git Bash ships)
+have an Alacritty config because kitty isn't available for Windows (when I do 
+need to use Windows 10 for some godforsaken reason, I want a terminal better 
+than the one Git Bash ships)
 
 My config:
 - sets up my preferred color theme (some weird mix of the kitty Alabaster Dark
@@ -323,7 +329,8 @@ width of 4, absolute line numbers, mouse support, filetype detection,
 cursor underline, and using my personal color scheme - see the Neovim section
 for more.
 
-Unlike my Neovim config, which I plan to eventually make pretty fancy, my vim config is gonna stay simple.
+Unlike my Neovim config, which I plan to eventually make pretty fancy, my vim 
+config is gonna stay simple.
 
 ### Waybar
 
@@ -342,7 +349,6 @@ Dependencies:
 - wireplumber (again, because I'm using Pipewire)
 - pavucontrol (because if I do need graphical audio configuration, pavucontrol
 does everything I could ever need)
-
 - Fira Code font (for the text)
 - Font Awesome
 
