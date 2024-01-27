@@ -1,6 +1,15 @@
 # My dotfiles
 
-If you don't know what a dotfile repo is, I can't help you.
+This repository contains the dotfiles/configuration files for programs that I
+want to have on any system I work on.
+
+If you don't know what dotfiles refer to, basically any Unix-Like OS (basically
+anything other than Windows) normally hides files that start with a period.
+These files have, over the years, become a common way to store a user's
+configuration or customization option for a specific application. For example
+`vim` will read a file called `.vimrc` in a user's home folder when it launches
+, allowing you to configure `vim` how you want (check out mine right here for
+an example).
 
 I also include some scripts and other files I've written that are nice to have.
 
@@ -20,10 +29,10 @@ files for configs where I need to change things system by system.
 
 ### yadm config options
 
-I try to make all my alternate files 
+I try to make all my alternate files
 (see [yadm docs](https://yadm.io/docs/alternates#)) operate based on yadm's
 class values. That way, changing which file I use for the config on a system
-just involves changing what classes are set in yadm's config. 
+just involves changing what classes are set in yadm's config.
 
 However, for some apps, I maintain configurations based on the hostname. This
 is exclusively for apps where that makes sense e.g. configuring my touchpad on
@@ -35,13 +44,14 @@ change:
 - `Small_Screen`: A class to enable when your screen is "small" and you want to
    enlarge text and/or icons
 	- `kitty` and `alacritty`: Changes the `font_size` from 11 pt to 13 pt
-	- GTK Theming: Changes `gtk-font-name` from DejaVu Sans 10 to DejaVu Sans 12
-	- Qt Theming: Changes the font sizes for both `fixed` and `general` to 12 
+	- GTK Theming: Changes `gtk-font-name` from DejaVu Sans 10 to DejaVu Sans
+      12
+	- Qt Theming: Changes the font sizes for both `fixed` and `general` to 12
 	  instead of 10
-    - zathura: Changes the font from `monospace normal 10` to 
+    - zathura: Changes the font from `monospace normal 10` to
 	  `monospace normal 12`
 
-- `Source_Git_Prompt`: A class to indicate if the `__git_ps1` shell function 
+- `Source_Git_Prompt`: A class to indicate if the `__git_ps1` shell function
    needs to be sourced from `/usr/share/git/completion/git-prompt.sh`
 
 ## Scope
@@ -81,7 +91,7 @@ minimum required for sourcing `.bashrc`. My `.bashrc` is based on the default
 Linux Mint `.bashrc`, with the following changes:
 
 - Simplified the setting of the shell prompt to always use a color prompt (I'm
-willing to assume any terminal I use (even the TTY) supports at least some 
+willing to assume any terminal I use (even the TTY) supports at least some
 color)
 
 - Customize my shell prompt a bit, including the git-provided function to get
@@ -144,10 +154,10 @@ DejaVu Sans.
 In addition, in my `.shrc`, I source a script called import-gsettings.sh which
 reads the GTK 3 config file and uses the values in there in the respective
 calls to `gsettings` (i.e. the `gtk-theme-name` in the GTK 3 config file gets
-passed to a call to gsettings set org.gnome.desktop.interface gtk-theme). 
+passed to a call to gsettings set org.gnome.desktop.interface gtk-theme).
 
-Finally, I also have a stylesheet called `gtk.css` in `~/.config/gtk-4.0/`, 
-which gets applied to libadwaita apps. This makes such apps (e.g. GNOME 
+Finally, I also have a stylesheet called `gtk.css` in `~/.config/gtk-4.0/`,
+which gets applied to libadwaita apps. This makes such apps (e.g. GNOME
 Calculator) have the Arc GTK colorscheme, even if other UI elements are still
 from Adwaita. It's not necessarily perfect matching, but it makes the apps
 fit my theme well enough for me (and doesn't depend on using the `GTK_THEME`
@@ -163,9 +173,9 @@ Dependencies:
 I keep this around in case there's ever a feature on Hyprland I want to try out,
 but I don't actually have it installed on my Arch install right now.
 
-My config basically does all the same stuff as my Sway config: handle audio 
-with my volume script, sets a custom background, uses fuzzel for launching, 
-etc. No screenshots yet - need to work on that. 
+My config basically does all the same stuff as my Sway config: handle audio
+with my volume script, sets a custom background, uses fuzzel for launching,
+etc. No screenshots yet - need to work on that.
 
 I also use yadm alternate files for hardware configuration. My hardware config
 for my laptop, for example, just sets up brightness control using my brightness
@@ -176,7 +186,7 @@ Dependencies:
 - blueman for a bluetooth applet
 - fuzzel
 - grim (in conjunction with slurp, screenshotting)
-- My brightness and volume notification scripts 
+- My brightness and volume notification scripts
 - gammastep for gamma control
 - geoclue for determining location (this is a dependency of gammastep (for Arch
 at least))
@@ -189,14 +199,14 @@ at least))
 
 Currently my preferred terminal emulator, mainly just for the windows and tabs.
 It's fast, I don't really care if it's faster than Alacritty. That said, I also
-have an Alacritty config because kitty isn't available for Windows (when I do 
-need to use Windows 10 for some godforsaken reason, I want a terminal better 
+have an Alacritty config because kitty isn't available for Windows (when I do
+need to use Windows 10 for some godforsaken reason, I want a terminal better
 than the one Git Bash ships)
 
 My config:
 - sets up my preferred color theme (some weird mix of the kitty Alabaster Dark
 and Alacritty Argonaut themes if memory serves) including opacity
-- adds a keybind to open a new window in the same directory 
+- adds a keybind to open a new window in the same directory
 (Ctrl+Shift+Alt+Enter)
 - Sets the font (system monospace font) and font size (either 11 pt or 13 pt,
 depending on if yadm local.class includes Small\_Screen)
@@ -237,7 +247,7 @@ colors to match my terminal colors and set the font to sans-serif (i.e. use the
 user/system sans-serif font). It also sets a 3 second default timeout on
 notifications.
 
-In addition, for my brightness/volume notification scripts (see below), it 
+In addition, for my brightness/volume notification scripts (see below), it
 will make those notifications appear in the bottom center of the screen and
 slightly larger (trying to mimic Cinnamon's brightness/volume control)
 
@@ -255,7 +265,7 @@ My Neovim config does the following:
   shoutout to [vim-noctu](https://github.com/noahfrederick/vim-noctu), the
   colorscheme I based mine off of (I copied that one and made changes where
   I wanted to change it).
-- uses the system clipboard (so you can copy and paste between Neovim and 
+- uses the system clipboard (so you can copy and paste between Neovim and
   anything else using Neovim commands)
 - sets tab width of 4, and to use tabs for indentation
 - enables absolute line numbers and active line underlining
@@ -265,32 +275,31 @@ My Neovim config does the following:
 
 ### Qt Theming
 
-For theming Qt, I generally just force Qt apps to use GTK 2 theming (GTK 2
-because it seems all the available Qt plugins for GTK theming use GTK 2). I
-include alternative `qt5ct.conf` and `qt6ct.conf` files to control font size
-using the `Small_Screen` yadm class I have. This way, I can specify if fonts
-need to be enlarged for smaller screens or not.
+For theming Qt, I generally just force Qt apps to use the Qt 5 and Qt 6
+settings apps. In those apps, I set the theme to GTK 2. I include alternative
+`qt5ct.conf` and `qt6ct.conf` files to control font size using the
+`Small_Screen` yadm class I have. This way, I can specify if fonts need to be
+enlarged for smaller screens or not.
 
 Dependencies:
 - Qt 5 Settings (qt5ct on arch)
 - Qt 6 Settings (qt6ct on arch)
 - A GTK theme that supports GTK 2 (for me, Arc-Dark)
-- On Arch linux, you need the 
+- On Arch linux, you need the
   [qt5-styleplugins](https://aur.archlinux.org/packages/qt5-styleplugins) and
   [qt6gtk2](https://aur.archlinux.org/packages/qt6gtk2) packages from the AUR.
-
-Something I noticed with Kdenlive specifically was that some parts of the UI
+- Something I noticed with Kdenlive specifically was that some parts of the UI
 didn't look right until I installed the Breeze theme, so also consider
 installing that as well.
 
 ### Sway
 
-My current window manager on Arch Linux.
+My current window manager/compositor on Arch Linux.
 
 I'm not gonna bother describing an entire window manager config here, but it's
 mostly just the defaults with a custom background and changing the launcher to
 `fuzzel`. I also added a screenshot mode based on a config I found online -
-enter it using Super+P (by default. You can change it in your hardware_config
+enter it using Super+P (by default. You can change it in your hardware\_config
 file).
 
 I also included handling of the XF86 keys for audio using wireplumber (because
@@ -309,7 +318,7 @@ Dependencies:
 - blueman for a bluetooth applet
 - fuzzel
 - grim (in conjunction with slurp, screenshotting)
-- My brightness and volume notification scripts 
+- My brightness and volume notification scripts
 - gammastep for gamma control
 - geoclue for determining location (this is a dependency of gammastep (for Arch
   at least))
@@ -329,7 +338,7 @@ width of 4, absolute line numbers, mouse support, filetype detection,
 cursor underline, and using my personal color scheme - see the Neovim section
 for more.
 
-Unlike my Neovim config, which I plan to eventually make pretty fancy, my vim 
+Unlike my Neovim config, which I plan to eventually make pretty fancy, my vim
 config is gonna stay simple.
 
 ### Waybar
@@ -338,10 +347,10 @@ The bar I use for Wayland compositors. Not gonna go in depth here yet, since my
 config is very much in flux. That said, I use Font Awesome for icons, and Fira
 Code for text. I also generally color my bar to match Arc GTK colors.
 
-I maintain separate config files for each Wayland compositor in a `waybar` 
-folder in that compositor's config folder. That file includes the main config 
-file, which itself includes a hardware config file. The compositor configs 
-include modules specific to a compositor e.g. sway/mode, while the hardware 
+I maintain separate config files for each Wayland compositor in a `waybar`
+folder in that compositor's config folder. That file includes the main config
+file, which itself includes a hardware config file. The compositor configs
+include modules specific to a compositor e.g. sway/mode, while the hardware
 config file includes host-specific options (e.g. a battery module). The main
 config file just contains options that should always work.
 
@@ -359,8 +368,7 @@ just changes the text size depending on the yadm `Small_Screen` class.
 
 ## Miscellaneous Scripts
 
-Aside from the dedicated dotfiles I have, I also use a few scripts I wrote. Those are:
-
+Aside from the dedicated dotfiles I have, I also use a few scripts I wrote.
 These are files in `~/.local/bin`, which is where I put any programs I want on
 PATH (pretty sure that follow the FreeDesktop Home Directory Specification).
 
@@ -383,7 +391,7 @@ handle the hint - you might have to remove the hint.
 ### import-gsettings.sh
 
 A tool to import settings from a GTK 3 config file and call the relevant
-`gsettings` calls to make GTK 4 match GTK 3 theming. Mostly taken from a Sway 
+`gsettings` calls to make GTK 4 match GTK 3 theming. Mostly taken from a Sway
 wiki page.
 
 ### volume-notifications.sh
@@ -414,8 +422,8 @@ Fuzzel to display icons for them.
 ### Backgrounds
 
 Where I put whatever background I use. Right now, it just has a picture I got
-off of WikiChip of a AMD Zen 2 Core Complex Die that I edited to be darker 
-(original image here: 
-https://en.wikichip.org/wiki/amd/microarchitectures/zen_2#Core_Complex_Die).
+off of WikiChip of a AMD Zen 2 Core Complex Die that I edited to be darker
+(original image
+[here](https://en.wikichip.org/wiki/amd/microarchitectures/zen_2#Core_Complex_Die)).
 
 Will probably add more soon.
