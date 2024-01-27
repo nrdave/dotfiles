@@ -72,7 +72,7 @@ Not necessarily my preferred terminal emulator at the moment, but it's
 good. I primarily keep this config around for Windows, where kitty is
 unavailable - I get to use a terminal emulator that doesn't suck (that said, I
 need to create a custom config or something for windows that'll include this
-config). The config is broken up into a few files for organizational sake.
+config). The config is broken up into a few files for organization.
 
 ### bash
 
