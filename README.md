@@ -402,6 +402,13 @@ to remove it.
 
 (yes I copied what I wrote for brightness-notifications, sue me).
 
+### logout\_power\_options.sh (and related scripts)
+
+This script works in conjunction with some really simple wrapper scripts for
+shutting down, rebooting, suspending, logging out, and locking the screen. It
+just echoes the names of the scripts along with some other stuff that allows
+Fuzzel to display icons for them.
+
 ## Other Files
 
 ### Backgrounds
@@ -412,26 +419,3 @@ off of WikiChip of a AMD Zen 2 Core Complex Die that I edited to be darker
 https://en.wikichip.org/wiki/amd/microarchitectures/zen_2#Core_Complex_Die).
 
 Will probably add more soon.
-
-### Desktop Entries
-
-These are `.desktop` files in `.local/share/applications`, which means that any
-program that can launch desktop entries should find them.
-
-#### systemctl-power-options.desktop
-
-This file wraps calls to various `systemctl` commands, namely `poweroff`,
-`reboot`, and `suspend`. With this file, I can shut down/reboot/suspend 
-through fuzzel.
-
-Each command is listed as a Desktop Action, with the main Desktop Entry doing
-nothing.
-
-#### loginctl-user-options.desktop
-
-This file wraps calls to two `loginctl` commands, namely `lock-session`, and
-`terminate-user $USER`. With this file, I can lock the screen or logout from
-fuzzel, or any desktop entry launcher for that matter.
-
-Each command is listed as a Desktop Action, with the main Desktop Entry doing
-nothing.
