@@ -9,17 +9,18 @@ window#waybar {
 	color: #bac3cf;
 }
 
-#workspaces button {
+#workspaces button,
+#tags button {
 	border-radius: 0.5em;
 	padding: 0;
 }
 
 #workspaces button.focused,
-#workspaces button.active {
+#workspaces button.active,
+#tags button.focused {
 	color: #5294e2;
 	background-color: #404552;
 }
-
 
 /* Common Styling for most modules */
 #clock,
