@@ -1,0 +1,29 @@
+#!/bin/sh
+# Programs to run on startup
+
+
+# Kill current waybar instances
+pkill waybar
+
+# Start the geoclue agent if it isn't already running
+[ -n "$(pgrep agent)" ] || riverctl spawn /usr/lib/geoclue-2.0/demos/agent 
+
+# Start tray applets if they aren't already running
+[ -n "$(pgrep gammastep)" ] || riverctl spawn gammastep-indicator
+[ -n "$(pgrep nm-applet)" ] || riverctl spawn nm-applet
+[ -n "$(pgrep blueman-applet)" ] || riverctl spawn blueman-applet
+[ -n "$(pgrep udiskie)" ] || riverctl spawn 'udiskie --no-automount --tray'
+
+riverctl spawn 'waybar -c ~/.config/river/waybar/config'
+
+# Swaybg for backgrounds
+riverctl spawn 'swaybg -i ~/backgrounds/zen2ccd.png -m fill'
+
+# Swayidle for handling idling and locking
+riverctl spawn 'swayidle -w timeout 600 swaylock \
+				lock swaylock \
+				before-sleep swaylock'
+
+
+# Spawn mako for notifications unless it's already running (unlikely)
+[ -n "$(pgrep mako)" ] || riverctl spawn mako

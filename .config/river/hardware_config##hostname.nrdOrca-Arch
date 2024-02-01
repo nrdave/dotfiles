@@ -1,0 +1,18 @@
+#!/bin/sh
+# Sets up configuration for specific hardware
+# This file is for my laptop
+
+# Configure touchpad
+riverctl input pointer-1739-52632-MSFT0004:00_06CB:CD98_Touchpad disable-while-typing enabled
+riverctl input pointer-1739-52632-MSFT0004:00_06CB:CD98_Touchpad natural-scroll enabled
+riverctl input pointer-1739-52632-MSFT0004:00_06CB:CD98_Touchpad tap enabled
+
+# Bind lock key to lock stuff
+
+# Use keys that have meaning in Windows (switch active window and settings)
+# to do media control
+for mode in normal locked
+do
+	riverctl map $mode Super P spawn 'playerctl play-pause'
+	riverctl map $mode Super I spawn 'playerctl next'
+done
