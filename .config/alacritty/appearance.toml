@@ -25,11 +25,11 @@ white 	= "#d2d9dd"
 [colors.bright]
 black	= "#323644"
 red		= "#ff7f8e"
-green	= "#5bef87"
-yellow	= "#ffea4c"
-blue	= "#4cb4ff"
+green	= "#7fffa5"
+yellow	= "#fff07f"
+blue	= "#7fc9ff"
 magenta	= "#ff7fff"
-cyan	= "#67ffef"
+cyan	= "#7ffff2"
 white	= "#f3faff"
 
 
