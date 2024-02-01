@@ -70,6 +70,7 @@ Below is the list of all programs/system configurations I have dotfiles for.
 - mako
 - Neovim
 - Qt Theming (kinda)
+- River
 - Sway
 - vim
 - Waybar
@@ -259,7 +260,16 @@ Dependencies:
 My preferred CLI editor. I like `vim` in general, I mainly chose Neovim because
 configuration in Lua is easier than in vimscript IMO.
 
-My Neovim config does the following:
+On that subject, I use lazy.nvim for plugins, so Neovim should be at least at
+version 0.8.0. As for plugins, I currently use the following:
+
+- telescope for file searching within a project (requires Neovim version 0.9)
+- nvim-treesitter for AST parsing/syntax highlighting
+- lualine for a nicer status bar
+- lspconfig - defaults for configuring LSPs. I only have clangd set up right
+  now.
+
+Aside from the plugins, my Neovim config does the following:
 - enables the mouse
 - sets up syntax highlighting to just use the terminal colors - MASSIVE
   shoutout to [vim-noctu](https://github.com/noahfrederick/vim-noctu), the
@@ -291,6 +301,14 @@ Dependencies:
 - Something I noticed with Kdenlive specifically was that some parts of the UI
 didn't look right until I installed the Breeze theme, so also consider
 installing that as well.
+
+### River
+
+I keep this around in case I want to try something on the River compositor -
+I've been playing around with it for a bit and it's nice, but I still prefer
+Sway.
+
+Basically does most of what my Sway/Hyprland configs do.
 
 ### Sway
 
