@@ -20,7 +20,7 @@ let g:colors_name = "thermo"
 hi Normal              ctermfg=7     ctermbg=0
 hi Cursor              ctermfg=7     ctermbg=NONE  
 hi MatchParen          ctermbg=0     cterm=reverse,bold
-hi Pmenu               ctermfg=15    ctermbg=0
+hi Pmenu               ctermfg=15    ctermbg=8
 hi PmenuThumb          ctermbg=7
 hi PmenuSBar           ctermbg=4
 hi PmenuSel            ctermfg=0     ctermbg=12
@@ -40,7 +40,7 @@ hi StatusLineNC        ctermfg=0     ctermbg=8     cterm=bold
 hi VertSplit           ctermfg=8     ctermbg=0     cterm=NONE
 hi TabLine             ctermfg=7     ctermbg=0     cterm=NONE
 hi TabLineSel          ctermfg=15    ctermbg=4
-hi Folded              ctermfg=14    ctermbg=0     cterm=bold
+hi Folded              ctermfg=14    ctermbg=8     cterm=bold
 hi Conceal             ctermfg=6     ctermbg=NONE
 hi Directory           ctermfg=12
 hi Title               ctermfg=15    cterm=bold
@@ -76,10 +76,10 @@ hi Comment         ctermfg=10
 hi Underlined      ctermfg=4   cterm=underline
 hi Type            ctermfg=4   cterm=bold
 hi String          ctermfg=14
-hi Keyword         ctermfg=4
+hi Keyword         ctermfg=5
 hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
-hi Function        ctermfg=11
-hi Identifier      ctermfg=4   cterm=bold
+hi Function        ctermfg=11  cterm=bold
+hi Identifier      ctermfg=12  cterm=NONE
 hi Statement       ctermfg=5   cterm=bold
 hi Constant        ctermfg=14
 hi Number          ctermfg=14
