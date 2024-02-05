@@ -265,8 +265,9 @@ version 0.8.0. As for plugins, I currently use the following:
 
 - telescope for file searching within a project (requires Neovim version 0.9)
 - nvim-treesitter for AST parsing/syntax highlighting
-- lspconfig - defaults for configuring LSPs. I only have clangd set up right
-  now.
+- lspconfig - defaults for configuring LSPs.
+- nvim-cmp for setting up completions
+- none-ls to hook in LSPs for formatting and completions
 
 Aside from the plugins, my Neovim config does the following:
 - enables the mouse
