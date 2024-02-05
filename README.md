@@ -265,7 +265,6 @@ version 0.8.0. As for plugins, I currently use the following:
 
 - telescope for file searching within a project (requires Neovim version 0.9)
 - nvim-treesitter for AST parsing/syntax highlighting
-- lualine for a nicer status bar
 - lspconfig - defaults for configuring LSPs. I only have clangd set up right
   now.
 
@@ -282,6 +281,7 @@ Aside from the plugins, my Neovim config does the following:
 - enables incremental search
 - disables highlighting search matches
 - search ignores case by default unless an uppercase letter is entered
+- sets up a nicer status bar
 
 ### Qt Theming
 
