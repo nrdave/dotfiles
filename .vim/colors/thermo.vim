@@ -20,8 +20,8 @@ let g:colors_name = "thermo"
 hi Normal              ctermfg=7     ctermbg=0
 hi Cursor              ctermfg=7     ctermbg=NONE  
 hi MatchParen          ctermbg=0     cterm=reverse,bold
-hi Pmenu               ctermfg=15    ctermbg=8
-hi PmenuThumb          ctermbg=7
+hi Pmenu               ctermfg=15    ctermbg=0
+hi PmenuThumb          ctermbg=7     ctermbg=0
 hi PmenuSBar           ctermbg=4
 hi PmenuSel            ctermfg=0     ctermbg=12
 hi ColorColumn         ctermbg=0
@@ -37,6 +37,11 @@ hi IncSearch           ctermfg=0     ctermbg=13    cterm=NONE
 hi Search              ctermfg=0     ctermbg=10
 hi StatusLine          ctermfg=15    ctermbg=8     cterm=bold
 hi StatusLineNC        ctermfg=0     ctermbg=8     cterm=bold
+hi StatusLineInsertAccent ctermfg=14 ctermbg=8     cterm=bold
+hi StatusLineVisualAccent ctermfg=13 ctermbg=8     cterm=bold
+hi StatusLineReplaceAccent ctermfg=11 ctermbg=8     cterm=bold
+hi StatusLineCmdLineAccent ctermfg=12 ctermbg=8     cterm=bold
+hi StatusLineTerminalAccent ctermfg=10 ctermbg=8     cterm=bold
 hi VertSplit           ctermfg=8     ctermbg=0     cterm=NONE
 hi TabLine             ctermfg=7     ctermbg=0     cterm=NONE
 hi TabLineSel          ctermfg=15    ctermbg=4
@@ -58,12 +63,12 @@ hi User6               ctermfg=6     ctermbg=0
 hi User7               ctermfg=7     ctermbg=0
 hi User8               ctermfg=8     ctermbg=0
 hi User9               ctermfg=15    ctermbg=5
+hi WarningMsg          ctermfg=8     ctermbg=3    cterm=bold
 hi SpecialKey          ctermfg=14
 hi! link CursorColumn  CursorLine
 hi! link SignColumn    LineNr
 hi! link WildMenu      Visual
 hi! link FoldColumn    SignColumn
-hi! link WarningMsg    ErrorMsg
 hi! link MoreMsg       Title
 hi! link Question      MoreMsg
 hi! link ModeMsg       MoreMsg
@@ -254,5 +259,12 @@ hi! link bladeParen      phpParent
 hi! link bladeEchoDelim  PreProc
 
 "}}}
+" LSP Coloring {{{
+hi LspDiagnosticsSignError ctermfg=1
+hi LspDiagnosticsSignWarning ctermfg=3
+hi LspDiagnosticsSignHint ctermfg=14
+hi LspDiagnosticsSignInfo ctermfg=12
+"}}}
+
 
 " vim: fdm=marker:sw=2:sts=2:et
