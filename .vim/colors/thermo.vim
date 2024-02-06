@@ -17,7 +17,7 @@ let g:colors_name = "thermo"
 
 "}}}
 " Vim UI {{{
-hi Normal              ctermfg=7     ctermbg=0
+hi Normal              ctermfg=7
 hi Cursor              ctermfg=7     ctermbg=NONE  
 hi MatchParen          ctermbg=0     cterm=reverse,bold
 hi Pmenu               ctermfg=15    ctermbg=0
@@ -45,7 +45,7 @@ hi StatusLineTerminalAccent ctermfg=10 ctermbg=8     cterm=bold
 hi VertSplit           ctermfg=8     ctermbg=0     cterm=NONE
 hi TabLine             ctermfg=7     ctermbg=0     cterm=NONE
 hi TabLineSel          ctermfg=15    ctermbg=4
-hi Folded              ctermfg=14    ctermbg=8     cterm=bold
+hi Folded              ctermfg=14    ctermbg=0     cterm=bold
 hi Conceal             ctermfg=6     ctermbg=NONE
 hi Directory           ctermfg=12
 hi Title               ctermfg=15    cterm=bold
@@ -259,12 +259,17 @@ hi! link bladeParen      phpParent
 hi! link bladeEchoDelim  PreProc
 
 "}}}
-" LSP Coloring {{{
+" LSP Coloring for my status bar {{{
 hi LspDiagnosticsSignError ctermfg=1
 hi LspDiagnosticsSignWarning ctermfg=3
-hi LspDiagnosticsSignHint ctermfg=14
-hi LspDiagnosticsSignInfo ctermfg=12
+hi LspDiagnosticsSignHint ctermfg=12
+hi LspDiagnosticsSignInfo ctermfg=7
 "}}}
-
+" GitSigns Neovim Plugin {{{
+hi GitSignsAdd ctermfg=2 ctermbg=NONE
+hi GitSignsChange ctermfg=3 ctermbg=NONE
+hi GitSignsDelete ctermfg=1 ctermbg=NONE
+hi GitSignsHead ctermfg=12 ctermbg=NONE
+"}}}
 
 " vim: fdm=marker:sw=2:sts=2:et
