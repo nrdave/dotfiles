@@ -6,6 +6,8 @@ set tabstop=4
 
 set number
 
+let mapleader = ' '
+
 syntax enable
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype on
