@@ -35,13 +35,13 @@ hi CursorLineNr        ctermfg=11    ctermbg=0
 hi Visual              ctermfg=15    ctermbg=8
 hi IncSearch           ctermfg=0     ctermbg=13    cterm=NONE
 hi Search              ctermfg=0     ctermbg=10
-hi StatusLine          ctermfg=15    ctermbg=8     cterm=bold
-hi StatusLineNC        ctermfg=0     ctermbg=8     cterm=bold
-hi StatusLineInsertAccent ctermfg=14 ctermbg=8     cterm=bold
-hi StatusLineVisualAccent ctermfg=13 ctermbg=8     cterm=bold
-hi StatusLineReplaceAccent ctermfg=11 ctermbg=8     cterm=bold
-hi StatusLineCmdLineAccent ctermfg=12 ctermbg=8     cterm=bold
-hi StatusLineTerminalAccent ctermfg=10 ctermbg=8     cterm=bold
+hi StatusLine          ctermfg=15    ctermbg=0     cterm=bold
+hi StatusLineNC        ctermfg=0     ctermbg=0     cterm=bold
+hi StatusLineInsertAccent ctermfg=14 ctermbg=0     cterm=bold
+hi StatusLineVisualAccent ctermfg=13 ctermbg=0     cterm=bold
+hi StatusLineReplaceAccent ctermfg=11 ctermbg=0     cterm=bold
+hi StatusLineCmdLineAccent ctermfg=12 ctermbg=0     cterm=bold
+hi StatusLineTerminalAccent ctermfg=10 ctermbg=0     cterm=bold
 hi VertSplit           ctermfg=8     ctermbg=0     cterm=NONE
 hi TabLine             ctermfg=7     ctermbg=0     cterm=NONE
 hi TabLineSel          ctermfg=15    ctermbg=4

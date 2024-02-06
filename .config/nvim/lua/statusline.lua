@@ -63,7 +63,7 @@ local function filename()
   if fname == "" then
       return ""
   end
-  return fname .. " %m" -- append modified symbol to file name
+  return fname .. " %m " -- append modified symbol to file name
 end
 
 local function lsp()
