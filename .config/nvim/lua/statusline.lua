@@ -97,7 +97,7 @@ local function lsp()
     info = " %#LspDiagnosticsSignInfo#🛈 " .. count["info"]
   end
 
-  return errors .. warnings .. hints .. info .. "%#Normal#"
+  return errors .. warnings .. hints .. info .. "%#Normal# "
 end
 
 local function filetype()
