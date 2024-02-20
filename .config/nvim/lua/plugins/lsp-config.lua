@@ -32,11 +32,20 @@ return {
 			local lspconfig = require("lspconfig")
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			
+			local on_attach = function(_, bufnr)
+				vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+				require('completion').on_attach()
+			end
+
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.pylsp.setup({
 				capabilities = capabilities,
+			})
+			lspconfig.zls.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
 			})
 
 		end,
