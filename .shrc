@@ -12,7 +12,12 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # Set some universal env vars
 export EDITOR='/usr/bin/nano'
-export VISUAL='/usr/bin/nvim'
+export VISUAL='/usr/bin/vim'
+
+# If neovim is available (either a system or local install) use it instead of
+# vim. For some systems, the version of neovim is too old for use with
+# lazy.nvim and its plugins, so I have to download an executable from upstream
+command -v nvim &> /dev/null 2>&1 && export VISUAL=$(command -v nvim)
 
 # Add my local bin folder to path
 if [ -d "$HOME/.local/bin" ] ; then
