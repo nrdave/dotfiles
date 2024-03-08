@@ -52,7 +52,7 @@ The 16 colors I use for my terminals, taken directly from my `kitty` config
 
 | Color    | Normal  | Bright  |
 |----------|---------|---------|
-|Black     |`#383c4c`|`#4b5066`|
+|Black     |`#252833`|`#4b5066`|
 |Red       |`#ff000f`|`#ff7f8e`|
 |Green     |`#3ed16a`|`#7fffa5`|
 |Yellow    |`#f2d500`|`#fff07f`|
