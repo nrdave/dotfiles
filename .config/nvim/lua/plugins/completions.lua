@@ -1,17 +1,13 @@
+-- Set up completions using nvim-cmp
 return {
 	{
-		"hrsh7th/cmp-nvim-lsp"
-	},
-	{
-		"L3MON4D3/LuaSnip"
-	},
-	{
-		"saadparwaiz1/cmp_luasnip"
-	},
-	{
 		'hrsh7th/nvim-cmp',
+		dependencies = {
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-nvim-lsp",
+			"saadparwaiz1/cmp_luasnip",
+		},
 		config = function()
-
 			local cmp = require("cmp")
 			cmp.setup({
 
@@ -35,11 +31,28 @@ return {
 				sources = cmp.config.sources({
 					{ name = 'nvim_lsp' },
 					{ name = 'luasnip' },
+					{ name = 'buffer' },
 				}, 
 				{
 					{ name = 'buffer' },
 				})
 			})
 		end,
+	},
+	{
+		-- Completions from language servers
+		"hrsh7th/cmp-nvim-lsp"
+	},
+	{
+		-- Snippet engine
+		"L3MON4D3/LuaSnip"
+	},
+	{
+		-- Completion source for LuaSnip (above)
+		"saadparwaiz1/cmp_luasnip"
+	},
+	{
+		-- Completions from the current buffer
+		"hrsh7th/cmp-buffer"
 	},
 }
