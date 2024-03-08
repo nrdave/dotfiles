@@ -91,6 +91,11 @@ for_window {
 	[window_type="dialog"] floating enable
 }
 
+input type:pointer {
+	accel_profile "flat"
+	pointer_accel 0.4
+}
+
 ### Idle configuration
 set $locker 'swaylock'
 
