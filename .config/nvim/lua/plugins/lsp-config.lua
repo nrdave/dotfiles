@@ -47,6 +47,14 @@ return {
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
+			lspconfig.ruff_lsp.setup({
+				capabilities = capabilities,
+				init_options = {
+				settings = {
+					args = {},
+					}
+				}
+			})
 
 		end,
 	},
