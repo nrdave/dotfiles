@@ -267,7 +267,14 @@ version 0.8.0. As for plugins, I currently use the following:
 - nvim-treesitter for AST parsing/syntax highlighting
 - lspconfig - defaults for configuring LSPs.
 - nvim-cmp for setting up completions
-- none-ls to hook in LSPs for formatting and completions
+    - cmp-nvim-lsp to hook in LSP completions
+    - LuaSnip as a snippet engine with cmp-luasnip
+    - cmp-buffer for completions from the current buffer
+- conform for formatting
+- trouble for viewing diagnostic information
+- mason for installing LSPs, formatters, linters, etc.
+- gitsigns for, ya know, git information
+- nvim-lint for linter support
 
 Aside from the plugins, my Neovim config does the following:
 - enables the mouse
