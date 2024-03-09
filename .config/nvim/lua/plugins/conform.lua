@@ -8,6 +8,12 @@ return {
 			-- Note that formatters that come with a language server e.g clang_format
 			-- are detected automatically, so there's no need to include them here
 			formatters_by_ft = {
+				python = {
+					-- To fix lint errors.
+					"ruff_fix",
+					-- To run the Ruff formatter.
+					"ruff_format",
+				},
 			},
 			format_on_save = {
 				lsp_fallback = true,

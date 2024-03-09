@@ -40,22 +40,43 @@ return {
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.ruff_lsp.setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+				init_options = {
+					settings = {
+						args = {
+							"--select", "D",
+							"--select", "E",
+							"--select", "F",
+							"--select", "W",
+							"--ignore", "D212",
+							"--ignore", "D400",
+							"--ignore", "D415",
+							"--line-length=79"
+						},
+					}
+				}
+			})
 			lspconfig.pylsp.setup({
 				capabilities = capabilities,
+				settings = {
+					pylsp = {
+						settings = {
+							plugins = {
+								pylint = { enabled = "false" },
+								pyflakes = { enabled = "false" },
+								pycodestyle = { enabled = "false" },
+							}
+						}
+					}
+				}
 			})
 			lspconfig.zls.setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
-			lspconfig.ruff_lsp.setup({
-				capabilities = capabilities,
-				init_options = {
-				settings = {
-					args = {},
-					}
-				}
-			})
-
+			
 		end,
 	},
 }
