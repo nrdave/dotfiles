@@ -1,0 +1,16 @@
+{
+	"height": 40,
+    "spacing": 2,
+
+	"group/host-specific": {
+		"orientation": "horizontal",
+        "modules": [
+		],
+    },
+	"wlr/taskbar": {
+		"icon-size": 32,
+	},
+	"tray": {
+		"icon-size": 24,
+    },
+}
