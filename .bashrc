@@ -35,13 +35,6 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# Source the git prompt function if necessary - the if necessary part comes from
-# my use of yadm as a dotfile manager
-source ~/.bash_source_git_prompt
-
-# Source common environment vars and settings
-source ~/.shrc
-
 # Set the bash prompt - I'm assuming whatever terminal I use has color support
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00;32m\]@\h\[\033[00m\] \[\033[01;34m\]\w \[\033[0;36;1m\]$(__git_ps1 "(%s) ")\[\033[0m\]\$ '
 

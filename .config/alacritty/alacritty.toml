@@ -1,10 +1,12 @@
 # The main config file - contains settings that don't have a category or 
 # settings that are the only changed value in their category
 
+shell = "C:/Users/point/scoop/shims/bash.exe"
+
 # import the other config files
 import = [
-	"~/.config/alacritty/font_size.toml",
-	"~/.config/alacritty/appearance.toml",
+	"~/dotfiles/.config/alacritty/font_size.toml",
+	"~/dotfiles/.config/alacritty/appearance.toml",
 ]
 
 live_config_reload = true
