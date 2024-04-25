@@ -52,6 +52,7 @@ return {
 							"--select", "W",
 							"--ignore", "D212",
 							"--ignore", "D400",
+							"--ignore", "D407",
 							"--ignore", "D415",
 							-- Ignore whitespace between colon as a slice operator (taking a section
 							-- of an array or list).
