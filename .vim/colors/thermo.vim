@@ -8,6 +8,7 @@
 " Scheme setup {{{
 set background=dark
 hi! clear
+set notermguicolors
 
 if exists("syntax_on")
   syntax reset
