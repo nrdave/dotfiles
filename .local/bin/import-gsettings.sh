@@ -19,7 +19,3 @@ gsettings set "$gnome_schema" icon-theme "$icon_theme"
 gsettings set "$gnome_schema" cursor-theme "$cursor_theme"
 gsettings set "$gnome_schema" cursor-size "$cursor_size"
 gsettings set "$gnome_schema" font-name "$font_name"
-
-export GTK_THEME=$gtk_theme
-
-systemctl --user import-environment GTK_THEME
