@@ -20,12 +20,8 @@ export VISUAL='/usr/bin/vim'
 command -v nvim &> /dev/null 2>&1 && export VISUAL=$(command -v nvim)
 
 # Add my local bin folder to path
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-else
-	mkdir -p $HOME/.local/bin
-    PATH="$HOME/.local/bin:$PATH"
-fi
+mkdir -p $HOME/.local/bin
+export PATH="$HOME/.local/bin:$PATH"
 
 # Set up GTK settings properly
 . import-gsettings.sh
