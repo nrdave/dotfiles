@@ -1,0 +1,34 @@
+# A shell file that should be readable by any shell that can source POSIX shell
+# scripts
+
+# Set some universal env vars
+export EDITOR='/usr/bin/nano'
+export VISUAL='/usr/bin/vim'
+
+# If neovim is available (either a system or local install) use it instead of
+# vim. For some systems, the version of neovim is too old for use with
+# lazy.nvim and its plugins, so I have to download an executable from upstream
+command -v nvim &> /dev/null 2>&1 && export VISUAL=$(command -v nvim)
+
+{{ if eq .chezmoi.os "linux" }}
+# Linux specific stuff
+
+# Add my local bin folder to path
+mkdir -p $HOME/.local/bin
+export PATH="$HOME/.local/bin:$PATH"
+
+# Set up GTK settings properly
+. import-gsettings.sh
+
+# Setting all XDG base directory values to their defaults
+# XDG user dirs are handled by the xdg-user-dirs package
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_RUNTIME_DIR="/run/user/$UID"
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# Set up Qt apps to use config from Qt 5 and Qt 6 settings apps
+export QT_QPA_PLATFORMTHEME=qt5ct
+{{- end }}
