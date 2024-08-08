@@ -80,12 +80,9 @@ color)
 - Customize my shell prompt a bit, including the git-provided function to get
 the current git branch if the working directory contains a git repo
 
-- Source the file required to load the above git function if necessary - uses
-yadm's alternate files. If yadm's local classes include `Source_Git_Prompt`,
-the file `/usr/share/git/completion/git-prompt.sh1` will be sourced (this is the
-location of the prompt function on an Arch Linux system). If the class is not
-set, this file isn't sourced (the file doesn't exist on Linux Mint as far as
-I can tell)
+- Source the file required to load the above git function if necessary - based
+  on the OS name/distro name using a variable I set in my chezmoi config
+  template.
 
 - Sources a file called `.shrc`, which contains environment variables that I
 want to maintain constant between bash and zsh (once I get around to switching
@@ -160,10 +157,6 @@ My config basically does all the same stuff as my Sway config: handle audio
 with my volume script, sets a custom background, uses fuzzel for launching,
 etc. No screenshots yet - need to work on that.
 
-I also use yadm alternate files for hardware configuration. My hardware config
-for my laptop, for example, just sets up brightness control using my brightness
-script, as well as some bindings for function keys that output Windows hotkeys.
-
 Dependencies:
 
 - blueman for a bluetooth applet
@@ -188,11 +181,12 @@ than the one Git Bash ships)
 
 My config:
 - sets up my preferred color theme (some weird mix of the kitty Alabaster Dark
-and Alacritty Argonaut themes if memory serves) including opacity
+  and Alacritty Argonaut themes if memory serves) including opacity
 - adds a keybind to open a new window in the same directory
-(Ctrl+Shift+Alt+Enter)
+  (Ctrl+Shift+Alt+Enter)
 - Sets the font (system monospace font) and font size (either 11 pt or 13 pt,
-depending on if yadm local.class includes Small\_Screen)
+  depending on if the computer is desktop or laptop - determined by
+  .chezmoi.toml.tmpl)
 
 ### lf
 
@@ -276,10 +270,9 @@ Aside from the plugins, my Neovim config does the following:
 ### Qt Theming
 
 For theming Qt, I generally just force Qt apps to use the Qt 5 and Qt 6
-settings apps. In those apps, I set the theme to GTK 2. I include alternative
-`qt5ct.conf` and `qt6ct.conf` files to control font size using the
-`Small_Screen` yadm class I have. This way, I can specify if fonts need to be
-enlarged for smaller screens or not.
+settings apps. In those apps, I set the theme to GTK 2. I set the System and
+Monospace fonts to "Sans Serif" and "Monospace" so they use the fonts I set in
+my [fontconfig](#fontconfig)
 
 Dependencies:
 - Qt 5 Settings (qt5ct on arch)
@@ -289,8 +282,8 @@ Dependencies:
   [qt5-styleplugins](https://aur.archlinux.org/packages/qt5-styleplugins) and
   [qt6gtk2](https://aur.archlinux.org/packages/qt6gtk2) packages from the AUR.
 - Something I noticed with Kdenlive specifically was that some parts of the UI
-didn't look right until I installed the Breeze theme, so also consider
-installing that as well.
+  didn't look right until I installed the Breeze theme, so also consider
+  installing that as well.
 
 ### River
 
@@ -316,7 +309,7 @@ really, even Linux Mint defaults to Pipewire. Make the switch. And
 Technically, I use my `volume-notifications.sh` script, but that just wraps
 wireplumber anyway.
 
-I also have yadm alternate files for config options for individual systems (at
+I also have chezmoi template for config options for individual systems (at
 this point, I only have a config for my laptop Arch install). For my laptop,
 I'm using my `brightness-notifications.sh` script that wraps brightnessctl to
 control brightness, along with configuring my trackpad.
@@ -372,7 +365,8 @@ does everything I could ever need)
 ### Zathura
 
 The reader (mainly for PDFs) I use on Arch (also Mint sometimes). The config
-just changes the text size depending on the yadm `Small_Screen` class.
+just changes the text size depending on the chassis type detected in
+.chezmoi.toml.tmpl.
 
 ## Miscellaneous Scripts
 

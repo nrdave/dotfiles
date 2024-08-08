@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.hostname "nrdOrca-Arch" }}
+{{- if eq .chezmoi.hostname "nrdOrca-Arch" -}}
 # Config stuff specific to my laptop
 
 # Set up monitor
@@ -26,10 +26,10 @@ bind = SUPER, L, exec, loginctl lock-session
 $screenshotKey1 = SUPER_SHIFT, S
 $screenshotKey2 = SUPER_SHIFT_ALT, S
 $screenshotKey3 = SUPER_SHIFT_CTRL, S
-{{- else }}
+{{- else -}}
 # Set screenshot keybind
 $screenshotKey1 = SUPER, P
 $screenshotKey2 = SUPER_ALT, P
 $screenshotKey3 = SUPER_CTRL, P
 $screenshotKey4 = SUPER_CTRL_ALT, P
-{{- end }}
+{{- end -}}
