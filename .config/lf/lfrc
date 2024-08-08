@@ -57,7 +57,7 @@ cmd open &{{
         text/*) lf -remote "send $id \$$EDITOR \$fx";;
         application/json) lf -remote "send $id \$$EDITOR \$fx";;
         application/xml) lf -remote "send $id \$$EDITOR \$fx";;
-        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+        *) for f in $fx; do mimeopen $f > /dev/null 2> /dev/null & done;;
     esac
 }}
 
