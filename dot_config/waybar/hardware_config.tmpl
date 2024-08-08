@@ -1,31 +1,31 @@
-{{- if .chezmoi.hostname eq "nrdBlue-Arch" }}
+{{- if eq .chezmoi.hostname "nrdBlue-Arch" }}
 {
 	"height": 40,
-    "spacing": 2,
+	"spacing": 2,
 
 	"group/host-specific": {
 		"orientation": "horizontal",
         "modules": [
 		],
-    },
+	},
 	"wlr/taskbar": {
 		"icon-size": 32,
 	},
 	"tray": {
 		"icon-size": 24,
-    },
+	},
 }
-{{- else if .chezmoi.hostname eq "nrdOrca-Arch" }}
+{{- else if eq .chezmoi.hostname "nrdOrca-Arch" }}
 {
 	"height": 40,
-    "spacing": 2,
+	"spacing": 2,
 
 	"group/host-specific": {
 		"orientation": "horizontal",
         "modules": [
 			"battery",
 		],
-    },
+	},
 	"battery": {
         "states": {
             "warning": 30,
@@ -43,7 +43,7 @@
 	},
 	"tray": {
 		"icon-size": 24,
-    },
+	},
 }
 {{- else }}
 {

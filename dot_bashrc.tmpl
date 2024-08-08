@@ -35,8 +35,8 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# Source the git prompt function if necessary
 {{ if eq .osid "linux-arch" }}
+# Source the git prompt function
 . /usr/share/git/completion/git-prompt.sh
 {{ end }}
 
