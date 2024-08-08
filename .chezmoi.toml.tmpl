@@ -17,11 +17,11 @@
 [data]
     osid = {{ $osid | quote }}
 {{- if eq $chassisType "laptop" }}
-    normal_font_size = 12
-    monospace_font_size = 13
+    font_size = 12
+    terminal_font_size = 13
 {{- else }}
-	normal_font_size = 10
-	monospace_font_size = 11
+	font_size = 10
+	terminal_font_size = 11
 {{- end }}
 	normal_font_name = "DejaVu Sans"
 	monospace_font_name = "Fira Code"
