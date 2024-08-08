@@ -6,6 +6,7 @@ colors.md
 # Ignore linux configs
 dot_config
 dot_local
+.gtkrc-2.0
 {{- else if eq .chezmoi.os "linux" -}}
 # Ignore windows appdata folder
 AppData
