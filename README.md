@@ -131,10 +131,11 @@ I use the Arc-Dark GTK theme, with the Papirus-Dark icon theme. These themes
 are set up in `.config/gtk-3.0/settings.ini`, which also sets the GTK font to
 DejaVu Sans.
 
-In addition, in my `.shrc`, I source a script called import-gsettings.sh which
-reads the GTK 3 config file and uses the values in there in the respective
-calls to `gsettings` (i.e. the `gtk-theme-name` in the GTK 3 config file gets
-passed to a call to gsettings set org.gnome.desktop.interface gtk-theme).
+In addition, in my `.shrc`, (if the OS is linux) I source a script called
+import-gsettings.sh which reads the GTK 3 config file and uses the values in
+there in the respective calls to `gsettings` (i.e. the `gtk-theme-name` in the
+GTK 3 config file gets passed to a call to gsettings set
+org.gnome.desktop.interface gtk-theme).
 
 Finally, I also have a stylesheet called `gtk.css` in `~/.config/gtk-4.0/`,
 which gets applied to libadwaita apps. This makes such apps (e.g. GNOME
