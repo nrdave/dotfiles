@@ -15,44 +15,26 @@ I also include some scripts and other files I've written that are nice to have.
 
 ## Management
 
-I use [yadm](https://yadm.io/) to manage my dotfiles. Why?
+I use [chezmoi](https://www.chezmoi.io/) to manage my dotfiles. Why?
+I generally set up my computers to boot multiple Linux distros, as well as a
+Windows install (though I won't be downgrading to Windows 11). In any case,
+I want to be able to use my dotfiles across multiple distros and operating
+systems (e.g. if my work computer runs Windows). That's hard to do with many
+dotfile managers.
 
-1. It was available in the repos for both Linux Mint and Arch Linux (the two
-distros I use)
+Chezmoi, on the other hand, allows for changing configs based on OS and
+distro, as well as specific hosts. I'm able to maintain a dotfiles repo that I
+can use across all my systems without having to do a ton manually. Note that I
+paid for this flexibility with a lot of upfront time investment to make things
+work.
 
-2. Like 90% of yadm commands are just git commands, so you barely have to learn
-anything
-
-3. Despite the above point, yadm allows you to maintain alternative files, so I
-only have to maintain one repo for all my dotfiles and just create alternate
-files for configs where I need to change things system by system.
-
-### yadm config options
-
-I try to make all my alternate files
-(see [yadm docs](https://yadm.io/docs/alternates#)) operate based on yadm's
-class values. That way, changing which file I use for the config on a system
-just involves changing what classes are set in yadm's config.
-
-However, for some apps, I maintain configurations based on the hostname. This
-is exclusively for apps where that makes sense e.g. configuring my touchpad on
-my laptop in Sway.
-
-Below are all the values for classes that I have used, as well as what they
-change:
-
-- `Small_Screen`: A class to enable when your screen is "small" and you want to
-   enlarge text and/or icons
-	- `kitty` and `alacritty`: Changes the `font_size` from 11 pt to 13 pt
-	- GTK Theming: Changes `gtk-font-name` from DejaVu Sans 10 to DejaVu Sans
-      12
-	- Qt Theming: Changes the font sizes for both `fixed` and `general` to 12
-	  instead of 10
-    - zathura: Changes the font from `monospace normal 10` to
-	  `monospace normal 12`
-
-- `Source_Git_Prompt`: A class to indicate if the `__git_ps1` shell function
-   needs to be sourced from `/usr/share/git/completion/git-prompt.sh`
+If you aren't as crazy as I am, and you only want your dotfiles repo to handle
+maybe 1 or 2 distros, I highly recommend [yadm](https://yadm.io/) as a dotfile
+manager - it's what I used before chezmoi. yadm is basically just a wrapper
+around git with support for different files on different systems/OSes, and
+it's what I used before chezmoi (there's a tag in this repo for my last yadm
+commit if you want to look). While yadm doesn't provide the same power as
+chezmoi, it will likely work for most people.
 
 ## Scope
 

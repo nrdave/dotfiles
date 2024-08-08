@@ -1,0 +1,56 @@
+{{- if eq .chezmoi.hostname "nrdBlue-Arch" }}
+{
+	"height": 40,
+	"spacing": 2,
+
+	"group/host-specific": {
+		"orientation": "horizontal",
+        "modules": [
+		],
+	},
+	"wlr/taskbar": {
+		"icon-size": 32,
+	},
+	"tray": {
+		"icon-size": 24,
+	},
+}
+{{- else if eq .chezmoi.hostname "nrdOrca-Arch" }}
+{
+	"height": 40,
+	"spacing": 2,
+
+	"group/host-specific": {
+		"orientation": "horizontal",
+        "modules": [
+			"battery",
+		],
+	},
+	"battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+		"interval": 1,
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+	"wlr/taskbar": {
+		"icon-size": 32,
+	},
+	"tray": {
+		"icon-size": 24,
+	},
+}
+{{- else }}
+{
+	"group/host-specific": {
+		"orientation": "horizontal",
+        "modules": [
+		],
+    },
+}
+{{- end }}

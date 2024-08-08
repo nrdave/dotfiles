@@ -1,7 +1,0 @@
-{
-	"group/host-specific": {
-		"orientation": "horizontal",
-        "modules": [
-		],
-    },
-}

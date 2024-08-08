@@ -1,0 +1,35 @@
+{{- if eq .chezmoi.hostname "nrdOrca-Arch" }}
+# Config stuff specific to my laptop
+
+# Set up monitor
+monitor=eDP-1,1920x1080,0x0,1
+# Screen Brightness control
+bindl = , XF86MonBrightnessDown, exec, brightness-notifications.sh down
+bindl = , XF86MonBrightnessUp, exec, brightness-notifications.sh up
+
+bindl = SHIFT, XF86MonBrightnessDown, exec, brightness-notifications.sh nano-down
+bindl = SHIFT, XF86MonBrightnessUp, exec, brightness-notifications.sh nano-up
+
+# Set cursor
+exec-once = hyprctl setcursor Adwaita 32
+
+# Use keys that have meaning in Windows (switch active window and settings)
+# to do media control
+bindl = SUPER, P, exec, playerctl play-pause
+bindl = SUPER, I, exec, playerctl next
+
+# Bind windows lock hotkey (SUPER+L) which is emitted by the lock key on my
+# laptop to lock
+bind = SUPER, L, exec, loginctl lock-session
+
+# Set screenshot keybind
+$screenshotKey1 = SUPER_SHIFT, S
+$screenshotKey2 = SUPER_SHIFT_ALT, S
+$screenshotKey3 = SUPER_SHIFT_CTRL, S
+{{- else }}
+# Set screenshot keybind
+$screenshotKey1 = SUPER, P
+$screenshotKey2 = SUPER_ALT, P
+$screenshotKey3 = SUPER_CTRL, P
+$screenshotKey4 = SUPER_CTRL_ALT, P
+{{- end }}
