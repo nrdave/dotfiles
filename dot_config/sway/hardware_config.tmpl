@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.hostname "nrdOrca-Arch" }}
+{{- if eq .chezmoi.hostname "nrdOrca-Arch" -}}
 ### Output configuration
 # Background
 output * bg ~/backgrounds/zen2ccd.png fill
@@ -34,12 +34,12 @@ bindsym Mod4+L exec loginctl lock-session
 # Set the screenshot key variable to the output of my laptop's screenshot key
 # (that's also the windows screenshot shortcut)
 set $screenshot-key Mod4+Shift+S
-{{- else if eq .chezmoi.hostname "nrdBlue-Arch" }}
+{{- else if eq .chezmoi.hostname "nrdBlue-Arch" -}}
 ### Output configuration
 # Background
 output * bg ~/backgrounds/zen2ccd.png fill
 set $screenshot-key Print
-{{- else }}
+{{- else -}}
 # Default hardware configuration
 # Sets up minimal config options so that the main config file works
 
@@ -50,4 +50,4 @@ output * bg ~/backgrounds/zen2ccd.png fill
 # Set the screenshot key variable to a reasonable default
 # Should be changed to the relevant screenshot key on a keyboard (if available)
 set $screenshot-key Mod4+P
-{{- end }}
+{{- end -}}
