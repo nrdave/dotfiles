@@ -65,6 +65,8 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 ### Bind Power button to use fuzzel with user/power options
 bindsym XF86PowerOff exec logout_power_options.sh | fuzzel -d | xargs swaymsg exec --
 
+### Bind calculator key to open calculator
+bindsym XF86Calculator exec gnome-calculator
 ### Configuring behavior for various windows
 
 for_window {
