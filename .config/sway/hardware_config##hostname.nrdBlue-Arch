@@ -9,5 +9,3 @@ output * bg ~/backgrounds/zen2ccd.png fill
 # Set the screenshot key variable to a reasonable default
 # Should be changed to the relevant screenshot key on a keyboard (if available)
 set $screenshot-key Print
-
-bindsym XF86Calculator exec gnome-calculator
