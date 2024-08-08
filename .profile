@@ -8,7 +8,7 @@
 # This makes the DE/WM process have those environment variables, which
 # is important when ensuring a constant GTK theme, something I found out by
 # testing with Linux Mint on my desktop.
-source ~/.shrc
+. ~/.shrc
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
