@@ -1,0 +1,43 @@
+# This file contains config options for alacritty's appearance
+
+window.opacity	= 0.9
+
+# Configuring generic colors
+[colors.primary]
+background = {{ .term_bg | quote }}
+foreground = {{ .term_fg | quote }}
+
+[colors.selection]
+text		= {{ .term_sel_fg | quote }}
+background	= {{ .term_sel_bg | quote }}
+
+
+[colors.normal]
+black	= {{ .term_black	| quote }}
+red 	= {{ .term_red		| quote }}
+green 	= {{ .term_green	| quote }}
+yellow 	= {{ .term_yellow	| quote }}
+blue 	= {{ .term_blue		| quote }}
+magenta = {{ .term_magenta	| quote }}
+cyan	= {{ .term_cyan		| quote }}
+white 	= {{ .term_white	| quote }}
+
+[colors.bright]
+black	= {{ .term_bright_black		| quote }}
+red		= {{ .term_bright_red		| quote }}
+green	= {{ .term_bright_green		| quote }}
+yellow	= {{ .term_bright_yellow	| quote }}
+blue	= {{ .term_bright_blue		| quote }}
+magenta	= {{ .term_bright_magenta	| quote }}
+cyan	= {{ .term_bright_cyan		| quote }}
+white	= {{ .term_bright_white		| quote }}
+
+
+# Cursor config
+[cursor]
+style.shape = "Beam"
+style.blinking = "On"
+
+[colors.cursor]
+text= "CellBackground"
+background = {{ .term_cursor | quote }}

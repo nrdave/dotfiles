@@ -3,8 +3,8 @@
 
 # import the other config files
 import = [
-	"~/.config/alacritty/font_size.toml",
-	"~/.config/alacritty/appearance.toml",
+	{{ list "~/" . "font_size.toml" | join "" | quote }},
+	{{ list "~/" . "appearance.toml" | join "" | quote }},
 ]
 
 live_config_reload = true
