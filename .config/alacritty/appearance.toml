@@ -41,4 +41,3 @@ style.blinking = "On"
 [colors.cursor]
 text= "CellBackground"
 background = "#605dff"
-
