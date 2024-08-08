@@ -67,6 +67,7 @@ bindsym XF86PowerOff exec logout_power_options.sh | fuzzel -d | xargs swaymsg ex
 
 ### Bind calculator key to open calculator
 bindsym XF86Calculator exec gnome-calculator
+
 ### Configuring behavior for various windows
 
 for_window {

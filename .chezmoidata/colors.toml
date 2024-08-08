@@ -1,0 +1,62 @@
+# GUI App colors, taken from the Arc Dark GTK theme
+# found here: https://github.com/jnsh/arc-theme
+
+gui_text	= "#d3dae3"
+gui_bg		= "#383c4a"
+gui_base	= "#404552"
+gui_border	= "#2c2f3a"
+
+gui_header_text		= "%gui_text"
+gui_header_bg		= "#2f343f"
+gui_header_border	= "#282c35"
+
+gui_sidebar_text	= "#bac3cf"
+gui_sidebar_bg		= "#353945"
+gui_sidebar_border	= "#2b2e38"
+
+gui_panel_text	= "#bac3cf"
+gui_panel_bg	= "#2b2e38"
+
+gui_selected_text	= "#ffffff"
+gui_selected_bg		= "#5294e2"
+
+gui_button_text		= "%gui_text"
+gui_button_bg		= "#434956"
+gui_button_border	= "%gui_border"
+
+gui_error_text	= "#ffffff"
+gui_error_bg  	= "#fc4138"
+
+gui_warning_text	= "#ffffff"
+gui_warning_bg		= "#f27835"
+
+gui_destructive_text	= "#ffffff"
+gui_destructive_bg		= "#f04a50"
+
+# Terminal Colors
+term_bg		= "#181a21"
+term_fg		= "#fffaf3"
+term_cursor	= "#605dff"
+term_sel_bg	= "#1e1f46"
+term_sel_fg	= "#f3faff"
+
+term_black		= "#252833"
+term_red		= "#ff3236"
+term_green		= "#3ed16a"
+term_yellow		= "#f2d500"
+term_blue		= "#0086e6"
+term_magenta	= "#c864c8"
+term_cyan		= "#00d7eb"
+term_white		= "#d2d9dd"
+
+term_bright_black	= "#4b5066"
+term_bright_red		= "#ff7f81"
+term_bright_green	= "#7fffa5"
+term_bright_yellow	= "#fff07f"
+term_bright_blue	= "#7fc9ff"
+term_bright_magenta	= "#ff7fff"
+term_bright_cyan	= "#7ffff2"
+term_bright_white	= "#f3faff"
+
+term_tab_1			= "b0aeff"
+term_tab_2			= "5e5f8c"

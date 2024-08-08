@@ -15,7 +15,7 @@
 {{-   $chassisType = (output "powershell.exe" "-NoProfile" "-NonInteractive" "-Command" "if ((Get-CimInstance -Class Win32_Battery | Measure-Object).Count -gt 0) { Write-Output 'laptop' } else { Write-Output 'desktop' }") | trim }}
 {{- end }}
 [data]
-    osid = {{ $osid | quote }}
+	osid = {{ $osid | quote }}
 {{- if eq $chassisType "laptop" }}
     font_size = 12
     terminal_font_size = 13
@@ -23,5 +23,3 @@
 	font_size = 10
 	terminal_font_size = 11
 {{- end }}
-	normal_font_name = "DejaVu Sans"
-	monospace_font_name = "Fira Code"
