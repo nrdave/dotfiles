@@ -6,7 +6,6 @@ gui_bg		= "#383c4a"
 gui_base	= "#404552"
 gui_border	= "#2c2f3a"
 
-gui_header_text		= "%gui_text"
 gui_header_bg		= "#2f343f"
 gui_header_border	= "#282c35"
 
@@ -17,21 +16,13 @@ gui_sidebar_border	= "#2b2e38"
 gui_panel_text	= "#bac3cf"
 gui_panel_bg	= "#2b2e38"
 
-gui_selected_text	= "#ffffff"
-gui_selected_bg		= "#5294e2"
-
-gui_button_text		= "%gui_text"
-gui_button_bg		= "#434956"
-gui_button_border	= "%gui_border"
-
-gui_error_text	= "#ffffff"
-gui_error_bg  	= "#fc4138"
-
-gui_warning_text	= "#ffffff"
-gui_warning_bg		= "#f27835"
-
-gui_destructive_text	= "#ffffff"
-gui_destructive_bg		= "#f04a50"
+gui_selected	= "#5294e2"
+gui_suggested	= "#4DADD4"
+gui_button		= "#434956"
+gui_success		= "#73d216"
+gui_error		= "#fc4138"
+gui_warning		= "#f27835"
+gui_destructive	= "#f04a50"
 
 # Terminal Colors
 term_bg		= "#181a21"

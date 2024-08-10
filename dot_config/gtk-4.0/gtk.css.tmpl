@@ -1,50 +1,50 @@
-@define-color accent_color #5294e2;
+@define-color accent_color {{ .gui_selected }};
 @define-color accent_bg_color @accent_color;
 @define-color accent_fg_color #ffffff;
 
-@define-color destructive_color #f04a50;
+@define-color destructive_color {{ .gui_destructive }};
 @define-color destructive_bg_color @destructive_color;
 @define-color destructive_fg_color #ffffff;
 
-@define-color success_color #73d216;
+@define-color success_color {{ .gui_success }};
 @define-color success_bg_color @success_color;
 @define-color success_fg_color #ffffff;
 
-@define-color warning_color #f27835;
+@define-color warning_color {{ .gui_warning }};
 @define-color warning_bg_color @warning_color;
 @define-color warning_fg_color #ffffff;
 
-@define-color error_color #fc4138;
+@define-color error_color {{ .gui_error }};
 @define-color error_bg_color @error_color;
 @define-color error_fg_color #ffffff;
 
-@define-color window_bg_color #383c4a;
-@define-color window_fg_color #d3dae3;
+@define-color window_bg_color {{ .gui_bg }};
+@define-color window_fg_color {{ .gui_text }};
 
-@define-color view_bg_color #404552;
+@define-color view_bg_color {{ .gui_base }};
 @define-color view_fg_color @window_fg_color;
 
-@define-color headerbar_bg_color #2f343f;
+@define-color headerbar_bg_color {{ .gui_header_bg }};
 @define-color headerbar_fg_color @window_fg_color;
-@define-color headerbar_border_color #282cff;
+@define-color headerbar_border_color {{ .gui_header_border }};
 @define-color headerbar_backdrop_color @headerbar_bg_color;
 @define-color headerbar_shade_color @window_bg_color;
 
-@define-color sidebar_bg_color #353945;
-@define-color sidebar_fg_color #bac3cf;
+@define-color sidebar_bg_color {{ .gui_sidebar_bg }};
+@define-color sidebar_fg_color {{ .gui_sidebar_text }};
 @define-color sidebar_shade_color rgba(0,0,0,0.25);
 
-@define-color card_bg_color #40455214;
+@define-color card_bg_color {{ .gui_base }};
 @define-color card_fg_color @window_fg_color;
 @define-color card_shade_color rgba(0, 0, 0, 0.3);
 
-@define-color thumbnail_bg_color #383c4a;
+@define-color thumbnail_bg_color @window_bg_color;
 @define-color thumbnail_fg_color @window_fg_color;
 
-@define-color dialog_bg_color #383c4a;
+@define-color dialog_bg_color @window_bg_color;
 @define-color dialog_fg_color @window_fg_color;
 
-@define-color popover_bg_color #383c4a;
+@define-color popover_bg_color @window_bg_color;
 @define-color popover_fg_color @window_fg_color;
 
 @define-color shade_color rgba(0, 0, 0, 0.8);

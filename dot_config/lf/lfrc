@@ -38,10 +38,10 @@ map X !$f
 map o &mimeopen $f
 map O $mimeopen --ask $f
 
-# Change how quit behaves, used in conjunction with the lfcd alias in 
-# .bashrc. Pressing q changes the last directory in lf to the directory 
-# lf was launched in, so when lfcd exits, the last directory is the 
-# directory it was launched in. If Q is pressed, don't do this. So, the 
+# Change how quit behaves, used in conjunction with the lfcd alias in
+# .bashrc. Pressing q changes the last directory in lf to the directory
+# lf was launched in, so when lfcd exits, the last directory is the
+# directory it was launched in. If Q is pressed, don't do this. So, the
 # last directory lf was in is returned to the cd in the lfcd alias
 map q %{{
   lf -remote "send $id :cd $OLDPWD; quit"
@@ -106,4 +106,3 @@ cmd zip ${{
     zip -r $1.zip $1
     rm -rf $1
 }}
-
