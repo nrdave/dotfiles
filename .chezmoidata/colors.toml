@@ -16,6 +16,12 @@ gui_sidebar_border	= "#2b2e38"
 gui_panel_text	= "#bac3cf"
 gui_panel_bg	= "#2b2e38"
 
+# Window Manager/Compositor panel, not GTK panel
+# Taken from cinnamon panel svg in arc gtk theme
+gui_wm_panel_fg		= "#ffffff"
+gui_wm_panel_bg		= "#252a35"
+gui_wm_panel_border	= "#0f1116"
+
 gui_selected	= "#5294e2"
 gui_suggested	= "#4DADD4"
 gui_button		= "#434956"
