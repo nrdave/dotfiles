@@ -15,6 +15,8 @@ screenshot_name="Screenshot_$(date +"%Y-%m-%d_%H-%M-%S").png"
 
 screenshot_loc="$screenshot_dir/$screenshot_name"
 
+mkdir -p "$screenshot_dir"
+
 case $1 in
 	area-save)
 		grim -g "$(slurp)" $screenshot_loc 

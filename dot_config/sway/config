@@ -240,7 +240,7 @@ bindsym $mod+r mode "resize"
 set $screenshot 1 selected, 2 whole, 3 selected clipboard, 4 whole clipboard, 5 swappy
 mode "$screenshot" {
     bindsym 1 exec 'wayland-screenshot.sh area-save', mode "default"
-    bindsym 2 exec 'wayland-screenshot.sh screen-sav', mode "default"
+    bindsym 2 exec 'wayland-screenshot.sh screen-save', mode "default"
     bindsym 3 exec 'wayland-screenshot.sh area-copy', mode "default"
     bindsym 4 exec 'wayland-screenshot.sh screen-copy', mode "default"
     bindsym 5 exec 'wayland-screenshot.sh area-swappy', mode "default"
