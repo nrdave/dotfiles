@@ -18,8 +18,10 @@ gui_panel_bg	= "#2b2e38"
 
 # Window Manager/Compositor panel, not GTK panel
 # Taken from cinnamon panel svg in arc gtk theme
-gui_wm_panel_fg		= "#ffffff"
+gui_wm_panel_text	= "#ffffff"
 gui_wm_panel_bg		= "#252a35"
+# Hex #252a35 with 0.9 opacity
+gui_wm_panel_bg_opa	= "rgba(37, 42, 53, 0.9)"
 gui_wm_panel_border	= "#0f1116"
 
 gui_selected	= "#5294e2"
