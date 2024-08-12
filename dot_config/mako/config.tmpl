@@ -2,11 +2,11 @@
 font=sans-serif
 icons=1
 icon-path=/usr/share/icons/Papirus-Dark
-background-color=#383c4aff
-text-color=#d3dae3ff
+background-color={{ list .gui_bg "ff" | join "" }}
+text-color={{ list .gui_text "ff" | join "" }}
 progress-color=#446795ff
 default-timeout=3000
-border-color=#2c2f3aff
+border-color={{ list .gui_border "ff" | join "" }}
 border-radius=5
 
 # Customize behavior of notifications from my volume and brightness
@@ -20,9 +20,9 @@ anchor=bottom-center
 group-by=app-name
 
 [anchor=bottom-center]
-text-color=#bac3cfff
+text-color=#ffffffff
 max-icon-size=256
-background-color=#2b2e38ff
+background-color={{ list .gui_wm_panel_bg "f2" | join "" }}
 border-color=#00000055
 border-size=2
 icon-location=top
