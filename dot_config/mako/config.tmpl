@@ -13,9 +13,11 @@ border-radius=5
 # scripts
 [app-name="volume-notification-script"]
 anchor=bottom-center
+layer=overlay
 group-by=app-name
 
 [app-name="brightness-notification-script"]
+layer=overlay
 anchor=bottom-center
 group-by=app-name
 
@@ -26,7 +28,6 @@ background-color={{ list .gui_wm_panel_bg "f2" | join "" }}
 border-color=#00000055
 border-size=2
 icon-location=top
-layer=overlay
 padding=10
 height=300
 format=<b>%s</b>
