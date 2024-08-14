@@ -56,7 +56,7 @@ print_links () {
 if [ -d "$folder" ]; then 
 	delete_links "$HOME/.local/$folder/bin" "$HOME/.local/bin"
 
-	for subdir in "applications" "man" "icons" "locale" "terminfo"; do
+	for subdir in "applications" "man" "icons" "locale" "terminfo" "bash-completion" "zsh"; do
 		delete_links "$HOME/.local/$folder/share/$subdir" "$HOME/.local/share/$subdir"
 	done
 else

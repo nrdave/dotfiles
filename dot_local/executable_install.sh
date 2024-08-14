@@ -13,9 +13,10 @@ make_links () {
 	in_dir=$1
 	out_dir=$2
 
+	mkdir -p "$out_dir"
+
 	if [ -d "$in_dir" ] && [ -d "$out_dir" ]; then
 		cd "$in_dir"
-		mkdir -p "$out_dir"
 
 		files=$(find . -type f)
 
@@ -34,9 +35,11 @@ print_links () {
 	in_dir=$1
 	out_dir=$2
 
+	echo "mkdir -p "$out_dir""
+	mkdir -p "$out_dir"
+
 	if [ -d "$in_dir" ] && [ -d "$out_dir" ]; then
 		cd "$in_dir"
-		echo "mkdir -p "$out_dir""
 
 		files=$(find . -type f)
 
@@ -54,7 +57,7 @@ print_links () {
 if [ -d "$folder" ]; then 
 	make_links "$HOME/.local/$folder/bin" "$HOME/.local/bin"
 
-	for subdir in "applications" "man" "icons" "locale" "terminfo"; do
+	for subdir in "applications" "man" "icons" "locale" "terminfo" "bash-completion" "zsh"; do
 		make_links "$HOME/.local/$folder/share/$subdir" "$HOME/.local/share/$subdir"
 	done
 else
