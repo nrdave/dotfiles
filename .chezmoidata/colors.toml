@@ -57,5 +57,5 @@ term_bright_magenta	= "#ff7fff"
 term_bright_cyan	= "#7ffff2"
 term_bright_white	= "#f3faff"
 
-term_tab_1			= "b0aeff"
-term_tab_2			= "5e5f8c"
+term_tab_1			= "#b0aeff"
+term_tab_2			= "#5e5f8c"
