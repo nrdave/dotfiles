@@ -5,11 +5,6 @@
 export EDITOR='/usr/bin/nano'
 export VISUAL='/usr/bin/vim'
 
-# If neovim is available (either a system or local install) use it instead of
-# vim. For some systems, the version of neovim is too old for use with
-# lazy.nvim and its plugins, so I have to download an executable from upstream
-command -v nvim &> /dev/null 2>&1 && export VISUAL=$(command -v nvim)
-
 {{ if eq .chezmoi.os "linux" }}
 # Linux specific stuff
 
@@ -32,3 +27,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Set up Qt apps to use config from Qt 5 and Qt 6 settings apps
 export QT_QPA_PLATFORMTHEME=qt5ct
 {{- end }}
+
+# If neovim is available (either a system or local install) use it instead of
+# vim. For some systems, the version of neovim is too old for use with
+# lazy.nvim and its plugins, so I have to download an executable from upstream
+command -v nvim &> /dev/null 2>&1 && export VISUAL=$(command -v nvim)
