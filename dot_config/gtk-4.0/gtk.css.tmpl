@@ -109,24 +109,65 @@
 @define-color dark_5 #000000;
 
 /*
-.titlebar:not(headerbar), headerbar { padding: 0 7px; min-height: 42px; border-width: 0 0 1px; border-style: solid; border-color: #262a33; border-radius: 0; color: rgba(207, 218, 231, 0.8); background-color: #2f343f; box-shadow: inset 0 1px rgba(54, 59, 72, 0.97); }
-.csd .titlebar:not(headerbar), .csd headerbar { background-color: rgba(47, 52, 63, 0.97); border-color: rgba(38, 42, 51, 0.97); }
+.titlebar:not(headerbar), headerbar {
+	padding: 0 7px;
+	min-height: 42px;
+	border-width: 0 0 1px;
+	border-style: solid;
+	border-color: #262a33;
+	border-radius: 0;
+	color: rgba(207, 218, 231, 0.8);
+	background-color: #2f343f;
+	box-shadow: inset 0 1px rgba(54, 59, 72, 0.97);
+}
+.csd .titlebar:not(headerbar), .csd headerbar {
+	background-color: rgba(47, 52, 63, 0.97);
+	border-color: rgba(38, 42, 51, 0.97);
+}
 
-.titlebar:backdrop:not(headerbar), headerbar:backdrop { color: rgba(207, 218, 231, 0.5); background-color: #323843; transition: 200ms ease-out; }
+.titlebar:backdrop:not(headerbar), headerbar:backdrop {
+	color: rgba(207, 218, 231, 0.5);
+	background-color: #323843;
+	transition: 200ms ease-out;
+}
 
-.csd .titlebar:backdrop:not(headerbar), .csd headerbar:backdrop { background-color: rgba(50, 56, 67, 0.97); }
+.csd .titlebar:backdrop:not(headerbar), .csd headerbar:backdrop {
+	background-color: rgba(50, 56, 67, 0.97);
+}
 
-.titlebar:not(headerbar) .title, headerbar .title { padding-left: 12px; padding-right: 12px; font-weight: normal; }
+.titlebar:not(headerbar) .title, headerbar .title {
+	padding-left: 12px;
+	padding-right: 12px;
+	font-weight: normal;
+}
 
-.titlebar:not(headerbar) .subtitle, headerbar .subtitle { font-size: smaller; padding-left: 12px; padding-right: 12px; }
-.titlebar:not(headerbar) separator { background-color: #262a33; }
+.titlebar:not(headerbar) .subtitle, headerbar .subtitle {
+	font-size: smaller;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.titlebar:not(headerbar) separator {
+	background-color: #262a33;
+}
 
-.csd headerbar headerbar:backdrop, .csd headerbar headerbar { background-color: transparent; }
+.csd headerbar headerbar:backdrop, .csd headerbar headerbar {
+	background-color: transparent;
+}
 
-window.devel headerbar.titlebar { background-image: cross-fade(20% -gtk-icontheme("system-run-symbolic"), image(transparent)); background-position: 90% 2%; background-size: 2
-56px 256px; background-repeat: no-repeat; }
+window.devel headerbar.titlebar {
+	background-image: cross-fade(20% -gtk-icontheme("system-run-symbolic"), image(transparent));
+	background-position: 90% 2%;
+	background-size: 256px 256px;
+	background-repeat: no-repeat;
+}
 
-headerbar entry { color: rgba(207, 218, 231, 0.8); border-color: rgba(21, 23, 28, 0.37); background-color: rgba(95, 105, 127, 0.37); }
+headerbar entry {
+	color: rgba(207, 218, 231, 0.8);
+	border-color: rgba(21, 23, 28, 0.37);
+	background-color: rgba(95, 105, 127, 0.37);
+}
 
-headerbar entry image { color: inherit; }
+headerbar entry image {
+	color: inherit;
+}
 */
