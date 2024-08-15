@@ -6,6 +6,7 @@ gui_bg		= "#383c4a"
 gui_base	= "#404552"
 gui_border	= "#2c2f3a"
 
+gui_header_text		= "#cfdae7"
 gui_header_bg		= "#2f343f"
 gui_header_border	= "#282c35"
 
