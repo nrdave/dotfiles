@@ -1,12 +1,12 @@
 * {
 	font-family: sans-serif, FontAwesome;
-	font-weight: 600;
 }
 
 window#waybar {
 	background-color: {{ .gui_wm_panel_bg_opa }};
 	color: {{ .gui_wm_panel_text }};
 	box-shadow: inset 0 0 2px {{ .gui_wm_panel_border }};
+	font-weight: 600;
 }
 
 #workspaces button,
@@ -42,10 +42,12 @@ window#waybar {
 }
 
 /**
- * Reducing padding for the tray because it doesn't need as much padding
+ * Tray-specific adjustments - custom padding values
+ * and lower font weight
  */
 #tray {
 	padding: 0.1em 0.4em;
+	font-weight: 400;
 }
 /**
  * Styling the fuzzel launcher to only have horizontal padding - made
