@@ -25,8 +25,8 @@ exec udiskie --no-automount --tray &
 # Launch mako, my notification daemon
 exec mako
 
-# Start up an authentication agent (KDE because it was smaller than GNOME lol)
-exec /usr/lib/polkit-kde-authentication-agent-1
+# Start up an authentication agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Inhibit the power button
 exec systemd-inhibit --what=handle-power-key sleep infinity
