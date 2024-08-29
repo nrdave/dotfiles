@@ -14,6 +14,10 @@ return {
 					-- To run the Ruff formatter.
 					"ruff_format",
 				},
+				markdown = { "mdslw" },
+			},
+			formatters = {
+				mdslw = { prepend_args = { "--stdin-filepath", "$FILENAME" } },
 			},
 			format_on_save = {
 				lsp_fallback = true,
