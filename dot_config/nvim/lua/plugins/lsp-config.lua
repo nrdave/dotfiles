@@ -1,5 +1,4 @@
 return {
-	
 	-- Grab mason.nvim for installing LSP servers in cases where the server
 	-- isn't installed on the system
 	{
