@@ -5,7 +5,7 @@
 	"modules-center": ["sway/workspaces"],
 
 	"sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        "format": "{}"
     },
 
 	"wlr/taskbar": {
