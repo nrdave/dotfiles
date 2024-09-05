@@ -5,9 +5,6 @@
 # Kill current waybar instances
 pkill waybar
 
-# Start the geoclue agent if it isn't already running
-[ -n "$(pgrep agent)" ] || riverctl spawn /usr/lib/geoclue-2.0/demos/agent 
-
 # Start tray applets if they aren't already running
 [ -n "$(pgrep gammastep)" ] || riverctl spawn gammastep-indicator
 [ -n "$(pgrep nm-applet)" ] || riverctl spawn nm-applet
