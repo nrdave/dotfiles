@@ -9,6 +9,9 @@ default-timeout=3000
 border-color={{ list .gui_border "ff" | join "" }}
 border-radius=5
 
+[actionable]
+on-button-left=exec makoctl menu -n "$id" fuzzel -d
+
 # Customize behavior of notifications from my volume and brightness
 # scripts
 [app-name="volume-notification-script"]
