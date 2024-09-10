@@ -38,6 +38,10 @@ map X !$f
 map o &mimeopen $f
 map O $mimeopen --ask $f
 
+# Enable boxes around panes
+set drawbox true
+set borderfmt "\033[0;90m"
+
 # Change how quit behaves, used in conjunction with the lfcd alias in
 # .bashrc. Pressing q changes the last directory in lf to the directory
 # lf was launched in, so when lfcd exits, the last directory is the
