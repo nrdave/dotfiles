@@ -9,6 +9,13 @@ else
 	folder="$1"
 fi
 
+get_abs_filename() {
+  # $1 : relative filename
+  echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
+}
+
+abs_folder=$(get_abs_filename $folder)
+
 delete_links () {
 	in_dir=$1
 	out_dir=$2
@@ -54,10 +61,10 @@ print_links () {
 }
 
 if [ -d "$folder" ]; then 
-	delete_links "$HOME/.local/$folder/bin" "$HOME/.local/bin"
+	delete_links "$abs_folder/bin" "$HOME/.local/bin"
 
 	for subdir in "applications" "man" "icons" "locale" "terminfo" "bash-completion" "zsh"; do
-		delete_links "$HOME/.local/$folder/share/$subdir" "$HOME/.local/share/$subdir"
+		delete_links "$abs_folder/share/$subdir" "$HOME/.local/share/$subdir"
 	done
 else
 	echo "Directory doesn't exist"
