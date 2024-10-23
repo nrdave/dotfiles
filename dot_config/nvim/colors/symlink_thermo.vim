@@ -1,1 +1,1 @@
-/home/nikhil/.vim/colors/thermo.vim
+../../vim/colors/thermo.vim
