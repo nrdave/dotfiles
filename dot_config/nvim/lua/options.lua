@@ -1,7 +1,10 @@
 vim.opt.clipboard = 'unnamedplus'   -- use system clipboard 
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 vim.opt.mouse = 'a'                 -- allow the mouse to be used in Nvim
-vim.g.mapleader = ' '				-- set my leader key to space
+vim.g.mapleader = ','				-- set my leader key to comma
+
+vim.opt.wildmenu = true
+vim.opt.path:append('**')
 
 -- Tab
 vim.opt.tabstop = 4                 -- number of visual spaces per TAB
@@ -21,4 +24,4 @@ vim.opt.hlsearch = false            -- do not highlight matches
 vim.opt.ignorecase = true           -- ignore case in searches by default
 vim.opt.smartcase = true            -- but make it case sensitive if an uppercase is entered
 
-vim.g.load_doxygen_syntax=1			-- Dozygen syntax loading
+vim.g.load_doxygen_syntax=1			-- Doxygen syntax loading

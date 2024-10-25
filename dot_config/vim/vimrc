@@ -1,27 +1,37 @@
 " Don't pretend to be vi
 set nocompatible
 
+
+" Allow backspacing over everything in insert mode.
+set backspace=indent,eol,start
+
+set history=200		" keep 200 lines of command line history
+set wildmenu		" display completion matches in a status line
+set showcmd			" Show in-progress commands
+set ruler			" Show cursor location
+
 " Set shift width to 4 spaces.
 set shiftwidth=4
 
 " Set tab width to 4 columns.
 set tabstop=4
 
+" Numbers on side
 set number
 
 let mapleader = ','
 
+" Filetype syntax
 syntax enable
 
-" Enable type file detection. Vim will be able to try to detect the type of
-" file in use.
-filetype on
+" Filetype detection, as well as using filetype plugin and indent files
+filetype plugin indent on
 
-" Enable plugins and load plugin for the detected file type.
-filetype plugin on
+" Always show status line
+set laststatus=2
 
-" Load an indent file for the detected file type.
-filetype indent on
+" Column at 80 characters
+set colorcolumn=80
 
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
@@ -32,6 +42,15 @@ colorscheme thermo
 " Incrementally highlight charactes while searching
 set incsearch
 
+" Scroll buffer when moving cursor within 5 lines of edge of visible text
+set scrolloff=5
+
 " Mouse support
-set mouse=a
-set ttymouse=sgr
+if has('mouse')
+	set mouse=a
+	set ttymouse=sgr
+endif
+
+
+" Include all subdirectories in file search paths
+set path+=**
