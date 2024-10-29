@@ -43,21 +43,11 @@ return {
 				capabilities = capabilities,
 				init_options = {
 					settings = {
-						args = {
-							"--select", "D",
-							"--select", "E",
-							"--select", "F",
-							"--select", "W",
-							"--ignore", "D212",
-							"--ignore", "D400",
-							"--ignore", "D407",
-							"--ignore", "D415",
-							-- Ignore whitespace between colon as a slice operator (taking a section
-							-- of an array or list).
-							-- See https://peps.python.org/pep-0008/#whitespace-in-expressions-and-statements
-							"--ignore", "E203",
-							"--line-length=79"
+						lint = {
+							select = {"D", "E", "F", "W"},
+							ignore = { "D212", "D400", "D407", "D415", "E203", },
 						},
+						lineLength = 79,
 					}
 				}
 			})
