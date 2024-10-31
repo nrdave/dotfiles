@@ -2,3 +2,7 @@
 	defaultBranch = main
 [commit]
 	template = ~/.gitmessage.txt
+[alias]
+	lga = log --graph --all
+	lg1 = log --graph
+	lgo = log --graph --oneline
