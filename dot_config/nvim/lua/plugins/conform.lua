@@ -9,10 +9,7 @@ return {
 			-- are detected automatically, so there's no need to include them here
 			formatters_by_ft = {
 				python = {
-					-- To fix lint errors.
-					"ruff_fix",
-					-- To run the Ruff formatter.
-					"ruff_format",
+					lsp_format = 'first',
 				},
 				markdown = { "mdslw" },
 			},
