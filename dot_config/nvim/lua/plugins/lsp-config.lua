@@ -69,6 +69,7 @@ return {
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
+			lspconfig.tinymist.setup({})
 			
 		end,
 	},
