@@ -1,0 +1,79 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+	"features": {
+		"inline_completion_provider": "none"
+	},
+	"vim_mode": true,
+	"ui_font_size": 20,
+	"buffer_font_size": 16,
+
+	"soft_wrap": "editor_width",
+
+	"format_on_save": "on",
+
+	"tab_size": 4,
+	"hard_tabs": true,
+
+	"preferred_line_length": 80,
+	"theme": {
+		"mode": "system",
+		"light": "One Light",
+		"dark": "Tokyo Night"
+	},
+	"buffer_font_family": "Fira Code",
+
+	"ui_font_family": "DejaVu Sans",
+
+	"indent_guides": {
+		"enabled": true,
+		"coloring": "indent_aware"
+	},
+	"terminal": {
+		"font_family": "Fira Code",
+		"font_size": 16
+	},
+
+	"lsp": {
+		"ruff": {
+			"initialization_options": {
+				"settings": {
+					"lineLength": 79,
+					"lint": {
+						"select": ["D", "E", "F", "W"],
+						"ignore": ["D212", "D400", "D407", "D415", "E203"]
+					}
+				}
+			}
+		},
+		"pylsp": {
+			"settings": {
+				"plugins": {}
+			}
+		}
+	},
+	"languages": {
+		"Python": {
+			"language_servers": ["pylsp", "ruff"],
+			"formatter": [
+				{
+					"code_actions": {
+						"source.organizeImports.ruff": true,
+						"source.fixAll.ruff": true
+					}
+				},
+				{
+					"language_server": {
+						"name": "ruff"
+					}
+				}
+			]
+		}
+	}
+}
