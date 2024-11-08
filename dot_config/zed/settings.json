@@ -14,7 +14,7 @@
 	"ui_font_size": 20,
 	"buffer_font_size": 16,
 
-	"soft_wrap": "editor_width",
+	"soft_wrap": "bounded",
 
 	"format_on_save": "on",
 
@@ -24,7 +24,7 @@
 	"preferred_line_length": 80,
 	"theme": {
 		"mode": "system",
-		"light": "One Light",
+		"light": "Tokyo Night",
 		"dark": "Tokyo Night"
 	},
 	"buffer_font_family": "Fira Code",
@@ -74,6 +74,13 @@
 					}
 				}
 			]
+		},
+		"Markdown": {
+			"formatter": {
+				"external": {
+					"command": "mdslw"
+				}
+			}
 		}
 	}
 }
