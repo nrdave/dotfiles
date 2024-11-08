@@ -8,6 +8,7 @@ progress-color=#446795ff
 default-timeout=3000
 border-color={{ list .gui_border "ff" | join "" }}
 border-radius=5
+layer=overlay
 
 [actionable]
 on-button-left=exec makoctl menu -n "$id" fuzzel -d
@@ -17,11 +18,9 @@ on-button-middle=dismiss
 # scripts
 [app-name="volume-notification-script"]
 anchor=bottom-center
-layer=overlay
 group-by=app-name
 
 [app-name="brightness-notification-script"]
-layer=overlay
 anchor=bottom-center
 group-by=app-name
 
