@@ -59,7 +59,7 @@ Below is the list of all programs/system configurations I have dotfiles for.
 - vim
 - Waybar
 - zathura
-
+- Zed
 
 ### Alacritty
 
@@ -256,7 +256,6 @@ On that subject, I use lazy.nvim for plugins, so Neovim should be at least at
 version 0.8.0.
 As for plugins, I currently use the following:
 
-- telescope for file searching within a project (requires Neovim version 0.9)
 - nvim-treesitter for AST parsing/syntax highlighting
 - lspconfig - defaults for configuring LSPs.
 - nvim-cmp for setting up completions
@@ -337,7 +336,8 @@ system I can just clone this repo and be all set with vim.
 
 In general, this config just sets up the necessary stuff - using tabs and tab
 width of 4, absolute line numbers, mouse support, filetype detection, cursor
-underline, and using my personal color scheme - see the Neovim section for more.
+underline, vim's native file searching, and using my personal color scheme - see
+the Neovim section for more.
 
 Unlike my Neovim config, which I plan to eventually make pretty fancy, my vim
 config is gonna stay simple.
@@ -371,9 +371,19 @@ The reader (mainly for PDFs) I use on Arch (also Mint sometimes).
 The config just changes the text size depending on the chassis type detected in
 .chezmoi.toml.tmpl.
 
+### Zed
+
+[Zed](https://zed.dev/) is a code editor I've been trying out in place of
+VSCodium.
+This config sets up Ruff and Pylsp as Python language servers, sets my color
+scheme, and just generally sets Zed up how I like it.
+
 ## Miscellaneous Scripts
 
 Aside from the dedicated dotfiles I have, I also use a few scripts I wrote.
+
+### System Management
+
 These are files in `~/.local/bin`, which is where I put any programs I want on
 PATH (pretty sure that follow the FreeDesktop Home Directory Specification).
 
@@ -381,7 +391,8 @@ PATH (pretty sure that follow the FreeDesktop Home Directory Specification).
 - import-gsettings.sh
 - volume-notifications.sh
 
-### brightness-notifications.sh
+
+#### brightness-notifications.sh
 
 A script that wraps `brightnessctl` with notifications.
 Uses `brightnessctl` to get and set the brightness, and uses `notify-send` to
@@ -395,13 +406,13 @@ text of the notification.
 I don't know how other notification daemons will handle the hint - you might
 have to remove the hint.
 
-### import-gsettings.sh
+#### import-gsettings.sh
 
 A tool to import settings from a GTK 3 config file and call the relevant
 `gsettings` calls to make GTK 4 match GTK 3 theming.
 Mostly taken from a Sway wiki page.
 
-### volume-notifications.sh
+#### volume-notifications.sh
 
 This script wraps `wpctl` to add notifications with `notify-send`.
 Right now, the script can increase/decrease volume of the default sink and
@@ -417,12 +428,23 @@ have to remove it.
 
 (yes I copied what I wrote for brightness-notifications, sue me).
 
-### logout\_power\_options.sh (and related scripts)
+#### logout\_power\_options.sh (and related scripts)
 
 This script works in conjunction with some really simple wrapper scripts for
 shutting down, rebooting, suspending, logging out, and locking the screen.
 It just echoes the names of the scripts along with some other stuff that allows
 Fuzzel to display icons for them.
+
+### Install/Uninstall to .local scripts
+
+I have install and uninstall scripts that "install" applications to `.local`
+using symlinks.
+`install.sh` creates symlinks from files in `<program folder>/bin` to
+`~/.local/bin`, as well as `<program
+folder>/share/{applications,man,icons,locale,terminfo,bash-completion,zsh}` to
+the respective folders in `~/.local/share`.
+
+`uninstall.sh` deletes those symlinks.
 
 ## Other Files
 
