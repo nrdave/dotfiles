@@ -60,6 +60,7 @@
 	},
 	"languages": {
 		"Python": {
+			"hard_tabs": false,
 			"language_servers": ["pylsp", "ruff"],
 			"formatter": [
 				{
