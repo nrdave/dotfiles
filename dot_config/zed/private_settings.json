@@ -10,6 +10,8 @@
 	"features": {
 		"inline_completion_provider": "none"
 	},
+	"assistant": { "enabled": false, "version": "2" },
+
 	"vim_mode": true,
 	"ui_font_size": 20,
 	"buffer_font_size": 16,
