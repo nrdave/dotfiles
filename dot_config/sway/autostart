@@ -1,4 +1,5 @@
 # Programs that I want to start automatically
 exec swaymsg 'workspace 3; exec steam -silent'
 exec swaymsg 'workspace 4; exec flatpak run com.spotify.Client'
+exec swaymsg 'workspace 5; exec flatpak run org.mozilla.Thunderbird'
 exec swaymsg 'workspace 2; exec firefox'
