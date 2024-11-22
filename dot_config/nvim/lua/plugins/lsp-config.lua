@@ -57,9 +57,10 @@ return {
 					pylsp = {
 						settings = {
 							plugins = {
-								pylint = { enabled = "false" },
-								pyflakes = { enabled = "false" },
-								pycodestyle = { enabled = "false" },
+								pylint = { enabled = false },
+								pyflakes = { enabled = false },
+								pycodestyle = { enabled = false },
+								pylsp_mypy = { enabled = true },
 							}
 						}
 					}

@@ -6,7 +6,8 @@ return {
 		},
 		config = function()
 			require('lint').linters_by_ft = {
-				python = { "mypy" },
+				-- Currently nothing, I just keep this on hand in case I need
+				-- to use standalone linters
 			}
 			vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
 				callback = function()
