@@ -1,3 +1,0 @@
-{{- template "alacritty.toml" "AppData/Roaming/" -}}
-
-shell = {{ list .chezmoi.homeDir "/scoop/apps/git/current/bin/bash.exe" | join "" | quote }}

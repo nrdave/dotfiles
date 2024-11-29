@@ -1,12 +1,14 @@
 # The main config file - contains settings that don't have a category or 
 # settings that are the only changed value in their category
 
+selection.save_to_clipboard = true
+
+[general]
+
+live_config_reload = true
+
 # import the other config files
 import = [
 	{{ list "~/" . "alacritty/font_size.toml" | join "" | quote }},
 	{{ list "~/" . "alacritty/appearance.toml" | join "" | quote }},
 ]
-
-live_config_reload = true
-
-selection.save_to_clipboard = true
