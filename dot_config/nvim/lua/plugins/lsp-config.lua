@@ -37,6 +37,7 @@ return {
 
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
+				cmd = { "clangd", '--fallback-style=none' },
 			})
 			lspconfig.ruff.setup({
 				on_attach = on_attach,
