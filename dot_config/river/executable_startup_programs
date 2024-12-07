@@ -17,10 +17,21 @@ riverctl spawn 'waybar -c ~/.config/river/waybar/config'
 riverctl spawn 'swaybg -i ~/backgrounds/zen2ccd.png -m fill'
 
 # Swayidle for handling idling and locking
-riverctl spawn 'swayidle -w timeout 600 swaylock \
-				lock swaylock \
-				before-sleep swaylock'
+riverctl spawn 'swayidle -w timeout 600 gtklock \
+				lock gtklock \
+				before-sleep gtklock'
 
 
 # Spawn mako for notifications unless it's already running (unlikely)
 [ -n "$(pgrep mako)" ] || riverctl spawn mako
+
+# Open autostart programs
+# Also set their locations
+
+[ -n "$(pgrep steam)" ] || riverctl spawn 'steam -silent'
+
+riverctl rule-add -app-id "org.mozilla.Thunderbird" tags 000010000
+riverctl rule-add -app-id "spotify" tags 000001000
+
+[ -n "$(pgrep spotify)" ] || riverctl spawn "flatpak run com.spotify.Client"
+[ -n "$(pgrep thunderbird)" ] || riverctl spawn "flatpak run org.mozilla.Thunderbird"
