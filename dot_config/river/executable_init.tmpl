@@ -30,6 +30,9 @@ riverctl map normal Super E spawn $file_manager
 
 # Lock screen keybind
 riverctl map normal Control+Alt L spawn "loginctl lock-session"
+riverctl map normal Control+Alt S spawn "systemctl suspend"
+
+riverctl map normal None XF86PowerOff spawn "logout_power_options.sh | fuzzel -d| xargs riverctl spawn "
 
 # Add option to reload config
 riverctl map normal Super+Shift C spawn ~/.config/river/init

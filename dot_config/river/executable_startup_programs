@@ -14,13 +14,14 @@ pkill waybar
 riverctl spawn 'waybar -c ~/.config/river/waybar/config'
 
 # Swaybg for backgrounds
-riverctl spawn 'swaybg -i ~/backgrounds/zen2ccd.png -m fill'
+[ -n "$(pgrep swaybg)" ] || riverctl spawn 'swaybg -i ~/backgrounds/zen2ccd.png -m fill'
 
 # Swayidle for handling idling and locking
-riverctl spawn 'swayidle -w timeout 600 gtklock \
+[ -n "$(pgrep swayidle)" ] || riverctl spawn 'swayidle -w timeout 600 gtklock \
 				lock gtklock \
 				before-sleep gtklock'
 
+[ -n "$(pgrep sleep)" ] || riverctl spawn "systemd-inhibit --what=handle-power-key sleep infinity"
 
 # Spawn mako for notifications unless it's already running (unlikely)
 [ -n "$(pgrep mako)" ] || riverctl spawn mako
