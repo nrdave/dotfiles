@@ -28,6 +28,9 @@ riverctl map normal Super E spawn $file_manager
 
 . ./hardware_config
 
+# Lock screen keybind
+riverctl map normal Control+Alt L spawn "loginctl lock-session"
+
 # Add option to reload config
 riverctl map normal Super+Shift C spawn ~/.config/river/init
 
@@ -131,6 +134,22 @@ riverctl map normal Super F11 enter-mode passthrough
 # Super+F11 to return to normal mode
 riverctl map passthrough Super F11 enter-mode normal
 
+for app in "firefox" "org.mozilla.Thunderbird"
+do
+	riverctl rule-add -app-id $app ssd
+done
+
+for window in "*Bitwarden*"
+do
+	riverctl rule-add -title $window float
+done
+
+for app in "piper" "mate-calc"
+do
+	riverctl rule-add -app-id $app float
+done
+
+
 # Various media key mapping examples for both normal and locked mode which do
 # not have a modifier
 for mode in normal locked
@@ -142,7 +161,6 @@ do
     riverctl map $mode None XF86AudioRaiseVolume	spawn 'volume-notifications.sh output-up' 
     riverctl map $mode None XF86AudioLowerVolume	spawn 'volume-notifications.sh output-down'
 	riverctl map $mode None XF86AudioMute			spawn 'volume-notifications.sh output-mute'
-
 	riverctl map $mode None XF86AudioMicMute		spawn 'volume-notifications.sh input-mute'
 
     # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
@@ -152,27 +170,23 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 
     # Control screen backlight brightness with my brightness script 
-    riverctl map $mode None XF86MonBrightnessUp   spawn 'brightness-notifications.sh up'
-    riverctl map $mode None XF86MonBrightnessDown spawn 'brightness-notifications.sh down'
     riverctl map $mode Shift XF86MonBrightnessUp   spawn 'brightness-notifications.sh nano-up'
     riverctl map $mode Shift XF86MonBrightnessDown spawn 'brightness-notifications.sh nano-down'
+    riverctl map $mode None XF86MonBrightnessUp   spawn 'brightness-notifications.sh up'
+    riverctl map $mode None XF86MonBrightnessDown spawn 'brightness-notifications.sh down'
 done
 
 # Set background and border color
-riverctl background-color 0x002b36
-riverctl border-color-focused 0x93a1a1
-riverctl border-color-unfocused 0x586e75
+riverctl background-color 0x {{- trimAll "#" .term_tab_2 }}
+riverctl border-color-focused 0x {{- trimAll "#" .term_cursor }}
+riverctl border-color-unfocused 0x {{- trimAll "#" .term_tab_2 }}
+riverctl border-width 2
+riverctl xcursor-theme Adwaita 32
 
 # Set keyboard repeat rate
-riverctl set-repeat 50 300
-
-# Make all views with an app-id that starts with "float" and title "foo" start floating.
-riverctl rule-add -app-id 'float*' -title 'foo' float
-
-# Make all views with app-id "bar" and any title use client-side decorations
-riverctl rule-add -app-id "bar" csd
+riverctl set-repeat 25 300
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 5 -outer-padding 5 &
+riverctl spawn "rivertile -view-padding 5 -outer-padding 5 &"
