@@ -27,11 +27,13 @@ riverctl spawn 'swayidle -w timeout 600 gtklock \
 
 # Open autostart programs
 # Also set their locations
+riverctl rule-add -app-id "org.mozilla.Thunderbird" tags $((1 << 4))
+riverctl rule-add -app-id "spotify" tags $((1 << 3))
+riverctl rule-add -app-id "steam" tags $((1 << 2))
 
 [ -n "$(pgrep steam)" ] || riverctl spawn 'steam -silent'
-
-riverctl rule-add -app-id "org.mozilla.Thunderbird" tags 000010000
-riverctl rule-add -app-id "spotify" tags 000001000
-
 [ -n "$(pgrep spotify)" ] || riverctl spawn "flatpak run com.spotify.Client"
 [ -n "$(pgrep thunderbird)" ] || riverctl spawn "flatpak run org.mozilla.Thunderbird"
+
+riverctl set-focused-tags 2
+[ -n "$(pgrep firefox)" ] || riverctl spawn firefox
