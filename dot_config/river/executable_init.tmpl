@@ -31,6 +31,13 @@ riverctl map normal Super E spawn $file_manager
 # Lock screen keybind
 riverctl map normal Control+Alt L spawn "loginctl lock-session"
 riverctl map normal Control+Alt S spawn "systemctl suspend"
+riverctl map locked Control+Alt S spawn "systemctl suspend"
+
+# Shortcuts to cycle between tags
+# Uses https://github.com/NickHastings/riverwm-utils (I install this using pipx)
+riverctl map normal Control+Alt Right spawn "cycle-focused-tags +1 9"
+riverctl map normal Control+Alt Left spawn "cycle-focused-tags -1 9"
+
 
 riverctl map normal None XF86PowerOff spawn "logout_power_options.sh | fuzzel -d| xargs riverctl spawn "
 
