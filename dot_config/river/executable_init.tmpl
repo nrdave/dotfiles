@@ -8,6 +8,16 @@
 # cd into current directory to allow easy access to other scripts
 cd $(dirname $0)
 
+# Set up XDG vars
+systemctl --user set-environment XDG_CURRENT_DESKTOP=river
+systemctl --user import-environment DISPLAY \
+                                         WAYLAND_DISPLAY \
+                                         XDG_CURRENT_DESKTOP
+
+hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY \
+
+
 terminal=kitty
 launcher=fuzzel
 file_manager=nemo
@@ -154,7 +164,7 @@ do
 	riverctl rule-add -title $window float
 done
 
-for app in "piper" "mate-calc" "bulky"
+for app in "piper" "mate-calc" "bulky" "blueman-manager"
 do
 	riverctl rule-add -app-id $app float
 done
