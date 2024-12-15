@@ -12,8 +12,6 @@ riverctl input pointer-1739-52632-MSFT0004:00_06CB:CD98_Touchpad accel-profile f
 riverctl input pointer-1133-16500-Logitech_G305 accel-profile flat
 riverctl input pointer-1133-16500-Logitech_G305 pointer-accel 0
 
-# Bind lock key to lock stuff
-
 # Use keys that have meaning in Windows (switch active window and settings)
 # to do media control
 for mode in normal locked
@@ -21,5 +19,9 @@ do
 	riverctl map $mode Super P spawn 'playerctl play-pause'
 	riverctl map $mode Super I spawn 'playerctl next'
 done
-{{- else }}
+{{- else if eq .chezmoi.hostname "nrdBlue-Arch" }}
+# Desktop
+# Configure mouse
+riverctl input pointer-1133-49298-Logitech_G203_LIGHTSYNC_Gaming_Mouse accel-profile flat
+riverctl input pointer-1133-49298-Logitech_G203_LIGHTSYNC_Gaming_Mouse pointer-accel 0
 {{- end }}
