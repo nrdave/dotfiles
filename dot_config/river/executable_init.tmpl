@@ -9,10 +9,11 @@
 cd $(dirname $0)
 
 # Set up XDG vars
+export XDG_CURRENT_DESKTOP=river
+
 systemctl --user set-environment XDG_CURRENT_DESKTOP=river
 systemctl --user import-environment DISPLAY \
                                          WAYLAND_DISPLAY \
-                                         XDG_CURRENT_DESKTOP
 
 hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY \
@@ -154,7 +155,7 @@ riverctl map normal Super F11 enter-mode passthrough
 # Super+F11 to return to normal mode
 riverctl map passthrough Super F11 enter-mode normal
 
-for app in "firefox" "org.mozilla.Thunderbird"
+for app in "firefox" "org.mozilla.Thunderbird" "org.pulseaudio.pavucontrol"
 do
 	riverctl rule-add -app-id $app ssd
 done
@@ -164,7 +165,7 @@ do
 	riverctl rule-add -title $window float
 done
 
-for app in "piper" "mate-calc" "bulky" "blueman-manager"
+for app in "piper" "mate-calc" "bulky" "blueman-manager" "org.pulseaudio.pavucontrol"
 do
 	riverctl rule-add -app-id $app float
 done
