@@ -1,7 +1,7 @@
 [init]
 	defaultBranch = main
 [commit]
-	template = ~/.gitmessage.txt
+	template = ~/.config/git/message.txt
 [alias]
 	lga = log --graph --all
 	lg1 = log --graph
