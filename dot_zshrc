@@ -1,0 +1,61 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt beep
+unsetopt autocd
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/nikhil/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+zstyle ':completion:*' menu select
+
+source ~/.shrc
+
+precmd() {
+	setup_git_prompt
+}
+
+
+# Prompt
+autoload -U colors && colors
+setopt prompt_subst 
+
+# Copied from https://github.com/slashbeast/conf-mgmt/blob/master/roles/home_files/files/DOTzshrc
+setup_git_prompt() {
+    if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+        unset git_prompt
+        return 0
+    fi
+
+    local git_status_dirty git_status_stash git_branch
+
+    if [ "$(git --no-optional-locks status --untracked-files='no' --porcelain)" ]; then
+        git_status_dirty='%F{2}*%f'
+    else
+        unset git_status_dirty
+    fi
+
+    if [ "$(git stash list)" ]; then
+        git_status_stash="%F{3}▲%f"
+    else
+        unset git_status_stash
+    fi
+
+    git_branch="$(git symbolic-ref HEAD 2>/dev/null)"
+    git_branch="${git_branch#refs/heads/}"
+
+    if [ "${#git_branch}" -ge 24 ]; then
+        git_branch="${git_branch:0:21}..."
+    fi
+
+    git_branch="${git_branch:-no branch}"
+
+	git_prompt=" %F{6}(${git_branch}${git_status_dirty}${git_status_stash}%F{6}) "
+
+}
+PROMPT=$'%B%F{2}%n%b@%m %B%F{4}%~${git_prompt}$reset_color \$ '
