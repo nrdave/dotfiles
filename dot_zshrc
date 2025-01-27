@@ -55,7 +55,7 @@ setup_git_prompt() {
 
     git_branch="${git_branch:-no branch}"
 
-	git_prompt=" %F{6}(${git_branch}${git_status_dirty}${git_status_stash}%F{6}) "
+	git_prompt=" %F{6}(${git_branch}${git_status_dirty}${git_status_stash}%F{6})"
 
 }
 PROMPT=$'%B%F{2}%n%b@%m %B%F{4}%~${git_prompt}$reset_color \$ '
