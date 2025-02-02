@@ -71,8 +71,12 @@ return {
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
-			lspconfig.tinymist.setup({})
-			
+			lspconfig.tinymist.setup({
+				single_file_support = true,
+				settings = {
+					exportPdf = "onSave",
+				},
+			})
 		end,
 	},
 }
