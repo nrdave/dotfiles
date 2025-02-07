@@ -72,9 +72,12 @@ return {
 				on_attach = on_attach,
 			})
 			lspconfig.tinymist.setup({
+				capabilities = capabilities,
 				single_file_support = true,
 				settings = {
 					exportPdf = "onSave",
+					formatterMode= "typstyle",
+					formatterPrintWidth= 80,
 				},
 			})
 		end,
