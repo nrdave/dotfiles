@@ -10,7 +10,7 @@
 	"custom/launcher": {
         "format": "<span font='18'>{icon}</span>",
         "format-icons": [""],
-		"on-click": "swaymsg exec fuzzel",
+		"on-click": "riverctl spawn fuzzel",
 		"tooltip": false,
 	},
 }
