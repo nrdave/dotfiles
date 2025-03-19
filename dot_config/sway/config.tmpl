@@ -23,6 +23,9 @@ exec udiskie --no-automount --tray &
 # Launch mako, my notification daemon
 exec mako
 
+# Launch playerctl daemon - handles which media player receives media controls
+exec "playerctld daemon"
+
 # Start up an authentication agent
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 

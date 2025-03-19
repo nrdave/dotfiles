@@ -13,6 +13,9 @@ pkill waybar
 
 riverctl spawn 'waybar -c ~/.config/river/waybar/config'
 
+# Playerctl daemon - handles which media player receives media commands
+riverctl spawn 'playerctld daemon'
+
 # Swaybg for backgrounds
 [ -n "$(pgrep swaybg)" ] || riverctl spawn 'swaybg -i ~/backgrounds/zen2ccd.png -m fill'
 
