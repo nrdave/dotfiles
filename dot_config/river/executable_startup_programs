@@ -26,6 +26,9 @@ riverctl spawn 'playerctld daemon'
 
 [ -n "$(pgrep sleep)" ] || riverctl spawn "systemd-inhibit --what=handle-power-key sleep infinity"
 
+# Authentication agennt
+[ -n "$(pgrep polkit-mate-authentication-agent-1)" ] || riverctl spawn "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
+
 # Spawn mako for notifications unless it's already running (unlikely)
 [ -n "$(pgrep mako)" ] || riverctl spawn mako
 
