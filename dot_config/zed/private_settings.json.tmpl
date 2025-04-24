@@ -16,7 +16,7 @@
 	"ui_font_size": {{ add .font_size 6 }},
 	"buffer_font_size": {{ add 4 .font_size }},
 
-	"soft_wrap": "bounded",
+	"soft_wrap": "editor_width",
 
 	"format_on_save": "on",
 
@@ -91,6 +91,9 @@
 					"command": "mdslw"
 				}
 			}
+		},
+		"YAML": {
+			hard_tabs: "false"
 		}
 	}
 }
