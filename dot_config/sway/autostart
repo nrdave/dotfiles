@@ -8,4 +8,3 @@ exec swaymsg 'workspace 2; exec firefox'
 assign [app_id="spotify"] workspace 4
 assign [app_id="steam"] workspace 3
 assign [app_id="org.mozilla.Thunderbird"] workspace 5
-assign [app_id="firefox"] workspace 2
