@@ -1,0 +1,16 @@
+{
+	"include": "~/.config/waybar/config",
+
+	"modules-left": ["custom/launcher", "wlr/taskbar"],
+	"modules-center": ["niri/workspaces"],
+
+	"wlr/taskbar": {
+		"on-click": "activate",
+	},
+	"custom/launcher": {
+        "format": "<span font='18'>{icon}</span>",
+        "format-icons": [""],
+		"on-click": "niri msg action spawn fuzzel",
+		"tooltip": false,
+	},
+}
