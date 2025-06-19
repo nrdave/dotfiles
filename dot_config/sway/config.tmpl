@@ -93,6 +93,10 @@ for_window {
 	[window_role="bubble"] floating enable
 	[window_role="dialog"] floating enable
 	[window_type="dialog"] floating enable
+
+	# Inhibit idle for steam games - prevents swayidle
+	# from turning screen off
+	[class="steam_app*"] inhibit_idle focus
 }
 
 input type:pointer {
