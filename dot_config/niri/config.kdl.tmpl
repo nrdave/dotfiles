@@ -67,13 +67,24 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
+{{- if eq .chezmoi.hostname "nrdBlue-Arch" -}}
+output "HDMI-A-1" {
+	mode "1920x1080"
+
+	transform "normal"
+
+{{- else -}}
+//---------------------------------------------
+// Default config with notes kept for reference
+//---------------------------------------------
+
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-output "HDMI-A-1" {
+// output "HDMI-A-1" {
     // Uncomment this line to disable this output.
     // off
 
@@ -83,11 +94,11 @@ output "HDMI-A-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@74.973"
+    // mode "1920x1080@74.973"
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-    transform "normal"
+    // transform "normal"
 
     // Position of the output in the global coordinate space.
     // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
@@ -98,8 +109,10 @@ output "HDMI-A-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=1280 y=0
-}
+    // position x=1280 y=0
+// }
+{{- end -}}
+
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
