@@ -73,6 +73,12 @@ output "HDMI-A-1" {
 
 	transform "normal"
 
+{{- else if eq .chezmoi.hostname "nrdOrca-Arch" }}
+output "eDP-1" {
+	mode "1920x1080"
+	scale 1.0
+	transform "normal"
+}
 {{- else -}}
 //---------------------------------------------
 // Default config with notes kept for reference
