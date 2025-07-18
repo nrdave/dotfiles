@@ -67,12 +67,12 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
-{{- if eq .chezmoi.hostname "nrdBlue-Arch" -}}
+{{- if eq .chezmoi.hostname "nrdBlue-Arch" }}
 output "HDMI-A-1" {
 	mode "1920x1080"
 
 	transform "normal"
-
+}
 {{- else if eq .chezmoi.hostname "nrdOrca-Arch" }}
 output "eDP-1" {
 	mode "1920x1080"
@@ -141,7 +141,9 @@ layout {
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
         proportion 0.33333
-        proportion 0.5
+		proportion 0.4
+		proportion 0.5
+		proportion 0.6
         proportion 0.66667
 
         // Fixed sets the width in logical pixels exactly.
@@ -287,6 +289,7 @@ spawn-at-startup "swayidle" "-w" \
 				"timeout" "600" "gtklock -d" \
 				"lock" "gtklock -d" \
 				"before-sleep" "gtklock -d"
+spawn-at-startup "xwayland-satellite"
 
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -329,25 +332,24 @@ window-rule {
     default-column-width {}
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
+// Open various windows as floating by default
 window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+	match app-id="org.pulseaudio.pavucontrol"
+	match app-id="blueman-manager"
+	match app-id="nm-connection-editor"
+	match app-id="piper"
+	match app-id="bulky.py"
     open-floating true
 }
 
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+// Block apps from screen capture
+window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
     block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
 }
 
 // Example: enable rounded corners for all windows.
