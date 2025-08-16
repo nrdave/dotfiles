@@ -3,6 +3,7 @@ vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 vim.opt.mouse = 'a'                 -- allow the mouse to be used in Nvim
 vim.g.mapleader = ','				-- set my leader key to comma
 vim.opt.scrolloff = 5
+vim.opt.relativenumber = true
 
 vim.opt.wildmenu = true
 vim.opt.path:append('**')
