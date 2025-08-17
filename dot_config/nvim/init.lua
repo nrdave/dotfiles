@@ -10,7 +10,7 @@ require('autocmds')
 -- Line number
 vim.opt.number = true			-- Line numbers
 vim.opt.relativenumber = true	-- Relative numbers
-vim.opt.cursorline = true		-- Highlight
+vim.opt.cursorline = true		-- Highlight current line
 vim.opt.wrap = false
 vim.opt.scrolloff = 5
 vim.opt.sidescrolloff = 10
@@ -66,7 +66,7 @@ vim.g.maplocalleader = " "
 
 -- Splitting
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>")
-vim.keymap.set("n", "<leader>sh", ":hsplit<CR>")
+vim.keymap.set("n", "<leader>sh", ":split<CR>")
 
 -- Visual mode indenting "keep-active"
 vim.keymap.set("v", "<", "<gv")

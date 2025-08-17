@@ -25,7 +25,7 @@ hi Pmenu               ctermfg=15    ctermbg=0
 hi PmenuThumb          ctermbg=7     ctermbg=0
 hi PmenuSBar           ctermbg=4
 hi PmenuSel            ctermfg=0     ctermbg=12
-hi ColorColumn         ctermbg=0
+hi ColorColumn         ctermfg=9     cterm=reverse
 hi SpellBad            ctermfg=1     ctermbg=NONE  cterm=underline
 hi SpellCap            ctermfg=10    ctermbg=NONE  cterm=underline
 hi SpellRare           ctermfg=11    ctermbg=NONE  cterm=underline
@@ -66,6 +66,7 @@ hi User8               ctermfg=8     ctermbg=0
 hi User9               ctermfg=15    ctermbg=5
 hi WarningMsg          ctermfg=8     ctermbg=3    cterm=bold
 hi SpecialKey          ctermfg=14
+hi CursorLine          ctermbg=0     cterm=NONE
 hi! link CursorColumn  CursorLine
 hi! link SignColumn    LineNr
 hi! link WildMenu      Visual
