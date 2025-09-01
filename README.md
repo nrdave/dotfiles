@@ -1,3 +1,5 @@
+**NOW BEING STORED ON CODEBERG** https://codeberg.org/nrdave/dotfiles
+
 # My dotfiles
 
 This repository contains the dotfiles/configuration files for programs that I
